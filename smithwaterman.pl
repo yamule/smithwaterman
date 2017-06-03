@@ -8,7 +8,8 @@ use warnings;
 # no warranty
 # author: yamule (https://github.com/yamule)
 # usage:
-# my ($res1,$res2) = sw::align("QUERYSEQ", "TEMPLATESEQ");
+# require "smithwaterman.pl";
+# my ($res1,$res2,$score) = sw::align("QUERYSEQ", "TEMPLATESEQ");
 # print ">seq1\n".join("",@{$res1})."\n";
 # print ">seq2\n".join("",@{$res2})."\n";
 # Output:
@@ -154,7 +155,7 @@ sub align{
 	}
 	
 	my $currentcode = $startcode;
-	if($currentcode == $MAT_){#MATˆÈŠO‚È‚¢‚Í‚¸‚¾‚ªB
+	if($currentcode == $MAT_){
 		my $sa = $starta;
 		my $sb = $startb;
 		
