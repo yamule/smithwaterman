@@ -27,7 +27,7 @@ import java.util.regex.Pattern;
  * ----EEEEMDQNNSLPPYA-GGTWRYII--
  * IIII----MDQNNS-PPYAQGGTWRY--EE
  * 
- * @author kimidori
+ * @author kimidori (<- this is the name of the current computer)
  */
 public class SmithWaterman {
 	public static int TYPE_MATCH = 0;
