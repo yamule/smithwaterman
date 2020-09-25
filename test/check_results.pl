@@ -41,6 +41,7 @@ if($check_pl == 1){
 		my $p2 = $seq2;
 		$p2 =~ s/[^A-Z]//g;
 		if($p1 ne ${$sourcefas{$tag}}[0]){
+			print $infile."\n";
 			print $p1."\n";
 			print ${$sourcefas{$tag}}[0]."\n";
 			if($p1 !~ /[JUZBOX]/){
@@ -48,6 +49,7 @@ if($check_pl == 1){
 			}
 		}
 		if($p2 ne ${$sourcefas{$tag}}[1]){
+			print $infile."\n";
 			print $p2."\n";
 			print ${$sourcefas{$tag}}[1]."\n";
 			if($p2 !~ /[JUZBOX]/){
