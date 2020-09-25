@@ -1,0 +1,62 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:51
+# Commandline: needle
+#    -endweight
+#    -asequence inputs/seq51.1.fas
+#    -bsequence inputs/seq51.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_res51.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_res51.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 292
+# Identity:      18/292 ( 6.2%)
+# Similarity:    29/292 ( 9.9%)
+# Gaps:         240/292 (82.2%)
+# Score: -93.0
+# 
+#
+#=======================================
+
+s1                 1 MK------------------------------------------------      2
+                     |.                                                
+s2                 1 MMPVDVCPRDRGSQWVWLEMGQCYSKKSVVPESDTSERSSMTSGSSESDI     50
+
+s1                 3 -----------DIGHL----------------------------------      7
+                                |.|.:                                  
+s2                51 PQENKVSKASLDTGQMAFTLAQLESLEICLKEAEEKAKALSEQLSVSEGT    100
+
+s1                 7 --------------------------------------------------      7
+                                                                       
+s2               101 KSKLLEQVSRLEEKLEAVDHKEASGGPYEKMVLVKDQCIQKLQAEVKASQ    150
+
+s1                 8 -QHLAQRLQWNRR------------AVNICGMHGWTKDL---SPHSRMPS     41
+                      |.:||:|:..::            |:.:..::...|.|   .|..|..|
+s2               151 EQLIAQKLKHEKKVKKLQTDLATANAITVLELNEKIKTLYEGKPAPREDS    200
+
+s1                42 MLE-----------------------------------------------     44
+                     :||                                               
+s2               201 LLEGFCGGLPPVEEGDRKISLIMELSTQVSLQTERITQLKEVLEEKERKI    250
+
+s1                45 -------------HVKHYMSC---------------------     52
+                                  .||....|                     
+s2               251 QQLEAERSPHPPQEVKDPPGCLPEAPVFSTHDIPPVVSDENL    292
+
+
+#---------------------------------------
+#---------------------------------------

@@ -1,0 +1,57 @@
+########################################
+# Program: water
+# Rundate: Sat 26 Sep 2020 01:34:25
+# Commandline: water
+#    -asequence inputs/seq7.1.fas
+#    -bsequence inputs/seq7.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/res7.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/res7.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 217
+# Identity:      44/217 (20.3%)
+# Similarity:    64/217 (29.5%)
+# Gaps:          80/217 (36.9%)
+# Score: 43.5
+# 
+#
+#=======================================
+
+s1               148 SPPYLLPAVESTTYSGCTTENLVQQIGERGIHF--------SIVSPRKLP    189
+                     ||..|:|          .|....:.|.::...|        .::....||
+s2               532 SPDGLIP----------WTRFCKENINDKNFPFWLWIESILELIKKHLLP    571
+
+s1               190 -----ALRLLFEKAAPPALLEPLQPPTDV---SQDPRHMVLVRGLVLPVG    231
+                          .:.....|....|||:..||.|.:   |:..|...:....|....
+s2               572 LWNDGCIMGFISKERERALLKDQQPGTFLLRFSESSREGAITFTWVERSQ    621
+
+s1               232 GGSAPG-----PLQSKQPVPLPPAAPSGATLSAAPQQPLPPVPPQYQVPG    276
+                     .|..|.     |...|:             |||.   ..|.:...|:|  
+s2               622 NGGEPDFHAVEPYTKKE-------------LSAV---TFPDIIRNYKV--    653
+
+s1               277 NLSAAQVAAQNAVEAAKNQKAGLGPRFSPITPLQQAAPGV------GPPF    320
+                           :||:|.                |..||:...|.:      |..:
+s2               654 ------MAAENI----------------PENPLKYLYPNIDKDHAFGKYY    681
+
+s1               321 S---QAPAPQLPPGPPG    334
+                     |   :||.|....||.|
+s2               682 SRPKEAPEPMELDGPKG    698
+
+
+#---------------------------------------
+#---------------------------------------

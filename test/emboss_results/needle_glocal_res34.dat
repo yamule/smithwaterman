@@ -1,0 +1,65 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:40
+# Commandline: needle
+#    -asequence inputs/seq34.1.fas
+#    -bsequence inputs/seq34.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_glocal_res34.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_glocal_res34.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 342
+# Identity:      32/342 ( 9.4%)
+# Similarity:    47/342 (13.7%)
+# Gaps:         244/342 (71.3%)
+# Score: 22.0
+# 
+#
+#=======================================
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2                 1 MLSPNHTIVTEFILLGLTDDPVLEKILFGVFLAIYLITLAGNLCMILLIR     50
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2                51 TNSQLQTPMYFFLGHLSFVDICYSSNVTPNMLHNFLSEQKTISYAGCFTQ    100
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2               101 CLLFIALVITEFYFLASMALDRYVAICSPLHYSSRMSKNICISLVTVPYM    150
+
+s1                 1 ------------------------------------------MAKYLAQI      8
+                                                               ..|.:|..
+s2               151 YGFLNGLSQTLLTFHLSFCGSLEINHFYCADPPLIMLACSDTRVKKMAMF    200
+
+s1                 9 IVMGVQVVGRAFARALRQ--EFAASRAAADARGRAGHRSAAASNLSGLSL     56
+                     :|.|..:....|...|..  .|||......|.||....|..||:|:.::|
+s2               201 VVAGFTLSSSLFIILLSYLFIFAAIFRIRSAEGRHKAFSTCASHLTIVTL    250
+
+s1                57 QEAQQILNVSKLSPEEVQKNYEHLFKV-----NDKSVGGS-----FY---     93
+                                        .|..||.:     ::|||..|     ||   
+s2               251 -------------------FYGTLFCMYVRPPSEKSVEESKIIAVFYTFL    281
+
+s1                94 --LQSKVVRAKERLDEELKIQAQEDREKGQMPHT--------    125
+                       :.:.::.:....|..|.||        ||...        
+s2               282 SPMLNPLIYSLRNRDVILAIQ--------QMIRGKSFCKIAV    315
+
+
+#---------------------------------------
+#---------------------------------------

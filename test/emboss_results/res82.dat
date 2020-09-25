@@ -1,0 +1,49 @@
+########################################
+# Program: water
+# Rundate: Sat 26 Sep 2020 01:35:12
+# Commandline: water
+#    -asequence inputs/seq82.1.fas
+#    -bsequence inputs/seq82.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/res82.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/res82.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 118
+# Identity:      24/118 (20.3%)
+# Similarity:    42/118 (35.6%)
+# Gaps:          27/118 (22.9%)
+# Score: 41.5
+# 
+#
+#=======================================
+
+s1                 3 AARDYAGALIRPLTFMGSQTKRVLFTPLMHPARPFRVSNHDRSSRRGVMA     52
+                     |.|.:.|:| :.||::|.|...:       ||.|                
+s2               427 AIRAHNGSL-QHLTWLGLQWNSL-------PALP----------------    452
+
+s1                53 SSLQELISKTLDALVIATGLVTLVLEEDGTVVDTEEFFQTLGDNTHFMIL    102
+                      .:::.:.:....|...|..:.....|...::|.|.|...:...:|..:.
+s2               453 -GIRKWLKQLFHRLPHETSRLETNAPESICILDLEVFLLGVVYTSHLQLK    501
+
+s1               103 EKGQKWMPGSQHVPTCSP    120
+                     ||...  ..|.:.|.|.|
+s2               502 EKCNS--HHSSYQPLCLP    517
+
+
+#---------------------------------------
+#---------------------------------------

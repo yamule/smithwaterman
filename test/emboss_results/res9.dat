@@ -1,0 +1,77 @@
+########################################
+# Program: water
+# Rundate: Sat 26 Sep 2020 01:34:26
+# Commandline: water
+#    -asequence inputs/seq9.1.fas
+#    -bsequence inputs/seq9.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/res9.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/res9.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 461
+# Identity:      83/461 (18.0%)
+# Similarity:   152/461 (33.0%)
+# Gaps:         171/461 (37.1%)
+# Score: 85.5
+# 
+#
+#=======================================
+
+s1               140 TIEKSWRELVPGHKEMSQELCHQQEALWELLTTELIYVRKLKIMTDLLAA    189
+                     |:.|:.|||:...|:            :|.:..|.:   |:|...::|..
+s2               875 TLAKTNRELLDVKKK------------FEDINQEFV---KIKDKNEILKR    909
+
+s1               190 GLLNLQRVGLLMEVSAETLF-----GNVPSLIRTHRSFWD---EVLG---    228
+                     .|.|.|.     ::.||.:.     ..:.||.::.|...|   |:|.   
+s2               910 NLENTQN-----QIKAEYISLAEHEAKMSSLSQSMRKVQDSNAEILANYR    954
+
+s1               229 ------PTLE-ETRASGQPLDPIGLQSGFLTFGQRFHPYVQYCLRVKQTM    271
+                           .||. |.:|..:.||.|                 |.|::||...
+s2               955 KGQEEIVTLHAEIKAQKKELDTI-----------------QECIKVKYAP    987
+
+s1               272 AYAREQQETNPLFHAFVQWCEKHKRSGRQMLCDLLIKPHQRITKYPLLLH    321
+                     ..:.|:             ||:..::..:.|.|.|.:..|   ||.:...
+s2               988 IVSFEE-------------CERKFKATEKELKDQLSEQTQ---KYSVSEE   1021
+
+s1               322 AVLKRSPEARAQEALNAMIEAVESFLRHINGQVRQGEEQESLAAAAQRIG    371
+                     .|.|...|   .:.|...|..::..||.....:.:..|.|          
+s2              1022 EVKKNKQE---NDKLKKEIFTLQKDLRDKTVLIEKSHEME----------   1058
+
+s1               372 PYEVLEPPSDEVEKNLRPFSTLDLTSPMLGVASEHTRQLLLEGPVRVKEG    421
+                       ..|...:||:.|.|:..|                              
+s2              1059 --RALSRKTDELNKQLKDLS------------------------------   1076
+
+s1               422 REGKLDVYLFLFSDVLLVTKPQRKADKAKVIRPPLMLEKLVCQPLRDPNS    471
+                                           :|..:.|.::     ||||.:..:..:.
+s2              1077 ----------------------QKYTEVKNVK-----EKLVEENAKQTSE   1099
+
+s1               472 FLLI-HLTEFQCVSSALLVHCPSPTDRAQWLEKTQQAQAALQKLKAEEYV    520
+                     .|.: :|.:.|.|          |.::.:.|:|:  ....::.|      
+s2              1100 ILAVQNLLQKQHV----------PLEQVEALKKS--LNGTIENL------   1131
+
+s1               521 QQKRELLTLYRDQDRESPSTRPSTPSLEGSQSSAEGRTPEFSTIIPHLVV    570
+                       |.||.::.|..::|..:.......||..::|:   .|    :..||.:
+s2              1132 --KEELKSMQRCYEKEQQTVTKLHQLLENQKNSS---VP----LAEHLQI   1172
+
+s1               571 TEDTDEDAPLV    581
+                     .|..:::..::
+s2              1173 KEAFEKEVGII   1183
+
+
+#---------------------------------------
+#---------------------------------------

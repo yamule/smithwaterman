@@ -1,0 +1,69 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:44
+# Commandline: needle
+#    -asequence inputs/seq40.1.fas
+#    -bsequence inputs/seq40.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_glocal_res40.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_glocal_res40.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 355
+# Identity:      43/355 (12.1%)
+# Similarity:    67/355 (18.9%)
+# Gaps:         201/355 (56.6%)
+# Score: 27.5
+# 
+#
+#=======================================
+
+s1                 1 MKVEFAPLNIQLARRLQTVAVLQWVLKYLLLGPMSIGITVMLIIHNYLFL     50
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1                51 YIPYLMWLYFDWHTPERGGRRSSWIKNWTLWKHFKDYFPIHLIKTQDLDP    100
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               101 SHNYIFGFHPHGIMAVGAFGNFSVNYSDFKDLFPGFTSYLHVLPLWFWCP    150
+                                                      .|..|.           
+s2                 1 ---------------------------------MGLLSQ-----------      6
+
+s1               151 VFREYVMS----VGLVSVSKKSVSYMVSK--EGGGNISVIVLGGAKESLD    194
+                       |::.:|    .|.|:::..|..::.|:  .|...:|.|:.........
+s2                 7 --RKWTLSGSQQTGCVALTVPSFPWVASRMHYGRKQVSWIIFLKIGAGCQ     54
+
+s1               195 AHPGKFTLFIRQRKG----FVKIALTHGASLVPVVSFGENELFKQTDNPE    240
+                     .|.|.....:|:::|    |........:.|.| .|.|.:.||.    |.
+s2                55 VHVGHDCSTLRRQQGAPWSFASSFRPAASPLAP-PSPGVSGLFP----PH     99
+
+s1               241 GSWIRTVQNKLQK-----IMGFALPLF-HARGVFQYNFGLMTYRKAIHTV    284
+                     ..|....|.:..|     |:|..|.|| |........:|    |..:.| 
+s2               100 ERWSGGSQTRCGKCVKMQILGSTLKLFRHPPSQVTRLWG----RHHLKT-    144
+
+s1               285 VGRPIPVRQT----LNPTQEQIEELHQTYMEELRKLFEEHKGKYGIPEHE    330
+                        |.|..|:    |||.:.....|.....:.|                 
+s2               145 ---PAPFLQSPGIQLNPGKVPASLLRLATWKPL-----------------    174
+
+s1               331 TLVLK    335
+                          
+s2               174 -----    174
+
+
+#---------------------------------------
+#---------------------------------------

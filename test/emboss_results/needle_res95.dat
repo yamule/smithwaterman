@@ -1,0 +1,78 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:35:21
+# Commandline: needle
+#    -endweight
+#    -asequence inputs/seq95.1.fas
+#    -bsequence inputs/seq95.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_res95.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_res95.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 498
+# Identity:      61/498 (12.2%)
+# Similarity:    96/498 (19.3%)
+# Gaps:         291/498 (58.4%)
+# Score: -86.5
+# 
+#
+#=======================================
+
+s1                 1 MDPARPLGLSILLLFLTEAALGDAAQEPTGNNAEICLLP----------L     40
+                     |               .|..|...|..    .|:|.::|          :
+s2                 1 M---------------CENQLKTKADA----TAQIEVIPCKICGDKSSGI     31
+
+s1                41 DYG-----PCRALLLRYYYDRYTQSC-RQFLYGGCEGNANNFYTWEACDD     84
+                     .||     .|:....|...:..:.|| ||   ..|..:..|....:.|  
+s2                32 HYGVITCEGCKGFFRRSQQNNASYSCPRQ---RNCLIDRTNRNRCQHC--     76
+
+s1                85 ACWRIEK---------VPKVCRLQVSVDDQCEGSTEKY------------    113
+                        |::|         ..|..|:.....|......:|:            
+s2                77 ---RLQKCLALGMSRDAVKFGRMSKKQRDSLYAEVQKHQQRLQEQRQQQS    123
+
+s1               114 -----------------FFNLSSMTCEKFFSG---------GCHRNRIEN    137
+                                      ..||::.|...:.:|         |.:......
+s2               124 GEAEALARVYSSSISNGLSNLNNETSGTYANGHVIDLPKSEGYYNVDSGQ    173
+
+s1               138 RFPDEA--TCMGFCAPKKIP---------SFCYSPKDEGLCSANVT----    172
+                     ..||::  ...|....|:.|         .|.||..:.|..:..:|    
+s2               174 PSPDQSGLDMTGIKQIKQEPIYDLTSVPNLFTYSSFNNGQLAPGITMTEI    223
+
+s1               173 ----RYYFNPRYRTC------------DAFTY------------------    188
+                         :........||            ...||                  
+s2               224 DRIAQNIIKSHLETCQYTMEELHQLAWQTHTYEEIKAYQSKSREALWQQC    273
+
+s1               189 ------------------TG----CGGNDNNFVSREDC------------    204
+                                       ||    | .||...:.:..|            
+s2               274 AIQITHAIQYVVEFAKRITGFMELC-QNDQILLLKSGCLEVVLVRMCRAF    322
+
+s1               205 -----------------------------------KRACAKAL-------    212
+                                                        |..|:..|       
+s2               323 NPLNNTVLFEGKYGGMQMFKALGSDDLVNEAFDFAKNLCSLQLTEEEIAL    372
+
+s1               213 ------------------KKKKKMPKLRFASR--IRK-------------    229
+                                       |.:|...|:.||.:  |:|             
+s2               373 FSSAVLISPDRAWLIEPRKVQKLQEKIYFALQHVIQKNHLDDETLAKLIA    422
+
+s1               230 ---------------------------------IRKKQF---------    235
+                                                      :.|:.|         
+s2               423 KIPTITAVCNLHGEKLQVFKQSHPEIVNTLFPPLYKELFNPDCATGCK    470
+
+
+#---------------------------------------
+#---------------------------------------

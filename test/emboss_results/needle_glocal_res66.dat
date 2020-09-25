@@ -1,0 +1,129 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:35:01
+# Commandline: needle
+#    -asequence inputs/seq66.1.fas
+#    -bsequence inputs/seq66.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_glocal_res66.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_glocal_res66.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 1132
+# Identity:       5/1132 ( 0.4%)
+# Similarity:    11/1132 ( 1.0%)
+# Gaps:        1114/1132 (98.4%)
+# Score: 17.0
+# 
+#
+#=======================================
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2                 1 MEPWPCSPGGGGGTRARHVIINVGGCRVRLAWAALARCPLARLERLRACR     50
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2                51 GHDDLLRVCDDYDVSRDEFFFDRSPCAFRAIVALLRAGKLRLLRGPCALA    100
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2               101 FRDELAYWGIDEARLERCCLRRLRRREEEAAEARAGPTERGAQGSPARAL    150
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2               151 GPRGRLQRGRRRLRDVVDNPHSGLAGKLFACVSVSFVAVTAVGLCLSTMP    200
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2               201 DIRAEEERGECSPKCRSLFVLETVCVAWFSFEFLLRSLQAESKCAFLRAP    250
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2               251 LNIIDILALLPFYVSLLLGLAAGPGGTKLLERAGLVLRLLRALRVLYVMR    300
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2               301 LARHSLGLRSLGLTMRRCAREFGLLLLFLCVAMALFAPLVHLAERELGAR    350
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2               351 RDFSSVPASYWWAVISMTTVGYGDMVPRSLPGQVVALSSILSGILLMAFP    400
+
+s1                 1 ------------------------------------------------MS      2
+                                                                     .:
+s2               401 VTSIFHTFSRSYSELKEQQQRAASPEPALQEDSTHSATATEDSSQGPDSA    450
+
+s1                 3 AIPAEESDQLLIRPLGAGQEVGRSCIILEFKGRKIMLDCGIHPGLEGMDA     52
+                     .:..:.:|.|.:|   ||:                               
+s2               451 GLADDSADALWVR---AGR-------------------------------    466
+
+s1                53 LPYIDLIDPAEIDLLLISHFHLDHCGALPWFLQKTSFKGRTFMTHATKAI    102
+                                                                       
+s2               466 --------------------------------------------------    466
+
+s1               103 YRWLLSDYVKVSNISADDMLYTETDLEESMDKIETINFHEVKEVAGIKFW    152
+                                                                       
+s2               466 --------------------------------------------------    466
+
+s1               153 CYHAGHVLGAAMFMIEIAGVKLLYTGDFSRQEDRHLMAAEIPNIKPDILI    202
+                                                                       
+s2               466 --------------------------------------------------    466
+
+s1               203 IESTYGTHIHEKREEREARFCNTVHDIVNRGGRGLIPVFALGRAQELLLI    252
+                                                                       
+s2               466 --------------------------------------------------    466
+
+s1               253 LDEYWQNHPELHDIPIYYASSLAKKCMAVYQTYVNAMNDKIRKQININNP    302
+                                                                       
+s2               466 --------------------------------------------------    466
+
+s1               303 FVFKHISNLKSMDHFDDIGPSVVMASPGMMQSGLSRELFESWCTDKRNGV    352
+                                                                       
+s2               466 --------------------------------------------------    466
+
+s1               353 IIAGYCVEGTLAKHIMSEPEEITTMSGQKLPLKMSVDYISFSAHTDYQQT    402
+                                                                       
+s2               466 --------------------------------------------------    466
+
+s1               403 SEFIRALKPPHVILVHGEQNEMARLKAALIREYEDNDEVHIEVHNPRNTE    452
+                                                                       
+s2               466 --------------------------------------------------    466
+
+s1               453 AVTLNFRGEKLAKVMGFLADKKPEQGQRVSGILVKRNFNYHILSPCDLSN    502
+                                                                       
+s2               466 --------------------------------------------------    466
+
+s1               503 YTDLAMSTVKQTQAIPYTGPFNLLCYQLQKLTGDVEELEIQEKPALKVFK    552
+                                                                       
+s2               466 --------------------------------------------------    466
+
+s1               553 NITVIQEPGMVVLEWLANPSNDMYADTVTTVILEVQSNPKIRKGAVQKVS    602
+                                                                       
+s2               466 --------------------------------------------------    466
+
+s1               603 KKLEMHVYSKRLEIMLQDIFGEDCVSVKDDSILSVTVDGKTANLNLETRT    652
+                                                                       
+s2               466 --------------------------------------------------    466
+
+s1               653 VECEEGSEDDESLREMVELAAQRLYEALTPVH    684
+                                                     
+s2               466 --------------------------------    466
+
+
+#---------------------------------------
+#---------------------------------------

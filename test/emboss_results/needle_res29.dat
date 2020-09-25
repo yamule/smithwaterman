@@ -1,0 +1,62 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:37
+# Commandline: needle
+#    -endweight
+#    -asequence inputs/seq29.1.fas
+#    -bsequence inputs/seq29.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_res29.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_res29.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 263
+# Identity:      46/263 (17.5%)
+# Similarity:    65/263 (24.7%)
+# Gaps:         149/263 (56.7%)
+# Score: -1.0
+# 
+#
+#=======================================
+
+s1                 1 M--------ALLPVLFLVTVLL--PSLPAEGKDPAFTALLTTQLQVQR-E     39
+                     |        |||.:|||....|  .|.|. |...:.:.|.|:.||.|| .
+s2                 1 MDPQTAPSRALLLLLFLHLAFLGGRSHPL-GSPGSASDLETSGLQEQRNH     49
+
+s1                40 IVNKHNELR--------KAVSPPASNMLKMEWSREVTTNAQRWANKCTLQ     81
+                     :..|.:||:        ...||..:.:.|   ||||.|...|...|..| 
+s2                50 LQGKLSELQVEQTSLEPLQESPRPTGVWK---SREVATEGIRGHRKMVL-     95
+
+s1                82 HSDPEDRKTSTRCGENLYMSSDPTSWSSAIQSWYDEILDFVYGV-GPKSP    130
+                                                              |.: .|:||
+s2                96 -----------------------------------------YTLRAPRSP    104
+
+s1               131 NAVVGHYTQLVWYSTYQVGCGIAYCPNQDSLKYYYVCQYCPAGNNMNRKN    180
+                     ..|                                               
+s2               105 KMV-----------------------------------------------    107
+
+s1               181 TPYQQGTPCAGCPDDCDKGLCTNSCQYQDLLSNCDSLKNTAGCEHELLKE    230
+                         ||:.|.|              :..|.:|:...|    ||  ::|:.
+s2               108 ----QGSGCFG--------------RKMDRISSSSGL----GC--KVLRR    133
+
+s1               231 KCKATCLCENKIY    243
+                                 :
+s2               134 ------------H    134
+
+
+#---------------------------------------
+#---------------------------------------

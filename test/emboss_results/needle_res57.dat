@@ -1,0 +1,94 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:55
+# Commandline: needle
+#    -endweight
+#    -asequence inputs/seq57.1.fas
+#    -bsequence inputs/seq57.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_res57.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_res57.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 677
+# Identity:     108/677 (16.0%)
+# Similarity:   174/677 (25.7%)
+# Gaps:         303/677 (44.8%)
+# Score: -30.5
+# 
+#
+#=======================================
+
+s1                 1 MELDLSPPHLSSSPEDLCPAPGTPPGTPRPPDTPLPEEVKRSQPLLIPTT     50
+                     |                                      .|:.|      
+s2                 1 M--------------------------------------ARAGP------      6
+
+s1                51 GRKLREEERRATSLPSIPNPFPELCSPPSQSPILGGPSSARGLLPRDASR    100
+                               |..|.:|....|...|....|.::...|..:.|.....:|
+s2                 7 ----------AWLLLAIWVVLPSWLSSAKVSSLIERISDPKDLKKLLRTR     46
+
+s1               101 PHVVKVYSEDGACRSVEVAAGATARHVCEMLVQRAHALSDE---TWGLVE    147
+                     .:|:.:||:.      ||||   ..|: .:|...|.|:..:   .|  |:
+s2                47 NNVLVLYSKS------EVAA---ENHL-RLLSTVAQAVKGQGTICW--VD     84
+
+s1               148 CHPHLALERGLEDHESVVEVQAAWPVGGDSRFVFRKNFAKYELFKSSPHS    197
+                     |                          ||:.        ..:|.|.....
+s2                85 C--------------------------GDAE--------SRKLCKKMKVD    100
+
+s1               198 LFPEKMVSSCLDAHTGISHEDLIQNFLNAGSFPEIQGFLQLRGSGRKLWK    247
+                     |.|:...........|..|.:    :..|.:|..|..||: ...|..||:
+s2               101 LSPKDKKVELFHYQDGAFHTE----YNRAVTFKSIVAFLK-DPKGPPLWE    145
+
+s1               248 RFFCFLRRSGLYYSTKGTSKDPRHLQYVADV------NESNVYVVTQGRK    291
+                     .              ...:||..||....|.      .|..:.::     
+s2               146 E--------------DPGAKDVVHLDSEKDFRRLLKKEEKPLLIM-----    176
+
+s1               292 LYG---------MPTDFGFCVKPNKLRNGH---KGLRIFCSEDEQSR---    326
+                     .|.         ||   .|.....:|| ||   .|:.::.||.|..:   
+s2               177 FYAPWCSMCKRMMP---HFQKAATQLR-GHAVLAGMNVYSSEFENIKEEY    222
+
+s1               327 -------TCWLAAFR-LFKYG---------VQLYKNYQQAQSR-------    352
+                            .|:....| ||:|.         |:..||.|..|.:       
+s2               223 SVRGFPTICYFEKGRFLFQYDNYGSTAEDIVEWLKNPQPPQPQVPETPWA    272
+
+s1               353 -------HL-----------HPSCLGSPPLRSASDNTLVAMDFSGHAGRV    384
+                            ||           |.|.|           .:....:.||..::
+s2               273 DEGGSVYHLTDEDFDQFVKEHSSVL-----------VMFHAPWCGHCKKM    311
+
+s1               385 ---IENPREAL-------------SVALEEAQAWRKKTNHRLSLPMPASG    418
+                        .|...|||             ...:.:|.|.|...:...:|....:|
+s2               312 KPEFEKAAEALHGEADSSGVLAAVDATVNKALAERFHISEFPTLKYFKNG    361
+
+s1               419 TSLSAAIHRTQL----WFHG-------RISREESQ----RLIGQQGLVDG    453
+                     ...:..:.||:.    |...       ..:.||.|    .|:|..     
+s2               362 EKYAVPVLRTKKKFLEWMQNPEAPPPPEPTWEEQQTSVLHLVGDN-----    406
+
+s1               454 LFLVRESQRNPQGFVL----------------------------------    469
+                        .||:.:..:..::                                  
+s2               407 ---FRETLKKKKHTLVMFYAPWCPHCKKVIPHFTATADAFKDDRKIACAA    453
+
+s1               470 ---------SLCHLQKVKHYLILPSEEEGRLYFSMDDGQTR--FTDLLQL    508
+                              .||..:.||.|........|:.....|..:|.  ||:.::.
+s2               454 VDCVKDKNQDLCQQEAVKGYPTFHYYHYGKFAEKYDSDRTELGFTNYIRA    503
+
+s1               509 V---EFHQLNRGILPCLLRHCCTRVAL    532
+                     :   :..:|.:           .:..|
+s2               504 LREGDHERLGK-----------KKEEL    519
+
+
+#---------------------------------------
+#---------------------------------------

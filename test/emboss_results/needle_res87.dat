@@ -1,0 +1,74 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:35:15
+# Commandline: needle
+#    -endweight
+#    -asequence inputs/seq87.1.fas
+#    -bsequence inputs/seq87.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_res87.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_res87.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 445
+# Identity:      60/445 (13.5%)
+# Similarity:    87/445 (19.6%)
+# Gaps:         260/445 (58.4%)
+# Score: -73.0
+# 
+#
+#=======================================
+
+s1                 1 MRSPLCWLLPLLILASVAQGQPTRRPRPGTGPGRRPRPRPRPTPSFPQPD     50
+                     |..           ..|.:|                              
+s2                 1 MSG-----------GGVIRG------------------------------      9
+
+s1                51 EPAEPTD-------LPPPLPP-----------------------GPPSIF     70
+                      ||...|       |||.:..                       |||..|
+s2                10 -PAGNNDCRIYVGNLPPDIRTKDIEDVFYKYGAIRDIDLKNRRGGPPFAF     58
+
+s1                71 PDCPRECYCPPDFPSALYCDSRNLRKVPVIPPRIHYLYLQNNFITELPVE    120
+                     .    |...|.|...|:|                                
+s2                59 V----EFEDPRDAEDAVY--------------------------------     72
+
+s1               121 SFQNATGLRWINLDNNRIRKIDQRVLEKLPGLVFLYMEKNQLEEVP----    166
+                           |....:.|..|:|                       .|.|    
+s2                73 ------GRDGYDYDGYRLR-----------------------VEFPRSGR     93
+
+s1               167 -----------SALPRNL--EQLRLSQNH--ISRIPP-GVFSKLENLLLL    200
+                                ...||..  ...|.|:|.  :|.:|| |.:..|::    
+s2                94 GTGRGGGGGGGGGAPRGRYGPPSRRSENRVVVSGLPPSGSWQDLKD----    139
+
+s1               201 DLQHNRLSDGVFKPDTFH---GLKNLMQLNLAHNILRKMPPRVPTAIHQL    247
+                        |.|.:..|...|.:.   |:...::.......:||            
+s2               140 ---HMREAGDVCYADVYRDGTGVVEFVRKEDMTYAVRK------------    174
+
+s1               248 YLDSNKIETIPNGYFKSFP-NLAFIRL--------NYNKLTDRGLPKN-S    287
+                      ||:.|        |:|.. ..|:||:        :|.:...|...:: |
+s2               175 -LDNTK--------FRSHEGETAYIRVKVDGPRSPSYGRSRSRSRSRSRS    215
+
+s1               288 FNISNLLVLHLSHNRISSVPAINNRLEHLYLNNNSIEKINGTQICPNDLV    337
+                     .:.||......|..|....|..:.|                         
+s2               216 RSRSNSRSRSYSPRRSRGSPRYSPR-------------------------    240
+
+s1               338 AFHDFSSDLENVPHLRYLRLDGNYLKPPIPLDLMMCFRLLQSVVI    382
+                       |..|...                                   .
+s2               241 --HSRSRSR-----------------------------------T    248
+
+
+#---------------------------------------
+#---------------------------------------

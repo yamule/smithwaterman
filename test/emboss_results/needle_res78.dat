@@ -1,0 +1,74 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:35:09
+# Commandline: needle
+#    -endweight
+#    -asequence inputs/seq78.1.fas
+#    -bsequence inputs/seq78.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_res78.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_res78.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 436
+# Identity:      63/436 (14.4%)
+# Similarity:   102/436 (23.4%)
+# Gaps:         216/436 (49.5%)
+# Score: -35.5
+# 
+#
+#=======================================
+
+s1                 1 MTARAWASWR----SSALLLLLVPGYFPLSHPMTVAGPVGGSLSVQCRYE     46
+                     |:.......:    .|...|.:.|.|..:   :..:...|..:......:
+s2                 1 MSELKDCPLQFHDFKSVDHLKVCPRYTAV---LARSEDDGIGIEELDTLQ     47
+
+s1                47 KEHRTLNKFWCRPPQILRCDKIVET-------------------------     71
+                     .|..||.....|..::|..:..:.|                         
+s2                48 LELETLLSSASRRLRVLEAETQILTDWQDKKGDRRFLKLGRDHELGAPPK     97
+
+s1                72 ---------KGSAGKRNGRVSIRDSPANL-------SFT---VTLENLTE    102
+                              :|.||...|....|....||       .||   :.:..:.:
+s2                98 HGKPKKQKLEGKAGHGPGPGPGRPKSKNLQPKIQEYEFTDDPIDVPRIPK    147
+
+s1               103 EDA-GTYWCGVDTPWLRD------------FHDPIVEVEVSVFPA-----    134
+                     .|| ..:|..|: |:..|            ...|..|.|....|.     
+s2               148 NDAPNRFWASVE-PYCADITSEEVRTLEELLKPPEDEAEHYKIPPLGKHY    196
+
+s1               135 ---------------GTTTASSPQSSMGTSGPPTKLPV------------    157
+                                    |...|:......|..||.|:|..            
+s2               197 SQRWAQEDLLEEQKDGARAAAVADKKKGLMGPLTELDTKDVDALLKKSEA    246
+
+s1               158 -HTWP-------SVTRK---------------DSPEPS------------    172
+                      |..|       ::|::               |||.|.            
+s2               247 QHEQPEDGCPFGALTQRLLQALVEENIISPMEDSPIPDMSGKESGADGAS    296
+
+s1               173 ------------PHPGSLFSNVRFLLL------------------VLLEL    192
+                                 ||..||.|.::..|:                  ||.||
+s2               297 TSPRNQNKPFSVPHTKSLESRIKEELIAQGLLESEDRPAEDSEDEVLAEL    346
+
+s1               193 PLLLSMLGAVLWVNRPQR--------------------------------    210
+                     ....:.|.|:...||.::                                
+s2               347 RKRQAELKALSAHNRTKKHDLLRLAKEEVSRQELRQRVRMADNEVMDAFR    396
+
+s1               211 ---SSRSRQNWP--KGENQ-----------------    224
+                        ::|.::..|  |.::|                 
+s2               397 KIMAARQKKRTPTKKEKDQAWKTLKERESILKLLDG    432
+
+
+#---------------------------------------
+#---------------------------------------

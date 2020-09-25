@@ -1,0 +1,78 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:59
+# Commandline: needle
+#    -endweight
+#    -asequence inputs/seq63.1.fas
+#    -bsequence inputs/seq63.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_res63.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_res63.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 489
+# Identity:      44/489 ( 9.0%)
+# Similarity:    85/489 (17.4%)
+# Gaps:         344/489 (70.3%)
+# Score: -105.5
+# 
+#
+#=======================================
+
+s1                 1 M-----------------------------------------------AG      3
+                     |                                               ..
+s2                 1 MNFTPTHTPVCRKRTVVSKRGVAVSGPTKRRGMADSLESTPLPSPEDRLA     50
+
+s1                 4 ELTPEEE--AQYKKAFSAVDTDGNGTINAQELGAALKATGKNLSE-----     46
+                     :|.|.:|  ..|:|..:..:.:....:...||... ...|::..|     
+s2                51 KLHPSKELLEYYQKKMAECEAENEDLLKKLELYKE-ACEGQHKLECDLQQ     99
+
+s1                47 -----AQLRKLISEVD--------------SDGD----------------     61
+                          |:|:|.:|::.              |:.|                
+s2               100 REEEIAELQKALSDMQVCLFQEREHVLRLYSENDRLRIRELEDKKKIQNL    149
+
+s1                62 --------GEISF----------------------QEFLTAAKKA-----     76
+                             ||:::                      ::..::|.||     
+s2               150 LALVGTDAGEVTYFCKEPPHKVTILQKTIQAVGECEQSESSAFKADPKIS    199
+
+s1                76 --------------------------------------------------     76
+                                                                       
+s2               200 KRRPSRERKESSEHYQRDIQTLILQVEALQAQLGEQTKLSREQIEGLIED    249
+
+s1                77 -RAGLEDLQV-------------------------------AFRAFDQDG     94
+                      |..||::||                               ..|:.:|:.
+s2               250 RRIHLEEIQVQHQRNQNKIKELTKNLHHTQELLYESTKDFLQLRSENQNK    299
+
+s1                95 DGHITVD-------------ELRRAMAGLGQPLP----------------    115
+                     :....::             :.::....:|:.||                
+s2               300 EKSWMLEKDNLMSKIKQYRVQCKKKEDKIGKVLPVMHESHHAQSEYIKSL    349
+
+s1               116 ---------------------QEEL------DAMIREADVDQDGRV----    134
+                                          :|||      :.|.||...|:..::    
+s2               350 KDKLVQEKKLSNMYQEQCISLEEELARIREEEGMRREIFKDRTNKMGKRL    399
+
+s1               135 -----NYE--EFARMLAQE-------------------------------    146
+                          .||  |..|:|..|                               
+s2               400 QIMTKRYEALERRRILEVEGFKTDIKVLRQKLKDLEQMLYKATVNARANQ    449
+
+s1               146 ---------------------------------------    146
+                                                            
+s2               450 DLALLCEVRDSNRRAHKIQGELKNLKSKVFGLENELRLC    488
+
+
+#---------------------------------------
+#---------------------------------------

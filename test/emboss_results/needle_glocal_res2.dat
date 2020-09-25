@@ -1,0 +1,77 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:22
+# Commandline: needle
+#    -asequence inputs/seq2.1.fas
+#    -bsequence inputs/seq2.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_glocal_res2.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_glocal_res2.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 459
+# Identity:       7/459 ( 1.5%)
+# Similarity:    18/459 ( 3.9%)
+# Gaps:         418/459 (91.1%)
+# Score: 23.5
+# 
+#
+#=======================================
+
+s1                 1 MPVKCCFYRSPTAETMTWSENMDTLLANQAGLDAFRIFLKSEFSEENVEF     50
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1                51 WLACEDFKKTKNADKIASKAKMIYSEFIEADAPKEINIDFGTRDLISKNI    100
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               101 AEPTLKCFDEAQKLIYCLMAKDSFPRFLKSEIYKK----LVNSQQVPNHK    146
+                                ...|..:.:...:..|:...::::    :.|...:.||.
+s2                 1 -----------MDNITWMASHTGWSDFILMGLFRQSKHPMANITWMANHT     39
+
+s1               147 KWLPFL--------------------------------------------    152
+                     .|..|:                                            
+s2                40 GWSDFILLGLFRQSKHPALLCVVIFVVFLMALSGNAVLILLIHCDAHLHT     89
+
+s1               152 --------------------------------------------------    152
+                                                                       
+s2                90 PMYFFISQLSLMDMAYISVTVPKMLLDQVMGVNKISAPECGMQMFFYVTL    139
+
+s1               152 --------------------------------------------------    152
+                                                                       
+s2               140 AGSEFFLLATMAYDRYVAICHPLRYPVLMNHRVCLFLSSGCWFLGSVDGF    189
+
+s1               152 --------------------------------------------------    152
+                                                                       
+s2               190 TFTPITMTFPFRGSREIHHFFCEVPAVLNLSCSDTSLYEIFMYLCCVLML    239
+
+s1               152 --------------------------------------------------    152
+                                                                       
+s2               240 LIPVVIISSSYLLILLTIHGMNSAEGRKKAFATCSSHLTVVILFYGAAIY    289
+
+s1               152 --------------------------------------------------    152
+                                                                       
+s2               290 TYMLPSSYHTPEKDMMVSVFYTILTPVVNPLIYSLRNKDVMGALKKMLTV    339
+
+s1               152 ---------    152
+                              
+s2               340 EPAFQKAME    348
+
+
+#---------------------------------------
+#---------------------------------------

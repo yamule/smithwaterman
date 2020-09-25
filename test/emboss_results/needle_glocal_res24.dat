@@ -1,0 +1,121 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:35
+# Commandline: needle
+#    -asequence inputs/seq24.1.fas
+#    -bsequence inputs/seq24.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_glocal_res24.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_glocal_res24.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 1004
+# Identity:      14/1004 ( 1.4%)
+# Similarity:    17/1004 ( 1.7%)
+# Gaps:         972/1004 (96.8%)
+# Score: 27.5
+# 
+#
+#=======================================
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2                 1 MSVDPLSSKALKIKRELSENTPHLSDEALMGLSVRELNRHLRGLSAEEVT     50
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2                51 RLKQRRRTLKNRGYAASCRVKRVCQKEELQKQKSELEREVDKLARENAAM    100
+
+s1                 1 --------------MGLKARRAAGAAG------------------GGGDG     18
+                                   .|. ||..|.|.|                  |.|.|
+s2               101 RLELDALRGKCEALQGF-ARSVAAARGPATLVAPASVITIVKSTPGSGSG    149
+
+s1                19 GGGGGGAANPAGGDAAAAGDEERKVGLAPGDVEQVTLALGAGADKDGTLL     68
+                     ...|   .:||.|.|:.:                                
+s2               150 PAHG---PDPAHGPASCS--------------------------------    164
+
+s1                69 LEGGGRDEGQRRTPQGIGLLAKTPLSRPVKRNNAKYRRIQTLIYDALERP    118
+                                                                       
+s2               164 --------------------------------------------------    164
+
+s1               119 RGWALLYHALVFLIVLGCLILAVLTTFKEYETVSGDWLLLLETFAIFIFG    168
+                                                                       
+s2               164 --------------------------------------------------    164
+
+s1               169 AEFALRIWAAGCCCRYKGWRGRLKFARKPLCMLDIFVLIASVPVVAVGNQ    218
+                                                                       
+s2               164 --------------------------------------------------    164
+
+s1               219 GNVLATSLRSLRFLQILRMLRMDRRGGTWKLLGSAICAHSKELITAWYIG    268
+                                                                       
+s2               164 --------------------------------------------------    164
+
+s1               269 FLTLILSSFLVYLVEKDVPEVDAQGEEMKEEFETYADALWWGLITLATIG    318
+                                                                       
+s2               164 --------------------------------------------------    164
+
+s1               319 YGDKTPKTWEGRLIAATFSLIGVSFFALPAGILGSGLALKVQEQHRQKHF    368
+                                                                       
+s2               164 --------------------------------------------------    164
+
+s1               369 EKRRKPAAELIQAAWRYYATNPNRIDLVATWRFYESVVSFPFFRKEQLEA    418
+                                                                       
+s2               164 --------------------------------------------------    164
+
+s1               419 ASSQKLGLLDRVRLSNPRGSNTKGKLFTPLNVDAIEESPSKEPKPVGLNN    468
+                                                                       
+s2               164 --------------------------------------------------    164
+
+s1               469 KERFRTAFRMKAYAFWQSSEDAGTGDPMAEDRGYGNDFPIEDMIPTLKAA    518
+                                                                       
+s2               164 --------------------------------------------------    164
+
+s1               519 IRAVRILQFRLYKKKFKETLRPYDVKDVIEQYSAGHLDMLSRIKYLQTRI    568
+                                                                       
+s2               164 --------------------------------------------------    164
+
+s1               569 DMIFTPGPPSTPKHKKSQKGSAFTFPSQQSPRNEPYVARPSTSEIEDQSM    618
+                                                                       
+s2               164 --------------------------------------------------    164
+
+s1               619 MGKFVKVERQVQDMGKKLDFLVDMHMQHMERLQVQVTEYYPTKGTSSPAE    668
+                                                                       
+s2               164 --------------------------------------------------    164
+
+s1               669 AEKKEDNRYSDLKTIICNYSETGPPEPPYSFHQVTIDKVSPYGFFAHDPV    718
+                                                                       
+s2               164 --------------------------------------------------    164
+
+s1               719 NLPRGGPSSGKVQATPPSSATTYVERPTVLPILTLLDSRVSCHSQADLQG    768
+                                                                       
+s2               164 --------------------------------------------------    164
+
+s1               769 PYSDRISPRQRRSITRDSDTPLSLMSVNHEELERSPSGFSISQDRDDYVF    818
+                                                                       
+s2               164 --------------------------------------------------    164
+
+s1               819 GPNGGSSWMREKRYLAEGETDTDTDPFTPSGSMPLSSTGDGISDSVWTPS    868
+                                                                       
+s2               164 --------------------------------------------------    164
+
+s1               869 NKPI    872
+                         
+s2               164 ----    164
+
+
+#---------------------------------------
+#---------------------------------------

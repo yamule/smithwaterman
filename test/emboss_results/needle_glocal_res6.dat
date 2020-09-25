@@ -1,0 +1,149 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:24
+# Commandline: needle
+#    -asequence inputs/seq6.1.fas
+#    -bsequence inputs/seq6.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_glocal_res6.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_glocal_res6.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 1380
+# Identity:     102/1380 ( 7.4%)
+# Similarity:   180/1380 (13.0%)
+# Gaps:        1015/1380 (73.6%)
+# Score: 54.5
+# 
+#
+#=======================================
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2                 1 MSWFSGLLVPKVDERKTAWGERNGQKRSRRRGTRAGGFCTPRYMSCLRDA     50
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2                51 EPPSPTPAGPPRCPWQDDAFIRRGGPGKGKELGLRAVALGFEDTEVTTTA    100
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2               101 GGTAEVAPDAVPRSGRSCWRRLVQVFQSKQFRSAKLERLYQRYFFQMNQS    150
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2               151 SLTLLMAVLVLLTAVLLAFHAAPARPQPAYVALLACAAALFVGLMVVCNR    200
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2               201 HSFRQDSMWVVSYVVLGILAAVQVGGALAADPRSPSAGLWCPVFFVYIAY    250
+
+s1                 1 --------------------------------------------MHWLRK      6
+                                                                 :.....
+s2               251 TLLPIRMRAAVLSGLGLSTLHLILAWQLNRGDAFLWKQLGANVLLFLCTN    300
+
+s1                 7 VQGLCTLWGTQMSSRTLYINSRQLVS--LQWGHQEVPAKFNFASDVLDHW     54
+                     |.|:||.:..::|.|..:..:|..:.  |...|:....:....|.:..|.
+s2               301 VIGICTHYPAEVSQRQAFQETRGYIQARLHLQHENRQQERLLLSVLPQHV    350
+
+s1                55 A-DMEKAGKRLPSPALWWVNGKGKELMWNFRELSENSQQAANVLSGACGL    103
+                     | :|::.           :|.|.:::|  |.::.               :
+s2               351 AMEMKED-----------INTKKEDMM--FHKIY---------------I    372
+
+s1               104 QRGDRVAVVLPRVPEWWLVILGCIRAGLIFMPGTIQMKSTDILYRLQMSK    153
+                     |:.|.|:::...:                  .|...:.|       |.:.
+s2               373 QKHDNVSILFADI------------------EGFTSLAS-------QCTA    397
+
+s1               154 AKAIVAGDEVIQEVDTVASECPSLRIKLLVSEKSCDGWLNFKKLLNEAST    203
+                     .:.::..:|:....|.:|:|...||||:|.....|...|...:    |..
+s2               398 QELVMTLNELFARFDKLAAENHCLRIKILGDCYYCVSGLPEAR----ADH    443
+
+s1               204 THHCVETGSQEASAIYFTSGTSGL---PKMAEHSYSSLGLKAKMDAGWTG    250
+                     .|.|||.|.....||......:|:   .::..||       .::..|..|
+s2               444 AHCCVEMGVDMIEAISLVREVTGVNVNMRVGIHS-------GRVHCGVLG    486
+
+s1               251 LQASDI-MWTISDTGWILNILCSLMEPWALGACTFVHLLPKFDPLVILKT    299
+                     |:.... :|:...|      |.:.||  |.|....:|:     ....|:.
+s2               487 LRKWQFDVWSNDVT------LANHME--AGGRAGRIHI-----TRATLQY    523
+
+s1               300 LS-SYPIKSMMGAPIVYRMLLQQDLSSY-KFPHLQNCVTVGESLLPETLE    347
+                     |: .|.::...|.          :.::| |..|::..:.:|.|       
+s2               524 LNGDYEVEPGRGG----------ERNAYLKEQHIETFLILGAS-------    556
+
+s1               348 NWRAQTGLDIRESYGQTETGLTCMVSKTMKIKPGYMGTAASCYDVQIIDD    397
+                                    |.......|::|..:.:...|              
+s2               557 ---------------QKRKEEKAMLAKLQRTRANSM--------------    577
+
+s1               398 KGNVLPPGTEGDIGIRV---KPIRPIGIFSGYVDNPDKTAANIRGDFWLL    444
+                      ..::|.........|.   |..|.:||.....||               
+s2               578 -EGLMPRWVPDRAFSRTKDSKAFRQMGIDDSSKDN---------------    611
+
+s1               445 GDRGIKD----EDGYFQFMGRANDIINSSGYRIGPSEVENALMEHPAVVE    490
+                       ||.:|    ||...:|:.||.|                          
+s2               612 --RGTQDALNPEDEVDEFLSRAID--------------------------    633
+
+s1               491 TAVISSPDPVRGEVVKAFVVLASQFLSHDPEQLTKELQQHVKSVTAPYKY    540
+                        ..|.|.:|.:.|:.|:      |:...|.|.|             ||
+s2               634 ---ARSIDQLRKDHVRRFL------LTFQREDLEK-------------KY    661
+
+s1               541 PRKIEFVLNLPKTVTGKIQRAKLRDKEWKMSGKARAQ-------------    577
+                     .||::     |:                  .|...|.             
+s2               662 SRKVD-----PR------------------FGAYVACALLVFCFICFIQL    688
+
+s1               577 --------------------------------------------------    577
+                                                                       
+s2               689 LIFPHSTLMLGIYASIFLLLLITVLICAVYSCGSLFPKALQRLSRSIVRS    738
+
+s1               577 --------------------------------------------------    577
+                                                                       
+s2               739 RAHSTAVGIFSVLLVFTSAIANMFTCNHTPIRSCAARMLNLTPADITACH    788
+
+s1               577 --------------------------------------------------    577
+                                                                       
+s2               789 LQQLNYSLGLDAPLCEGTMPTCSFPEYFIGNMLLSLLASSVFLHISSIGK    838
+
+s1               577 --------------------------------------------------    577
+                                                                       
+s2               839 LAMIFVLGLIYLVLLLLGPPATIFDNYDLLLGVHGLASSNETFDGLDCPA    888
+
+s1               577 --------------------------------------------------    577
+                                                                       
+s2               889 AGRVALKYMTPVILLVFALALYLHAQQVESTARLDFLWKLQATGEKEEME    938
+
+s1               577 --------------------------------------------------    577
+                                                                       
+s2               939 ELQAYNRRLLHNILPKDVAAHFLARERRNDELYYQSCECVAVMFASIANF    988
+
+s1               577 --------------------------------------------------    577
+                                                                       
+s2               989 SEFYVELEANNEGVECLRLLNEIIADFDEIISEERFRQLEKIKTIGSTYM   1038
+
+s1               577 --------------------------------------------------    577
+                                                                       
+s2              1039 AASGLNASTYDQVGRSHITALADYAMRLMEQMKHINEHSFNNFQMKIGLN   1088
+
+s1               577 --------------------------------------------------    577
+                                                                       
+s2              1089 MGPVVAGVIGARKPQYDIWGNTVNVSSRMDSTGVPDRIQVTTDLYQVLAA   1138
+
+s1               577 ------------------------------    577
+                                                   
+s2              1139 KGYQLECRGVVKVKGKGEMTTYFLNGGPSS   1168
+
+
+#---------------------------------------
+#---------------------------------------

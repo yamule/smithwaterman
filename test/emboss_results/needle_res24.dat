@@ -1,0 +1,110 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:34
+# Commandline: needle
+#    -endweight
+#    -asequence inputs/seq24.1.fas
+#    -bsequence inputs/seq24.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_res24.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_res24.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 872
+# Identity:      60/872 ( 6.9%)
+# Similarity:    94/872 (10.8%)
+# Gaps:         708/872 (81.2%)
+# Score: -266.0
+# 
+#
+#=======================================
+
+s1                 1 MGLKARRAAGAAGGGGDGGGGGGGAANPAGGDAAAAGDEERKVGLAPGDV     50
+                     |.:                                               
+s2                 1 MSV-----------------------------------------------      3
+
+s1                51 EQVTLALGAGADKDGTLLLEGGGRDEGQRRTPQGIGLLAKTPLSRPVKRN    100
+                                                             .|||      
+s2                 4 ----------------------------------------DPLS------      7
+
+s1               101 NAKYRRIQTLIYDALERPRGWALLYHALVFLIVLGCLILAVLTTFKEYET    150
+                                                                       
+s2                 7 --------------------------------------------------      7
+
+s1               151 VSGDWLLLLETFAIFIFGAEFALRIWAAGCCCRYKGWRGRLKFARKPLCM    200
+                                                                       
+s2                 7 --------------------------------------------------      7
+
+s1               201 LDIFVLIASVPVVAVGNQGNVLATSLRSLRFLQILRMLRMDRRGGTWKLL    250
+                                                                       
+s2                 7 --------------------------------------------------      7
+
+s1               251 GSAICAHSKELITAWYIGFLTLILSSFLVYLVEKDVPEVDAQGEEMKEEF    300
+                            ||.|                                 ::|.|.
+s2                 8 -------SKAL---------------------------------KIKREL     17
+
+s1               301 ETYADALWWGLITLATIGYGDKTPKTWEGRLIAATFSLIGVSFFALPAGI    350
+                                        .:.||...:..|                   
+s2                18 -------------------SENTPHLSDEAL-------------------     29
+
+s1               351 LGSGLALKVQEQHRQKHFEKRRKPAAELIQAAWRYYATNPNRIDLVATWR    400
+                         :.|.|:|.:|                                    
+s2                30 ----MGLSVRELNR------------------------------------     39
+
+s1               401 FYESVVSFPFFRKEQLEAASSQKLGLLDRVRLSNPRGSNTKGKLFTPLNV    450
+                                   .|...|::::..|                       
+s2                40 --------------HLRGLSAEEVTRL-----------------------     52
+
+s1               451 DAIEESPSKEPKPVGLNNKERFRTAFRMKAYAFWQSSEDAGTGDPMAEDR    500
+                                       |:|.||                      .::|
+s2                53 ------------------KQRRRT----------------------LKNR     62
+
+s1               501 GYGNDFPIEDMIPTLKAAIRAVRILQFRLYKKKFKETLRPYDVKDVIEQY    550
+                     ||.             |:.|..|:.|        ||.|:..  |..:|: 
+s2                63 GYA-------------ASCRVKRVCQ--------KEELQKQ--KSELER-     88
+
+s1               551 SAGHLDMLSRIKYLQTRIDMIFTPGPPSTPKHKKSQKGSAFTFPSQQSPR    600
+                        .:|.|:|                                        
+s2                89 ---EVDKLAR----------------------------------------     95
+
+s1               601 NEPYVARPSTSEIEDQSMMGKFVKVERQVQDMGKKLDFLVDMHMQHMERL    650
+                           ..:...:|..::.||                         .|.|
+s2                96 ------ENAAMRLELDALRGK-------------------------CEAL    114
+
+s1               651 QVQVTEYYPTKGTSSPAEAEKKEDNRYSDLKTIICNYSETGPPEPPYSFH    700
+                     |.........:|   ||              |::.          |.|. 
+s2               115 QGFARSVAAARG---PA--------------TLVA----------PASV-    136
+
+s1               701 QVTIDKVSPYGFFAHDPVNLPRGGPSSGKVQATPPSSATTYVERPTVLPI    750
+                      :||.|.:|..          ..||:.|...|..|:|.:           
+s2               137 -ITIVKSTPGS----------GSGPAHGPDPAHGPASCS-----------    164
+
+s1               751 LTLLDSRVSCHSQADLQGPYSDRISPRQRRSITRDSDTPLSLMSVNHEEL    800
+                                                                       
+s2               164 --------------------------------------------------    164
+
+s1               801 ERSPSGFSISQDRDDYVFGPNGGSSWMREKRYLAEGETDTDTDPFTPSGS    850
+                                                                       
+s2               164 --------------------------------------------------    164
+
+s1               851 MPLSSTGDGISDSVWTPSNKPI    872
+                                           
+s2               164 ----------------------    164
+
+
+#---------------------------------------
+#---------------------------------------

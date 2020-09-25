@@ -1,0 +1,98 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:27
+# Commandline: needle
+#    -endweight
+#    -asequence inputs/seq11.1.fas
+#    -bsequence inputs/seq11.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_res11.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_res11.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 739
+# Identity:      65/739 ( 8.8%)
+# Similarity:   104/739 (14.1%)
+# Gaps:         551/739 (74.6%)
+# Score: -185.0
+# 
+#
+#=======================================
+
+s1                 1 MKKSRSVMTVMADDNVKDYFECSLSKSYSSSSNTLGIDLWRGRRCCSGNL     50
+                     |..||:    .|.||. .:..|...|.:....                  
+s2                 1 MCFSRA----DAADNY-PFGTCQQRKLFPHFH------------------     27
+
+s1                51 QLPPLSQRQSERARTPEGDGISRPTTLPLTTLPSIAITTVSQECFDVENG    100
+                       ||                                 ..:..:...:...
+s2                28 --PP---------------------------------NLIGNKFVPLRGS     42
+
+s1               101 PSPGRSPLDPQASSSAGLVLHATFPGHSQRRESFLYRSDS---DYDLSPK    147
+                     |..|                    ||        .|.||.   .|||   
+s2                43 PHRG--------------------PG--------CYFSDGYGLAYDL---     61
+
+s1               148 AMSRNSSLPSEQHGDDLIVTPFAQVLASLRSVRNNFTILTNLHGTSNKRS    197
+                          |.:|:...|    .|..|:.....:.::...|             
+s2                62 -----SKIPTSIKG----YTLGARTAVRFKPIQKEMT-------------     89
+
+s1               198 PAASQPPVSRVNPQEESYQKLAMETLEELDWCLDQLETIQTYRSVSEMAS    247
+                     |.|.:  ..:|:||:|.::                    |.:...:.:..
+s2                90 PHAGR--YQKVSPQQEKHK--------------------QNFAPFNVLVP    117
+
+s1               248 NKFKRMLNRELTHLSEMSRSGNQVSEYISNTFLDKQNDVEIPSPTQKDRE    297
+                      :||                     .|..:|:        .|||...:.|
+s2               118 -RFK---------------------NYPKDTY--------YPSPGAYNPE    137
+
+s1               298 KKKKQQLMTQISGVKKLMHSSSLNNTSISRFGVNTENEDHLAKELEDLNK    347
+                     ||...::...:                  :||                  
+s2               138 KKPPPKIAWPM------------------KFG------------------    151
+
+s1               348 WGLNIFNVAGYSHNRPLTCIMYAIFQERDLLKTFRISSDTFITYMMTLED    397
+                                                                       
+s2               151 --------------------------------------------------    151
+
+s1               398 HYHSDVAYHNSLHAADVAQSTHVLLSTPALDAVFTDLEILAAIFAAAIHD    447
+                                  :.|.||       .|.|                    
+s2               152 -------------SPDWAQ-------VPCL--------------------    161
+
+s1               448 VDHPGVSNQFLINTNSELALMYNDESVLENHHLAVGFKLLQEEHCDIFMN    497
+                                                                       
+s2               161 --------------------------------------------------    161
+
+s1               498 LTKKQRQTLRKMVIDMVLATDMSKHMSLLADLKTMVETKKVTSSGVLLLD    547
+                         |::||:                                        
+s2               162 ----QKRTLK----------------------------------------    167
+
+s1               548 NYTDRIQVLRNMVHCADLSNPTKSLELYRQWTDRIMEEFFQQGDKERERG    597
+                                    |:||            ||:                
+s2               168 ---------------AELS------------TDK----------------    174
+
+s1               598 MEISPMCDKHTASVEKSQVGFIDYIVHPLWETWADLVQPDAQDILDTLED    647
+                                           |:..|                      .
+s2               175 ----------------------DFRKH----------------------R    180
+
+s1               648 NRNWYQSMIPQSPSPPLDEQNRDCQGLMEKFQFELTLDEEDSEGPEKEGE    697
+                     ||..|.|:                                          
+s2               181 NRVAYLSL------------------------------------------    188
+
+s1               698 GHSYFSSTKTLCVIDPENRDSLGETDIDIATEDKSPVDT    736
+                        |::                                 
+s2               189 ---YYN---------------------------------    191
+
+
+#---------------------------------------
+#---------------------------------------

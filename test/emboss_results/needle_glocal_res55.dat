@@ -1,0 +1,305 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:54
+# Commandline: needle
+#    -asequence inputs/seq55.1.fas
+#    -bsequence inputs/seq55.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_glocal_res55.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_glocal_res55.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 3302
+# Identity:      19/3302 ( 0.6%)
+# Similarity:    31/3302 ( 0.9%)
+# Gaps:        3232/3302 (97.9%)
+# Score: 31.5
+# 
+#
+#=======================================
+
+s1                 1 METRSPGLNNMKPQSLQLVLEEQVLALQQQMAENQAASWRKLKNSQEAQQ     50
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1                51 RQATLVRKLQAKVLQYRSWCQELEKRLEATGGPIPQRWENVEEPNLDELL    100
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               101 VRLEEEQQRCESLAEVNTQLRLHMEKADVVNKALREDVEKLTVDWSRARD    150
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               151 ELMRKESQWQMEQEFFKGYLKGEHGRLLSLWREVVTFRRHFLEMKSATDR    200
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               201 DLMELKAEHVRLSGSLLTCCLRLTVGAQSREPNGSGRMDGREPAQLLLLL    250
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               251 AKTQELEKEAHERSQELIQLKSQGDLEKAELQDRVTELSALLTQSQKQNE    300
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               301 DYEKMIKALRETVEILETNHTELMEHEASLSRNAQEEKLSLQQVIKDITQ    350
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               351 VMVEEGDNIAQGSGHENSLELDSSIFSQFDYQDADKALTLVRSVLTRRRQ    400
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               401 AVQDLRQQLAGCQEAVNLLQQQHDQWEEEGKALRQRLQKLTGERDTLAGQ    450
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               451 TVDLQGEVDSLSKERELLQKAREELRQQLEVLEQEAWRLRRVNVELQLQG    500
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               501 DSAQGQKEEQQEELHLAVRERERLQEMLMGLEAKQSESLSELITLREALE    550
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               551 SSHLEGELLRQEQTEVTAALARAEQSIAELSSSENTLKTEVADLRAAAVK    600
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               601 LSALNEALALDKVGLNQQLLQLEEENQSVCSRMEAAEQARNALQVDLAEA    650
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               651 EKRREALWEKNTHLEAQLQKAEEAGAELQADLRDIQEEKEEIQKKLSESR    700
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               701 HQQEAATTQLEQLHQEAKRQEEVLARAVQEKEALVREKAALEVRLQAVER    750
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               751 DRQDLAEQLQGLSSAKELLESSLFEAQQQNSVIEVTKGQLEVQIQTVTQA    800
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               801 KEVIQGEVRCLKLELDTERSQAEQERDAAARQLAQAEQEGKTALEQQKAA    850
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               851 HEKEVNQLREKWEKERSWHQQELAKALESLEREKMELEMRLKEQQTEMEA    900
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               901 IQAQREEERTQAESALCQMQLETEKERVSLLETLLQTQKELADASQQLER    950
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               951 LRQDMKVQKLKEQETTGILQTQLQEAQRELKEAARQHRDDLAALQEESSS   1000
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              1001 LLQDKMDLQKQVEDLKSQLVAQDDSQRLVEQEVQEKLRETQEYNRIQKEL   1050
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              1051 EREKASLTLSLMEKEQRLLVLQEADSIRQQELSALRQDMQEAQGEQKELS   1100
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              1101 AQMELLRQEVKEKEADFLAQEAQLLEELEASHITEQQLRASLWAQEAKAA   1150
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              1151 QLQLRLRSTESQLEALAAEQQPGNQAQAQAQLASLYSALQQALGSVCESR   1200
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              1201 PELSGGGDSAPSVWGLEPDQNGARSLFKRGPLLTALSAEAVASALHKLHQ   1250
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              1251 DLWKTQQTRDVLRDQVQKLEERLTDTEAEKSQVHTELQDLQRQLSQNQEE   1300
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              1301 KSKWEGKQNSLESELMELHETMASLQSRLRRAELQRMEAQGERELLQAAK   1350
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              1351 ENLTAQVEHLQAAVVEARAQASAAGILEEDLRTARSALKLKNEEVESERE   1400
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              1401 RAQALQEQGELKVAQGKALQENLALLTQTLAEREEEVETLRGQIQELEKQ   1450
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              1451 REMQKAALELLSLDLKKRNQEVDLQQEQIQELEKCRSVLEHLPMAVQERE   1500
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              1501 QKLTVQREQIRELEKDRETQRNVLEHQLLELEKKDQMIESQRGQVQDLKK   1550
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              1551 QLVTLECLALELEENHHKMECQQKLIKELEGQRETQRVALTHLTLDLEER   1600
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              1601 SQELQAQSSQIHDLESHSTVLARELQERDQEVKSQREQIEELQRQKEHLT   1650
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              1651 QDLERRDQELMLQKERIQVLEDQRTRQTKILEEDLEQIKLSLRERGRELT   1700
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              1701 TQRQLMQERAEEGKGPSKAQRGSLEHMKLILRDKEKEVECQQEHIHELQE   1750
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              1751 LKDQLEQQLQGLHRKVGETSLLLSQREQEIVVLQQQLQEAREQGELKEQS   1800
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              1801 LQSQLDEAQRALAQRDQELEALQQEQQQAQGQEERVKEKADALQGALEQA   1850
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              1851 HMTLKERHGELQDHKEQARRLEEELAVEGRRVQALEEVLGDLRAESREQE   1900
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              1901 KALLALQQQCAEQAQEHEVETRALQDSWLQAQAVLKERDQELEALRAESQ   1950
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              1951 SSRHQEEAARARAEALQEALGKAHAALQGKEQHLLEQAELSRSLEASTAT   2000
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              2001 LQASLDACQAHSRQLEEALRIQEGEIQDQDLRYQEDVQQLQQALAQRDEE   2050
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              2051 LRHQQEREQLLEKSLAQRVQENMIQEKQNLGQEREEEEIRGLHQSVRELQ   2100
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              2101 LTLAQKEQEILELRETQQRNNLEALPHSHKTSPMEEQSLKLDSLEPRLQR   2150
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              2151 ELERLQAALRQTEAREIEWREKAQDLALSLAQTKASVSSLQEVAMFLQAS   2200
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              2201 VLERDSEQQRLQDELELTRRALEKERLHSPGATSTAELGSRGEQGVQLGE   2250
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              2251 VSGVEAEPSPDGMEKQSWRQRLEHLQQAVARLEIDRSRLQRHNVQLRSTL   2300
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              2301 EQVERERRKLKREAMRAAQAGSLEISKATASSPTQQDGRGQKNSDAKCVA   2350
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1              2351 ELQKEVVLLQAQLTL-ERKQKQDYITRSAQTSRELAGLHHSLSHSLLAVA   2399
+                          ::|..|.|.| ..:.....:..:|..:::.||             
+s2                 1 -----MLLGWASLLLCAFRLPLAAVGPAATPAQDKAG-------------     32
+
+s1              2400 QAPEATVLEAETRRLDESLTQSLTSPGPVLLHPSPSTTQAASR-------   2442
+                     |.|.|.......||..|.:.:....||    ||.|...:..|:       
+s2                33 QPPTAAAAAQPRRRQGEEVQERAEPPG----HPHPLAQRRRSKGLVQNID     78
+
+s1              2442 --------------------------------------------------   2442
+                                                                       
+s2                79 QLYSGGGKVGYLVYAGGRRFLLDLERDGSVGIAGFVPAGGGTSAPWRHRS    128
+
+s1              2442 --------------------------------------------------   2442
+                                                                       
+s2               129 HCFYRGTVDGSPRSLAVFDLCGGLDGFFAVKHARYTLKPLLRGPWAEEEK    178
+
+s1              2442 --------------------------------------------------   2442
+                                                                       
+s2               179 GRVYGDGSARILHVYTREGFSFEALPPRASCETPASTPEAHEHAPAHSNP    228
+
+s1              2442 --------------------------------------------------   2442
+                                                                       
+s2               229 SGRAALASQLLDQSALSPAGGSGPQTWWRRRRRSISRARQVELLLVADAS    278
+
+s1              2442 --------------------------------------------------   2442
+                                                                       
+s2               279 MARLYGRGLQHYLLTLASIANRLYSHASIENHIRLAVVKVVVLGDKDKSL    328
+
+s1              2442 --------------------------------------------------   2442
+                                                                       
+s2               329 EVSKNAATTLKNFCKWQHQHNQLGDDHEEHYDAAILFTREDLCGHHSCDT    378
+
+s1              2442 --------------------------------------------------   2442
+                                                                       
+s2               379 LGMADVGTICSPERSCAVIEDDGLHAAFTVAHEIGHLLGLSHDDSKFCEE    428
+
+s1              2442 --------------------------------------------------   2442
+                                                                       
+s2               429 TFGSTEDKRLMSSILTSIDASKPWSKCTSATITEFLDDGHGNCLLDLPRK    478
+
+s1              2442 --------------------------------------------------   2442
+                                                                       
+s2               479 QILGPEELPGQTYDATQQCNLTFGPEYSVCPGMDVCARLWCAVVRQGQMV    528
+
+s1              2442 --------------------------------------------------   2442
+                                                                       
+s2               529 CLTKKLPAVEGTPCGKGRICLQGKCVDKTKKKYYSTSSHGNWGSWGSWGQ    578
+
+s1              2442 --------------------------------------------------   2442
+                                                                       
+s2               579 CSRSCGGGVQFAYRHCNNPAPRNNGRYCTGKRAIYRSCSLMPCPPNGKSF    628
+
+s1              2442 --------------------------------------------------   2442
+                                                                       
+s2               629 RHEQCEAKNGYQSDAKGVKTFVEWVPKYAGVLPADVCKLTCRAKGTGYYV    678
+
+s1              2442 --------------------------------------------------   2442
+                                                                       
+s2               679 VFSPKVTDGTECRLYSNSVCVRGKCVRTGCDGIIGSKLQYDKCGVCGGDN    728
+
+s1              2442 --------------------------------------------------   2442
+                                                                       
+s2               729 SSCTKIVGTFNKKSKGYTDVVRIPEGATHIKVRQFKAKDQTRFTAYLALK    778
+
+s1              2442 --------------------------------------------------   2442
+                                                                       
+s2               779 KKNGEYLINGKYMISTSETIIDINGTVMNYSGWSHRDDFLHGMGYSATKE    828
+
+s1              2442 --------------------------------------------------   2442
+                                                                       
+s2               829 ILIVQILATDPTKPLDVRYSFFVPKKSTPKVNSVTSHGSNKVGSHTSQPQ    878
+
+s1              2442 --------------------------------------------------   2442
+                                                                       
+s2               879 WVTGPWLACSRTCDTGWHTRTVQCQDGNRKLAKGCPLSQRPSAFKQCLLK    928
+
+s1              2442 --   2442
+                       
+s2               929 KC    930
+
+
+#---------------------------------------
+#---------------------------------------

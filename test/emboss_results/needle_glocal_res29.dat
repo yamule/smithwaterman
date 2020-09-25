@@ -1,0 +1,61 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:37
+# Commandline: needle
+#    -asequence inputs/seq29.1.fas
+#    -bsequence inputs/seq29.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_glocal_res29.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_glocal_res29.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 279
+# Identity:      36/279 (12.9%)
+# Similarity:    48/279 (17.2%)
+# Gaps:         181/279 (64.9%)
+# Score: 29.5
+# 
+#
+#=======================================
+
+s1                 1 --------MALLPVLFLVTVLL--PSLPAEGKDPAFTALLTTQLQVQR-E     39
+                             .|||.:|||....|  .|.|. |...:.:.|.|:.||.|| .
+s2                 1 MDPQTAPSRALLLLLFLHLAFLGGRSHPL-GSPGSASDLETSGLQEQRNH     49
+
+s1                40 IVNKHNELR--------KAVSPPASNMLKMEWSREVTTNAQRWANKCTL-     80
+                     :..|.:||:        ...||..:.:.|   ||||.|...|...|..| 
+s2                50 LQGKLSELQVEQTSLEPLQESPRPTGVWK---SREVATEGIRGHRKMVLY     96
+
+s1                81 -----------QHSDPEDRK-----TSTRCGENLYMSSDPTSWSSAIQSW    114
+                                |.|....||     :|:..|..:....            
+s2                97 TLRAPRSPKMVQGSGCFGRKMDRISSSSGLGCKVLRRH------------    134
+
+s1               115 YDEILDFVYGVGPKSPNAVVGHYTQLVWYSTYQVGCGIAYCPNQDSLKYY    164
+                                                                       
+s2               134 --------------------------------------------------    134
+
+s1               165 YVCQYCPAGNNMNRKNTPYQQGTPCAGCPDDCDKGLCTNSCQYQDLLSNC    214
+                                                                       
+s2               134 --------------------------------------------------    134
+
+s1               215 DSLKNTAGCEHELLKEKCKATCLCENKIY    243
+                                                  
+s2               134 -----------------------------    134
+
+
+#---------------------------------------
+#---------------------------------------

@@ -1,0 +1,105 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:44
+# Commandline: needle
+#    -asequence inputs/seq41.1.fas
+#    -bsequence inputs/seq41.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_glocal_res41.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_glocal_res41.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 837
+# Identity:      35/837 ( 4.2%)
+# Similarity:    50/837 ( 6.0%)
+# Gaps:         735/837 (87.8%)
+# Score: 19.5
+# 
+#
+#=======================================
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2                 1 MKTSPRRPLILKRRRLPLPVQNAPSETSEEEPKRSPAQQESNQAEASKEV     50
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2                51 AESNSCKFPAGIKIINHPTMPNTQVVAIPNNANIHSIITALTAKGKESGS    100
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2               101 SGPNKFILISCGGAPTQPPGLRPQTQTSYDAKRTEVTLETLGPKPAARDV    150
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2               151 NLPRPPGALCEQKRETCADGEAAGCTINNSLSNIQWLRKMSSDGLGSRSI    200
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2               201 KQEMEEKENCHLEQRQVKVEEPSRPSASWQNSVSERPPYSYMAMIQFAIN    250
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2               251 STERKRMTLKDIYTWIEDHFPYFKHIAKPGWKNSIRHNLSLHDMFVRETS    300
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2               301 ANGKVSFWTIHPSANRYLTLDQVFKPLDPGSPQLPEHLESQQKRPNPELR    350
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2               351 RNMTIKTELPLGARRKMKPLLPRVSSYLVPIQFPVNQSLVLQPSVKVPLP    400
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2               401 LAASLMSSELARHSKRVRIAPKVLLAEEGIAPLSSAGPGKEEKLLFGEGF    450
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2               451 SPLLPVQTIKEEEIQPGEEMPHLARPIKVESPPLEEWPSPAPSFKEESSH    500
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2               501 SWEDSSQSPTPRPKKSYSGLRSPTRCVSEMLVIQHRERRERSRSRRKQHL    550
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2               551 LPPCVDEPELLFSEGPSTSRWAAELPFPADSSDPASQLSYSQEVGGPFKT    600
+
+s1                 1 --------------------MALWRAYQRALAAHPWKVQVLTAGSL----     26
+                                         ...||      ...|.||..|....:    
+s2               601 PIKETLPISSTPSKSVLPRTPESWR------LTPPAKVGGLDFSPVQTSQ    644
+
+s1                27 ---------MGLGDIISQQLVERRGLQEHQR---GRTLTMVSLGCGFVGP     64
+                              :||.|:.:..|.....|:..||   ...|.::|:..|...|
+s2               645 GASDPLPDPLGLMDLSTTPLQSAPPLESPQRLLSSEPLDLISVPFGNSSP    694
+
+s1                65 VVGGWYKVLDRFIPGT---------------------TKVDALKKMLLDQ     93
+                           ..:|...||:                     |..|:|.|:|||.
+s2               695 ------SDIDVPKPGSPEPQVSGLAANRSLTEGLVLDTMNDSLSKILLDI    738
+
+s1                94 GGFAPCFLGCFLPLVGALNGLSAQDNWA----KLQRDYPDALITNYYLWP    139
+                     .     |.|.....:|..|     .||:    :||               
+s2               739 S-----FPGLDEDPLGPDN-----INWSQFIPELQ---------------    763
+
+s1               140 AVQLANFYLVPLHYRLAVVQCVAVIWNSYLSWKAHRL    176
+                                                          
+s2               763 -------------------------------------    763
+
+
+#---------------------------------------
+#---------------------------------------

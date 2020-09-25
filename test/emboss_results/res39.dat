@@ -1,0 +1,73 @@
+########################################
+# Program: water
+# Rundate: Sat 26 Sep 2020 01:34:43
+# Commandline: water
+#    -asequence inputs/seq39.1.fas
+#    -bsequence inputs/seq39.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/res39.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/res39.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 442
+# Identity:     102/442 (23.1%)
+# Similarity:   132/442 (29.9%)
+# Gaps:         179/442 (40.5%)
+# Score: 81.5
+# 
+#
+#=======================================
+
+s1               111 LQAQPPGIFLVHKST--------KMQKKVLSLRLPCEFG-----AP-LKE    146
+                     |:|..||:||...|.        ..:..||.|.||...|     || |.|
+s2                49 LRAAGPGLFLGELSCPPAAPGPWAAEANVLVLVLPGPEGNGEPLAPALGE     98
+
+s1               147 FAI--------------------------KESTYTFSLEGSGISFADLFR    170
+                     .|:                          ::.|... |..:|:..||||.
+s2                99 AALAALARGTPLLAVRNLRPGDSQTAAQARDQTAAL-LNSAGLGAADLFV    147
+
+s1               171 LIAFYCISRDVLPFTLKLPYAISTAKSEAQLEELAQMGLNFWSSPADSKP    220
+                     |.| .|.|.|......:|..|:     ::|.|.|.::             
+s2               148 LPA-NCGSSDGCEELERLRAAL-----QSQAEALRRL-------------    178
+
+s1               221 PNLPPPHRPLSSDGVCPASLRQLCLINGVHSIKTRTPSELECSQTNG---    267
+                       |||     :.||.......:|..:.             |..:|.|   
+s2               179 --LPP-----AQDGFEVLGAAELEAVR-------------EAFETGGLEA    208
+
+s1               268 ALCFINP---------LFLKVHSQ-------DLSGGLKRPSTRTPNANGT    301
+                     ||.::..         |.|.|..:       |:..||   ....|.|...
+s2               209 ALSWVRSGLERLGSARLDLAVAGKADVGLVVDMLLGL---DPGDPGAAPA    255
+
+s1               302 ERTRSPPPRPPPPAINSLHTSPRLARTETQTSMPETVNHNKHGNVAL---    348
+                     ....:|.|.|.|...|.:..:..|..|.|.|: ....:|..|.:..:   
+s2               256 SVPTAPTPFPAPERPNVVLWTVPLGHTGTATT-AAAASHPTHYDALILVT    304
+
+s1               349 PGTKPTP----------IPPPRL----------------------KKQAS    366
+                     ||. ||.          :|...|                      .|..|
+s2               305 PGA-PTEKDWAQVQALLLPDAPLVCVRTDGEGEDPECLGEGKMENPKGES    353
+
+s1               367 FLEAEGGA--KTLSGGR-----------PGAGPELELGTAGS--------    395
+                     ...|.||.  ..||.||           .|.||    |.|||        
+s2               354 LKNAGGGGLENALSKGREKCSAGSQKAGSGEGP----GKAGSEGLQQVVG    399
+
+s1               396 ---PGGAPPEAA----PGDCT-----RAPPPSSESRPPCHGG    425
+                        .||...|.|    |.|.|     .||||....||   ||
+s2               400 MKKSGGGDSERAAALSPEDETWEVLEEAPPPVFPLRP---GG    438
+
+
+#---------------------------------------
+#---------------------------------------

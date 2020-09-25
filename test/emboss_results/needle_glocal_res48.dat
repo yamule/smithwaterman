@@ -1,0 +1,61 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:49
+# Commandline: needle
+#    -asequence inputs/seq48.1.fas
+#    -bsequence inputs/seq48.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_glocal_res48.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_glocal_res48.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 298
+# Identity:      40/298 (13.4%)
+# Similarity:    62/298 (20.8%)
+# Gaps:         170/298 (57.0%)
+# Score: 6.5
+# 
+#
+#=======================================
+
+s1                 1 MAPTGLLVAGASFLAFRGLHWGLRRLPTPESAARDRWQWWNLCVSLAHSL     50
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1                51 LSGTGALLGLSLYPQMAADPIHGHPRWALVLVAVSVGYFLADGADLLWNQ    100
+                     :.|..|.|.|                |.|:..:.|.|     |.      
+s2                 1 MKGFTATLFL----------------WTLIFPSCSGG-----GG------     23
+
+s1               101 TLGKTWDLLCHHLVVVSCLSTAVLSGHY--------VGFSMVSLLLELNS    142
+                       ||.|..   |:|   | |.:.|...|        .|||:.....:|.|
+s2                24 --GKAWPT---HVV---C-SDSGLEVLYQSCDPLQDFGFSVEKCSKQLKS     64
+
+s1               143 ACLHLR--------------KLLLLSRQAPSLAFSV-TSWASLATLA---    174
+                     . :::|              .|.|:|:.:..|.||. ...|:|...:   
+s2                65 N-INIRFGIILREDIKELFLDLALMSQGSSVLNFSYPICEAALPKFSFCG    113
+
+s1               175 ------LFRLVPLGWMSLWLFRQHHQVPLALVT--LGGIGLVTVGIMSII    216
+                           ::...|:......:.:..:||.|.|.|  ...:......||.. 
+s2               114 RRKGEQIYYAGPVNNPEFTIPQGEYQVLLELYTEKRSTVACANATIMCS-    162
+
+s1               217 LGIRILVNDVLQSRPHPPSPGHEKTRGTRTRRDNGPVTSNSSTLSLKD    264
+                                                                     
+s2               162 ------------------------------------------------    162
+
+
+#---------------------------------------
+#---------------------------------------

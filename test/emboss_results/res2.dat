@@ -1,0 +1,41 @@
+########################################
+# Program: water
+# Rundate: Sat 26 Sep 2020 01:34:22
+# Commandline: water
+#    -asequence inputs/seq2.1.fas
+#    -bsequence inputs/seq2.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/res2.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/res2.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 43
+# Identity:      10/43 (23.3%)
+# Similarity:    19/43 (44.2%)
+# Gaps:          11/43 (25.6%)
+# Score: 30.0
+# 
+#
+#=======================================
+
+s1                14 ETMTWSENMDTLLANQAGLDAF---RIFLKSEFSEENVEFWLA     53
+                     :.:||       :|:..|...|   .:|.:|:....|:. |:|
+s2                 2 DNITW-------MASHTGWSDFILMGLFRQSKHPMANIT-WMA     36
+
+
+#---------------------------------------
+#---------------------------------------

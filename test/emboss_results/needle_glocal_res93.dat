@@ -1,0 +1,101 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:35:20
+# Commandline: needle
+#    -asequence inputs/seq93.1.fas
+#    -bsequence inputs/seq93.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_glocal_res93.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_glocal_res93.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 761
+# Identity:      20/761 ( 2.6%)
+# Similarity:    30/761 ( 3.9%)
+# Gaps:         703/761 (92.4%)
+# Score: 19.0
+# 
+#
+#=======================================
+
+s1                 1 MCSAGELLRGGDGGERDEDGDALAEREAAGTGWDPGASPRRRGQRPKESE     50
+                                                                     .|
+s2                 1 ------------------------------------------------ME      2
+
+s1                51 QDVEDSQNHTGEPVGDDYKKMGTLFGE--------------LNKNLINMG     86
+                     :.|...:..:|.||     .:..|:|.              |.:.|..:|
+s2                 3 EFVGLREGSSGNPV-----TLQELWGPCPRIRRGIRGGLEWLKQKLFRLG     47
+
+s1                87 FTRMYFGERIVEPVIVIFFWVMLWFLG-LQALGLVAVLCLVIIYVQQ---    132
+                     ..                 |..|..|| |.||    |.|.:.:.|:.   
+s2                48 ED-----------------WYFLMTLGVLMAL----VSCAMDLAVESVVR     76
+
+s1               132 --------------------------------------------------    132
+                                                                       
+s2                77 AHQWLYREIGDSHLLRYLSWTVYPVALVSFSSGFSQSITPSSGGSGIPEV    126
+
+s1               132 --------------------------------------------------    132
+                                                                       
+s2               127 KTMLAGVVLEDYLDIKNFGAKVVGLSCTLACGSTLFLGKVGPFVHLSVMM    176
+
+s1               132 --------------------------------------------------    132
+                                                                       
+s2               177 AAYLGRVRTTTIGEPENKSKQNEMLVAAAAVGVATVFAAPFSGVLFSIEV    226
+
+s1               132 --------------------------------------------------    132
+                                                                       
+s2               227 MSSHFSVWDYWRGFFAATCGAFMFRLLAVFNSEQETITSLYKTSFRVDVP    276
+
+s1               132 --------------------------------------------------    132
+                                                                       
+s2               277 FDLPEIFFFVALGGLCGILGSAYLFCQRIFFGFIRNNRFSSKLLATSKPV    326
+
+s1               132 --------------------------------------------------    132
+                                                                       
+s2               327 YSALATLVLASITYPPSAGRFLASRLSMKQHLDSLFDNHSWALMTQNSSP    376
+
+s1               132 --------------------------------------------------    132
+                                                                       
+s2               377 PWPEELDPQHLWWEWYHPRFTIFGTLAFFLVMKFWMLILATTIPMPAGYF    426
+
+s1               132 --------------------------------------------------    132
+                                                                       
+s2               427 MPIFVYGAAIGRLFGETLSFIFPEGIVAGGITNPIMPGGYALAGAAAFSG    476
+
+s1               132 --------------------------------------------------    132
+                                                                       
+s2               477 AVTHTISTALLAFEVTGQIVHALPVLMAVLAANAIAQSCQPSFYDGTVIV    526
+
+s1               132 --------------------------------------------------    132
+                                                                       
+s2               527 KKLPYLPRILGRNIGSHRVRVEHFMNHSITTLAKDMPLEEVVKVVTSTDV    576
+
+s1               132 --------------------------------------------------    132
+                                                                       
+s2               577 AKYPLVESTESQILVGIVRRAQLVQALKAEPPSWAPGHQQCLQDILAAGC    626
+
+s1               132 --------------------------------------------------    132
+                                                                       
+s2               627 PTEPVTLKLSPETSLHEAHNLFELLNLHSLFVTSRGRAVGCVSWVEMKKA    676
+
+s1               132 -----------    132
+                                
+s2               677 ISNLTNPPAPK    687
+
+
+#---------------------------------------
+#---------------------------------------

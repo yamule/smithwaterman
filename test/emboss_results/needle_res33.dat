@@ -1,0 +1,86 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:39
+# Commandline: needle
+#    -endweight
+#    -asequence inputs/seq33.1.fas
+#    -bsequence inputs/seq33.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_res33.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_res33.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 584
+# Identity:     101/584 (17.3%)
+# Similarity:   151/584 (25.9%)
+# Gaps:         274/584 (46.9%)
+# Score: -50.5
+# 
+#
+#=======================================
+
+s1                 1 M---DSYSAPEST------------PSASSRPED-------YFIGATPLQ     28
+                     |   .|.|..:.|            |:..:...|       :|:......
+s2                 1 MPLQGSVSFKDVTVDFTQEEWQQLDPAQKALYRDVMLENYCHFVSVGFHM     50
+
+s1                29 KRLESVRK--QSSFILTPPRRKIPQCSQLQEDVDPQKV------------     64
+                     .:.:.:||  |...:.|  :|..|..|.|:||...:.|            
+s2                51 AKPDMIRKLEQGEELWT--QRIFPSYSYLEEDGKTEDVLVKFKEYQDRHS     98
+
+s1                65 ---AFLLHKQ------------WTL----YSLTPL--YKFSYSNLKEYSR     93
+                        .|:.||:            :||    .|.|.|  ||.....||..|.
+s2                99 RPLIFINHKKLIKERSNIYGKTFTLGKNRISKTILCEYKPDGKVLKNISE    148
+
+s1                94 LL--NAFIVAEK--------------------------------------    103
+                     |:  |...:.||                                      
+s2               149 LVIRNISPIKEKFGDSTGWEKSLLNTKHEKIHPAVNLHKQTERVLSGKQE    198
+
+s1               104 ----QKGLAVEVGEDFN-------IK-VIFSTLLGMKGTQ-----RDPEA    136
+                         ||..|.|...|.|       :| ::|:.....:|.:     :|..|
+s2               199 LIQHQKVQAPEQPFDHNECEKSFLMKGMLFTHTRAHRGERTFEYNKDGIA    248
+
+s1               137 FLVQIVSKSQL---PSE---------NREGKVLW---------------T    159
+                     |    :.||.|   ||.         |:.||.|.               .
+s2               249 F----IEKSSLSVHPSNLMEKKPSAYNKYGKFLCRKPVFIMPQRPQTEEK    294
+
+s1               160 GWFCCVFGDSL-----------LETVSEDFTCLPLFLANGAESNTAIIGT    198
+                     .:.|...|::.           :.|..:.:.|..  ........||:  |
+s2               295 PFHCPYCGNNFRRKSYLIEHQRIHTGEKPYVCNQ--CGKAFRQKTAL--T    340
+
+s1               199 WFQKT---------FDCYFSPLAINAFNLSWMAAMWTACKMDHYVATTEF    239
+                     ..:||         .||.      .:|...      ......|...|.|.
+s2               341 LHEKTHIEGKPFICIDCG------KSFRQK------ATLTRHHKTHTGEK    378
+
+s1               240 LWSVP-CSPQSLDISFAI-HP------------EDAKALWDSVHKTPGEV    275
+                     .:..| |.......|:.| |.            |..||.   :.||...|
+s2               379 AYECPQCGSAFRKKSYLIDHQRTHTGEKPYQCNECGKAF---IQKTTLTV    425
+
+s1               276 -----TQEEVDLFMDC-----------LYSHFHR----------------    293
+                          |.|:..:..:|           |:...|.                
+s2               426 HQRTHTGEKPYICNECGKSFCQKTTLTLHQRIHTGEKPYICNECGKSFRQ    475
+
+s1               294 ------HFKIHLS---------------ATRLVRVSTSVASAHTDGK---    319
+                           |.:||..               .:.|:|..    ..||..|   
+s2               476 KAILTVHHRIHTGEKSNGCPQCGKAFSRKSNLIRHQ----KTHTGEKPYE    521
+
+s1               320 IKILCHKYLIGVLAYLTELAIFQ---------IE    344
+                     .| .|.|:    .:..:.|.:.|         |:
+s2               522 CK-QCGKF----FSCKSNLIVHQKTHKVETTGIQ    550
+
+
+#---------------------------------------
+#---------------------------------------

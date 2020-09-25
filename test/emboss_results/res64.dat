@@ -1,0 +1,61 @@
+########################################
+# Program: water
+# Rundate: Sat 26 Sep 2020 01:35:00
+# Commandline: water
+#    -asequence inputs/seq64.1.fas
+#    -bsequence inputs/seq64.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/res64.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/res64.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 254
+# Identity:      50/254 (19.7%)
+# Similarity:    76/254 (29.9%)
+# Gaps:         110/254 (43.3%)
+# Score: 43.0
+# 
+#
+#=======================================
+
+s1                71 IVHLTLPDG------TKRSGQVLEVS------------GSKAVVQVFE--    100
+                     ::||...:|      ..||..|.:::            |.:|.|.|.:  
+s2               323 VLHLRFSNGLMVTCSKDRSIAVWDMASATDITLRRVLVGHRAAVNVVDFD    372
+
+s1               101 --------GTSGIDAKKTS-CEFTGDILRTPVSEDMLGRVFNGSGKPIDR    141
+                             |...|....|| |||.              |..||.    .|
+s2               373 DKYIVSASGDRTIKVWSTSTCEFV--------------RTLNGH----KR    404
+
+s1               142 GPVVLA-EDFLDIMGQPINP----------------------QCRIYPEE    168
+                     |...|. .|.|.:.|...|.                      :|..:..:
+s2               405 GIACLQYRDRLVVSGSSDNTIRLWDIECGACLRVLEGHEELVRCIRFDNK    454
+
+s1               169 MIQTGISAIDGMNSIARGQKIPIFS-AAGLPHNEIAAQICRQAGLVKKSK    217
+                     .|.:|  |.||        ||.::. .|.|.....|:.:|        .:
+s2               455 RIVSG--AYDG--------KIKVWDLQAALDPRAPASTLC--------LR    486
+
+s1               218 DVVDYSEENFAIVFAAMGVNMETARFFKSDFEE----NGSMDNVCLFLNL    263
+                     .:|::|                 .|.|:..|:|    :.|.|:..|..:.
+s2               487 TLVEHS-----------------GRVFRLQFDEFQIISSSHDDTILIWDF    519
+
+s1               264 ANDP    267
+                     .|.|
+s2               520 LNVP    523
+
+
+#---------------------------------------
+#---------------------------------------

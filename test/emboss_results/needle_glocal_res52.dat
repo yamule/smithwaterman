@@ -1,0 +1,73 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:52
+# Commandline: needle
+#    -asequence inputs/seq52.1.fas
+#    -bsequence inputs/seq52.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_glocal_res52.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_glocal_res52.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 430
+# Identity:      23/430 ( 5.3%)
+# Similarity:    42/430 ( 9.8%)
+# Gaps:         330/430 (76.7%)
+# Score: 17.5
+# 
+#
+#=======================================
+
+s1                 1 MSVAFAAPRQRGKGEITPAAIQKMLDDNNHLIQCIMDSQNKGKTSECSQY     50
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1                51 QQMLHTNLVYLATIADSNQNMQSLLPAPPTQNMPMGPGGMNQSGPPPPPR    100
+                                                            |..:|...|..
+s2                 1 ---------------------------------------MQDTGSVVPLH     11
+
+s1               101 SHNMPSDGMVGGGPPAPHMQNQMNGQMP----GPNHMPMQGPGPNQLNMT    146
+                     ........:|..|....:::   .|.:|    |.....:.|.|..||:..
+s2                12 WFGFGYAALVASGGIIGYVK---AGSVPSLAAGLLFGSLAGLGAYQLSQD     58
+
+s1               147 NSSMNMPSSSHGSMGG-----YNHS---VPSSQSMPVQNQMTMSQGQPMG    188
+                     ..::.:..::.|::.|     :.||   :|:.........|....|..|.
+s2                59 PRNVWVFLATSGTLAGIMGMRFYHSGKFMPAGLIAGASLLMVAKVGVSMF    108
+
+s1               189 NYGPRPNMSMQPNQGPMMHQQPPSQQYNMPQGGGQHYQGQQPPMGMMGQV    238
+                     |   ||:                                           
+s2               109 N---RPH-------------------------------------------    112
+
+s1               239 NQGNHMMGQRQIPPYRPPQQGPPQQYSGQEDYYGDQYSHGGQGPPEGMNQ    288
+                                                                       
+s2               112 --------------------------------------------------    112
+
+s1               289 QYYPDGHNDYGYQQPSYPEQGYDRPYEDSSQHYYEGGNSQYGQQQDAYQG    338
+                                                                       
+s2               112 --------------------------------------------------    112
+
+s1               339 PPPQQGYPPQQQQYPGQQGYPGQQQGYGPSQGGPGPQYPNYPQGQGQQYG    388
+                                                                       
+s2               112 --------------------------------------------------    112
+
+s1               389 GYRPTQPGPPQPPQQRPYGYDQGQYGNYQQ    418
+                                                   
+s2               112 ------------------------------    112
+
+
+#---------------------------------------
+#---------------------------------------

@@ -1,0 +1,61 @@
+########################################
+# Program: water
+# Rundate: Sat 26 Sep 2020 01:35:09
+# Commandline: water
+#    -asequence inputs/seq77.1.fas
+#    -bsequence inputs/seq77.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/res77.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/res77.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 273
+# Identity:      55/273 (20.1%)
+# Similarity:   108/273 (39.6%)
+# Gaps:          57/273 (20.9%)
+# Score: 130.0
+# 
+#
+#=======================================
+
+s1               572 RNNIEYVRDIGEGAFGRVFQARAPGLLPYEPFTMVAVKMLKEEASADMQA    621
+                     :::.:.||.:|.|.:..||:|     :.......|.||:||..    .:.
+s2                37 QDDYQLVRKLGRGKYSEVFEA-----INITNNERVVVKILKPV----KKK     77
+
+s1               622 DFQREAALMAEF-DNPNIVKLLGVC--AVGKPMCLLFEYMAYGDLNEFLR    668
+                     ..:||..::... ...||:||:...  .|.|...|:|||:...|..:..:
+s2                78 KIKREVKILENLRGGTNIIKLIDTVKDPVSKTPALVFEYINNTDFKQLYQ    127
+
+s1               669 SMSPHTVCSLSHSDLSMRAQVSSPGPPPLSCAEQLCIARQVAAGMAYLSE    718
+                     .:          :|..:|..:                 .::...:.|...
+s2               128 IL----------TDFDIRFYM-----------------YELLKALDYCHS    150
+
+s1               719 RKFVHRDLATRNCLVG-ENMVVKIADFGLSRNIYSADYYKANENDAIPIR    767
+                     :..:|||:...|.::. :...:::.|:||:...:.|..|    |..:..|
+s2               151 KGIMHRDVKPHNVMIDHQQKKLRLIDWGLAEFYHPAQEY----NVRVASR    196
+
+s1               768 WM--PPESIFYNRYTTESDVWAYGVVLWEIFSYGLQPYYGMAHEEVIY--    813
+                     :.  |...:.|..|....|:|:.|.:|..:. :..:|::   |.:..|  
+s2               197 YFKGPELLVDYQMYDYSLDMWSLGCMLASMI-FRREPFF---HGQDNYDQ    242
+
+s1               814 YVRDGNILSCPENCPVELYNLMR    836
+                     .||...:|...     |||..::
+s2               243 LVRIAKVLGTE-----ELYGYLK    260
+
+
+#---------------------------------------
+#---------------------------------------

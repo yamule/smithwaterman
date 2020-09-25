@@ -1,0 +1,77 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:53
+# Commandline: needle
+#    -asequence inputs/seq53.1.fas
+#    -bsequence inputs/seq53.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_glocal_res53.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_glocal_res53.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 473
+# Identity:      29/473 ( 6.1%)
+# Similarity:    55/473 (11.6%)
+# Gaps:         357/473 (75.5%)
+# Score: 10.5
+# 
+#
+#=======================================
+
+s1                 1 MTEPGASPEDPWVKASPVGAHAGEGRAGRARARRGAGRRGASLLSPKSPT     50
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1                51 LSVPRGCREDSSHPACAKVEYAYSDNSLDPGLFVESTRKGSVVSRANSIG    100
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               101 STSASSVPNTDDEDSDYHQEAYKESYKDRRRRAHTQAEQKRRDAIKRGYD    150
+                                                           .....|:..|:.
+s2                 1 --------------------------------------MAETSALPTGFG     12
+
+s1               151 DLQTIVPTCQQQDFSIGSQKLSKAI--VLQKTIDYIQFLHKEKKKQEEEV    198
+                     :|:.:         ::|...|.:|:  :...|:....|....:.:....:
+s2                13 ELEVL---------AVGMVLLVEALSGLSLNTLTIFSFCKTPELRTPCHL     53
+
+s1               199 STLRKDVTALKIMKVNYEQIVKAHQDN----PHEGEDQVSDQVKFNVFQG    244
+                     ..|.   .||....::...:|.|....    |:.     ||..:.:.|||
+s2                54 LVLS---LALADSGISLNALVAATSSLLRRWPYG-----SDGCQAHGFQG     95
+
+s1               245 IMDSLFQSFNASISVASFQELSACVFSWIEEH--CKPQTLREIVIGVLHQ    292
+                     .:.:|     |||       .|:...:|...|  |               
+s2                96 FVTAL-----ASI-------CSSAAIAWGRYHHYC---------------    118
+
+s1               293 LKNQLY--------------------------------------------    298
+                     .::||.                                            
+s2               119 TRSQLAWNSAVSLVLFVWLSSAFWAALPLLGWGHYDYEPLGTCCTLDYSK    168
+
+s1               298 --------------------------------------------------    298
+                                                                       
+s2               169 GDRNFTSFLFTMSFFNFAMPLFITITSYSLMEQKLGKSGHLQVNTTLPAR    218
+
+s1               298 --------------------------------------------------    298
+                                                                       
+s2               219 TLLLGWGPYAILYLYAVIADVTSISPKLQMVPALIAKMVPTINAINYALG    268
+
+s1               298 -----------------------    298
+                                            
+s2               269 NEMVCRGIWQCLSPQKREKDRTK    291
+
+
+#---------------------------------------
+#---------------------------------------

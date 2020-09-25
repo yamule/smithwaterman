@@ -1,0 +1,49 @@
+########################################
+# Program: water
+# Rundate: Sat 26 Sep 2020 01:35:10
+# Commandline: water
+#    -asequence inputs/seq79.1.fas
+#    -bsequence inputs/seq79.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/res79.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/res79.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 116
+# Identity:      27/116 (23.3%)
+# Similarity:    47/116 (40.5%)
+# Gaps:          34/116 (29.3%)
+# Score: 50.0
+# 
+#
+#=======================================
+
+s1               473 LSGGIFGGQGNSLLCSYG---MDDYVHLSEAVLDGVKVQL----------    509
+                     |:||:....| .:|.|:.   ::  ::|:..||.|:.:.|          
+s2                89 LAGGLLASAG-MILASFATRLLE--LYLTAGVLTGLGLALNFQPSLIMLG    135
+
+s1               510 ------RPLASILSSCHLTHLILLPKSVGAITETNCLRLWKFHDFLSSGS    553
+                           ||||:.|::..      .|..:.|::......|.:|      |.
+s2               136 LYFERRRPLANGLAAAG------SPVFLSALSPLGQQLLERF------GW    173
+
+s1               554 QNGLKFIETLPLHLCA    569
+                     :.|...:..|.||.||
+s2               174 RGGFLLLGGLLLHCCA    189
+
+
+#---------------------------------------
+#---------------------------------------

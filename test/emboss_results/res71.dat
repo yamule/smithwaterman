@@ -1,0 +1,65 @@
+########################################
+# Program: water
+# Rundate: Sat 26 Sep 2020 01:35:05
+# Commandline: water
+#    -asequence inputs/seq71.1.fas
+#    -bsequence inputs/seq71.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/res71.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/res71.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 321
+# Identity:      56/321 (17.4%)
+# Similarity:    99/321 (30.8%)
+# Gaps:         109/321 (34.0%)
+# Score: 49.0
+# 
+#
+#=======================================
+
+s1               295 EIKEILRFWLTKGVDGFSLDAVKFLLEAKHLRDEIQVNKTQIPDTVTQYS    344
+                     |::|     |..|:||             ||.|.::..|  :.|..:::.
+s2                74 ELQE-----LFSGIDG-------------HLTDNLETEK--LCDYFSEHL    103
+
+s1               345 ELYHDFTTTQVGMHDIVRSFRQTMDQYSTEPGRYRFMGTEAYAESIDRTV    394
+                     .:|.   .....:..:.|:....||....|..|         |..:|:.|
+s2               104 GVYR---PVLAALESLNRAVLAAMDATKLEYER---------ASKVDQFV    141
+
+s1               395 MYYGLPFIQEADFPFNNYLSMLDTVSGNSVYEVITSWMENMPEGKW----    440
+                               ..|.....:|.|..:  .|..|..:..:|....| |    
+s2               142 ----------TRFLLRETVSQLQAL--QSSLEGASDTLEAQAHG-WRSDA    178
+
+s1               441 --------------------------PNWMIGGPDSSRLTSRLGNQY---    461
+                                               ..|..|..|:.| :|....|:   
+s2               179 ESVEAQSRLCGSRRAGRRALRSVSRSSTWSPGSSDTGR-SSEAEMQWRLQ    227
+
+s1               462 VNVMNMLLFTL------------PGTPITYYGEEIG--------------    485
+                     ||.:..|:..|            .|.| ::|..|.|              
+s2               228 VNRLQELIDQLECKVRAVGPGPHKGGP-SWYPPEPGPCWRPGPHSVPSQA    276
+
+s1               486 --MGNIVAANLNESYDINTLRSKSPMQWDNSSNAGFSEASNTWLP-TNSD    532
+                       :..:...:|.:..|::.|.::..:|........|..|...::. |.:.
+s2               277 PRLEPLREEDLAKGPDLHILMAQRQVQVAEEGLQDFHRALRCYVDFTGAQ    326
+
+s1               533 YHTVNVDVQKTQPRSALKLYQ    553
+                     .|.::|..||....::..||:
+s2               327 SHCLHVSAQKMLDGASFTLYE    347
+
+
+#---------------------------------------
+#---------------------------------------

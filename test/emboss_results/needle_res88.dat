@@ -1,0 +1,66 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:35:16
+# Commandline: needle
+#    -endweight
+#    -asequence inputs/seq88.1.fas
+#    -bsequence inputs/seq88.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_res88.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_res88.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 329
+# Identity:      51/329 (15.5%)
+# Similarity:    96/329 (29.2%)
+# Gaps:         133/329 (40.4%)
+# Score: -36.0
+# 
+#
+#=======================================
+
+s1                 1 MPPYTVVYFPVRGRCAALRM---LLADQGQSWKE--EVVTVETWQEGSLK     45
+                     |...:      :|....:..   ||.|..||..|  |....:..:||...
+s2                 1 METSS------KGLLTQVTQFWNLLDDLAQSDPEGYEKFIQQQLKEGKQL     44
+
+s1                46 AS------CLYGQLPKFQDGDLTLY----------QSNTILRHLGRTLG-     78
+                     .:      ||..::.|.::..|.:.          ||.|  ..:..|:| 
+s2                45 CAAPEPQLCLQTRILKPKEKILFINLCQWTRIPAPQSTT--HPVPLTVGK     92
+
+s1                79 ----------------LYGKDQQEAALVDMV--NDGVE-DLRC---KYIS    106
+                                     .|..|...||..|.|  |..:: .::|   |:..
+s2                93 PEDTTEISDAYTVIDVAYNPDVLHAAEKDQVKKNQLIQMAMKCIEEKFQF    142
+
+s1               107 LIYTNYEAGK---DDYVKALPGQLKPFET---------------------    132
+                     .:..:|...|   ...::.:...|...:|                     
+s2               143 TLSHSYHITKFRIKGSIQRMKQNLMGIQTDSIDLREKMRRELTLGQIRSS    192
+
+s1               133 -----------LLSQNQ-GGKTFIVGDQISFADYNL------LDLLLIHE    164
+                                ||.::| .||...:.::||..:..:      .:|.::|:
+s2               193 TMSNPDHFPQLLLPKDQVSGKAVCLIEEISSTEIQVEMKMPAYELKIVHD    242
+
+s1               165 -----------VLAPGCLDAFPLLSAYVGR----LSARPKLKAFLASPEY    199
+                                |..|| :::..|....|..    :....|.:..|..|:.
+s2               243 HSEKPLKIELKVELPG-INSVSLCDLSVSEDDLLIEVSEKYRLHLNLPKL    291
+
+s1               200 VN------------------LPINGNGKQ    210
+                     ::                  :|:     .
+s2               292 IDTEMTTAKFIKEKSTLIITMPL-----V    315
+
+
+#---------------------------------------
+#---------------------------------------

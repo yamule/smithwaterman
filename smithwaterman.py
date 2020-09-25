@@ -61,12 +61,14 @@ class SmithWaterman:
 	def __init__(self):
 		
 		self.smat = {};
+		self.acceptable = {};
 		self.go = 10.0;#must be positive
 		self.ge = 0.5;
 		heads = re.split("[\s]+",blosumlines[0]);
 		for ii in range(1,len(blosumlines)):
 			pt = re.split("[\s]+",blosumlines[ii]);
 			for jj in range(1,len(pt)):
+				self.acceptable[pt[0]] = True;
 				self.smat[pt[0]+"_"+heads[jj-1]] = int(pt[jj]);
 				
 	
@@ -86,7 +88,16 @@ class SmithWaterman:
 		
 	def makeDPMatrix(self,seqA,seqB):
 		self.aaA = list(re.sub("[^A-Z]","",seqA.upper()));
-		self.aaB = list(re.sub("[^A-Z]","",seqB.upper()));	
+		self.aaB = list(re.sub("[^A-Z]","",seqB.upper()));
+		for ii in range(len(self.aaA)):
+			if not self.aaA[ii] in self.acceptable:
+				self.aaA[ii] = "X";
+				sys.stderr.write(self.aaA[ii]+" was changed to X.\n");
+		for ii in range(len(self.aaB)):
+			if not self.aaB[ii] in self.acceptable:
+				self.aaB[ii] = "X";
+				sys.stderr.write(self.aaB[ii]+" was changed to X.\n");
+
 		self.dpmat = [[0 for i in range(len(self.aaA)+1)] for j in range(len(self.aaB)+1)]
 		
 		for rr in range(len(self.aaB)+1):

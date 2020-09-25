@@ -1,0 +1,206 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:30
+# Commandline: needle
+#    -endweight
+#    -asequence inputs/seq17.1.fas
+#    -bsequence inputs/seq17.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_res17.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_res17.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 2088
+# Identity:     294/2088 (14.1%)
+# Similarity:   504/2088 (24.1%)
+# Gaps:        1001/2088 (47.9%)
+# Score: -127.0
+# 
+#
+#=======================================
+
+s1                 1 M----------------DSLEEPQKKVFKARKTMRVSDRQQLEAVYKVKE     34
+                     |                .....|:....::..|..||...:...:    .
+s2                 1 MRRQWGALLLGALLCAHGLASSPECACGRSHFTCAVSALGECTCI----P     46
+
+s1                35 ELLKTDVKLLNGNH--ENGDLDPT-SPLE---------NMDYIKDKE---     69
+                     ...:.|.....|:|  |:|.:.|| |||:         ...::.|.:   
+s2                47 AQWQCDGDNDCGDHSDEDGCILPTCSPLDFHCDNGKCIRRSWVCDGDNDC     96
+
+s1                70 EVNGIEEICFDPEGSKAEWKETP-----CILSV-----------------     97
+                     |.:..|:.|...|   .|..|.|     ||.|:                 
+s2                97 EDDSDEQDCPPRE---CEEDEFPCQNGYCIRSLWHCDGDNDCGDNSDEQC    143
+
+s1                98 ---NVKNKQ---------------DDDLNCEPLSPHNITPEPVSKLPAEP    129
+                        ...:|:               |.|.:|:..|.....|   |.:||.|
+s2               144 DMRKCSDKEFRCSDGSCIAEHWYCDGDTDCKDGSDEENCP---SAVPAPP    190
+
+s1               130 VSGDP--------------APGDLDAGDPASGVLASGDSTSGDPTSSEPS    165
+                     .:.:.              ..||.|.||         .|...|.:|.:|.
+s2               191 CNLEEFQCAYGRCILDIYHCDGDDDCGD---------WSDESDCSSHQPC    231
+
+s1               166 SSDAASGDATSGDAPSG-DVSPGDATSGDATADDLSSGDPTSSDPIPGEP    214
+                     .|.....|       || .::.|....|||..||.|.....::.....|.
+s2               232 RSGEFMCD-------SGLCINAGWRCDGDADCDDQSDERNCTTSMCTAEQ    274
+
+s1               215 VPVEPISGDC--------AADDIASSEITSVDLASGAPASTDPASDDLAS    256
+                     ....  ||.|        ..||.|.:                  ||:...
+s2               275 FRCH--SGRCVRLSWRCDGEDDCADN------------------SDEENC    304
+
+s1               257 GDLSSSELASDD-------------LATGELASDELTSESTFDRTFEPKS    293
+                     .:..|.:.|.|.             |..|.....:.:.||          
+s2               305 ENTGSPQCALDQFLCWNGRCIGQRKLCNGVNDCGDNSDES----------    344
+
+s1               294 VPVCEPVPEIDNIEPSSNKDDDFLEKNGADEKLEQIQSKDSLDEKNKADN    343
+                            |: .|..|.:.:::..:...|..:|.:.::.            
+s2               345 -------PQ-QNCRPRTGEENCNVNNGGCAQKCQMVRG------------    374
+
+s1               344 NIDANEETLE-----TDDTTICSDRPPENEKKVEEDIITELALGEDAISS    388
+                        |.:.|..     |:|...|.|             :.|.|  |:...|
+s2               375 ---AVQCTCHTGYRLTEDGHTCQD-------------VNECA--EEGYCS    406
+
+s1               389 SMEIDQGEKNEDETSADLVETINENVIEDNKS------ENILENTDSMET    432
+                          ||..|.:.......||..| :..|.:|      |.:|...:.::.
+s2               407 -----QGCTNSEGAFQCWCETGYE-LRPDRRSCKALGPEPVLLFANRIDI    450
+
+s1               433 DEIIP-------ILEKLAPS-------EDELTCFSKTSLLPIDETN---P    465
+                     .:::|       :|..|..:       ..||..:|..:|..|...|   .
+s2               451 RQVLPHRSEYTLLLNNLENAIALDFHHRRELVFWSDVTLDRILRANLNGS    500
+
+s1               466 DLEEKMESSFGSPSKQESSESLPKEAFLVLSDEEDISGEKDESEVISQNE    515
+                     ::||.:.:...||.                    .::.:....::...:.
+s2               501 NVEEVVSTGLESPG--------------------GLAVDWVHDKLYWTDS    530
+
+s1               516 TCSPAEVESNEKDNKPEEEEQVIHEDDERPSE-----------KNEFSRR    554
+                     ..|..||.:.:..::    :.::.::.|:|..           ..::...
+s2               531 GTSRIEVANLDGAHR----KVLLWQNLEKPRAIALHPMEGTIYWTDWGNT    576
+
+s1               555 KRSKSEDMDNVQSK-------------------RRRYMEEEYEAEFQVKI    585
+                     .|.::..||....:                   ||.|.   .:|:..|..
+s2               577 PRIEASSMDGSGRRIIADTHLFWPNGLTIDYAGRRMYW---VDAKHHVIE    623
+
+s1               586 TAKGDINQKLQKVIQWLLEEKLCALQCAVFDKTLAELKTRVEKIECNKRH    635
+                     .|..|.:.:...:.|.|..    .....||:.:|                
+s2               624 RANLDGSHRKAVISQGLPH----PFAITVFEDSL----------------    653
+
+s1               636 KTVLTELQAKIARLTKRFEAAKEDLKKRHEHPP------NPPVSP-GKTV    678
+                       ..|:...|......:|....:::.:...|.|      :|...| ||  
+s2               654 --YWTDWHTKSINSANKFTGKNQEIIRNKLHFPMDIHTLHPQRQPAGK--    699
+
+s1               679 NDVNSNNNMSYRNAGTVRQMLESKRNVSESAPPSF---------------    713
+                           |.....|.|.....|.|.:|.:.:.|..|               
+s2               700 ------NRCGDNNGGCTHLCLPSGQNYTCACPTGFRKISSHACAQSLDKF    743
+
+s1               714 ----------QTPVNTVSSTNLVTPPAVVSSQPKLQ----------TPVT    743
+                               :...:|...::.|.|.|.|.|...|.          |.|:
+s2               744 LLFARRMDIRRISFDTEDLSDDVIPLADVRSAVALDWDSRDDHVYWTDVS    793
+
+s1               744 SGSLT-------------------------------------ATSVLPAP    756
+                     :.:::                                     .|..:...
+s2               794 TDTISRAKWDGTGQEVVVDTSLESPAGLAIDWVTNKLYWTDAGTDRIEVA    843
+
+s1               757 NTATVVATTQVPSGNPQP-TISLQPL------------PVILHVPVAVSS    793
+                     ||...:.|..:.....:| .|.::|:            |.|....:..|.
+s2               844 NTDGSMRTVLIWENLDRPRDIVVEPMGGYMYWTDWGASPKIERAGMDASG    893
+
+s1               794 QPQLLQSH---PGTLVTNQPS----------GNVEFISVQSP--------    822
+                     :..::.|:   |..|..:..|          ..:||..:...        
+s2               894 RQVIISSNLTWPNGLAIDYGSQRLYWADAGMKTIEFAGLDGSKRKVLIGS    943
+
+s1               823 --PTVSGLT----------------KNPVSLPSLPNPTKPNNVPSVPSPS    854
+                       |...|||                ::...|..|...|...|:.::....
+s2               944 QLPHPFGLTLYGERIYWTDWQTKSIQSADRLTGLDRETLQENLENLMDIH    993
+
+s1               855 I--QRNPTASAAPLGTTLAVQAVPTAHSIVQATRTS-LPTVGPSGL----    897
+                     :  :|.|     |:.|..|::....:|..:::...| .....|:|:    
+s2               994 VFHRRRP-----PVSTPCAMENGGCSHLCLRSPNPSGFSCTCPTGINLLS   1038
+
+s1               898 ----YSPSTN-------RGPIQM-----------KIPISAFSTSSAA---    922
+                         .||..|       |..|:|           .:||:....::.|   
+s2              1039 DGKTCSPGMNSFLIFARRIDIRMVSLDIPYFADVVVPINITMKNTIAIGV   1088
+
+s1               923 -------EQNSNTTPRI---------------------------------    932
+                            ..:.:|..||                                 
+s2              1089 DPQEGKVYWSDSTLHRISRANLDGSQHEDIITTGLQTTDGLAVDAIGRKV   1138
+
+s1               933 ---ENQTNK----TIDASVSKKAADSTSQCGKA-----------------    958
+                        :..||:    .:|.|:.|..........:|                 
+s2              1139 YWTDTGTNRIEVGNLDGSMRKVLVWQNLDSPRAIVLYHEMGFMYWTDWGE   1188
+
+s1               959 ---------TGSDSSGVID--------LTMDDEES---------------    976
+                              .|||.:.:|:        ||:|...|               
+s2              1189 NAKLERSGMDGSDRAVLINNNLGWPNGLTVDKASSQLLWADAHTERIEAA   1238
+
+s1               977 ---GASQDPKKLNHTPVSTMS-----------------------------    994
+                        ||::      ||.||.:.                             
+s2              1239 DLNGANR------HTLVSPVQHPYGLTLLDSYIYWTDWQTRSIHRADKGT   1282
+
+s1               995 --------SSQPVSRPLQPIQPAPPL------------------QPSGV-   1017
+                             |:.|....:|.:..|.||                  :|||. 
+s2              1283 GSNVILVRSNLPGLMDMQAVDRAQPLGFNKCGSRNGGCSHLCLPRPSGFS   1332
+
+s1              1018 -------------PTSGPSQTTIHLLPTAPTTVNVT---------HRPVT   1045
+                                  .|..||..|..|..:..:...::         |.||.
+s2              1333 CACPTGIQLKGDGKTCDPSPETYLLFSSRGSIRRISLDTSDHTDVHVPVP   1382
+
+s1              1046 QVTTRLPVPRAPANHQVVYTTLPAPP-AQAPLRGTVMQAPAVRQVNPQNS   1094
+                     ::...:.:.....:.:|.||.:.... .:|.|.|:.|:....|.:...:.
+s2              1383 ELNNVISLDYDSVDGKVYYTDVFLDVIRRADLNGSNMETVIGRGLKTTDG   1432
+
+s1              1095 VTVRVPQTTTY---------------------VVN---------------   1108
+                     :.|.......|                     ::|               
+s2              1433 LAVDWVARNLYWTDTGRNTIEASRLDGSCRKVLINNSLDEPRAIAVFPRK   1482
+
+s1              1109 -----------------------------------NGLTL----------   1113
+                                                        |||||          
+s2              1483 GYLFWTDWGHIAKIERANLDGSERKVLINTDLGWPNGLTLDYDTRRIYWV   1532
+
+s1              1114 -------------GSTGPQLTVHHRPPQVHTEPPR---------------   1135
+                                  |.....|..|...|...|:..|               
+s2              1533 DAHLDRIESADLNGKLRQVLVSHVSHPFALTQQDRWIYWTDWQTKSIQRV   1582
+
+s1              1135 --------------------------------------------------   1135
+                                                                       
+s2              1583 DKYSGRNKETVLANVEGLMDIIVVSPQRQTGTNACGVNNGGCTHLCFARA   1632
+
+s1              1136 -------PVHPAPLPEAPQPQRLPPEAASTS-------LPQKP-------   1164
+                            |..|...|.:..|..:||...:|.       ||..|       
+s2              1633 SDFVCACPDEPDSRPCSLVPGLVPPAPRATGMSEKSPVLPNTPPTTLYSS   1682
+
+s1              1165 ----HLKLARVQSQ-----------------------NGIVLSWSV---L   1184
+                         ...|..|:.:                       .|:.:|:::   |
+s2              1683 TTRTRTSLEEVEGRCSERDARLGLCARSNDAVPAAPGEGLHISYAIGGLL   1732
+
+s1              1185 EVDRSCATVDSYHLYAY--------------HEEPSATVPSQWKKIGEVK   1220
+                     .:......:.:..||.:              :..||....:|..||   :
+s2              1733 SILLILVVIAALMLYRHKKSKFTDPGMGNLTYSNPSYRTSTQEVKI---E   1779
+
+s1              1221 ALPLPM--------------------------------------------   1226
+                     |:|.|.                                            
+s2              1780 AIPKPAMYNQLCYKKEGGPDHNYTKEKIKIVEGICLLSGDDAEWDDLKQL   1829
+
+s1              1227 -----------ACTLTQFVSGSKYYFAVRAKDIYGRFGPFCDPQSTDVIS   1265
+                                .|..|..||            |....|...|.::..::.
+s2              1830 RSSRGGLLRDHVCMKTDTVS------------IQASSGSLDDTETEQLLQ   1867
+
+s1              1266 STQSS---------------------------------   1270
+                     ..||.                                 
+s2              1868 EEQSECSSVHTAATPERRGSLPDTGWKHERKLSSESQV   1905
+
+
+#---------------------------------------
+#---------------------------------------

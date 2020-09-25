@@ -1,0 +1,77 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:24
+# Commandline: needle
+#    -asequence inputs/seq5.1.fas
+#    -bsequence inputs/seq5.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_glocal_res5.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_glocal_res5.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 471
+# Identity:      25/471 ( 5.3%)
+# Similarity:    52/471 (11.0%)
+# Gaps:         357/471 (75.8%)
+# Score: 24.0
+# 
+#
+#=======================================
+
+s1                 1 MWTLKSSLVLLLCLTCSYAFMFSSLRQKTSEPQGKVQYGEHFRIRQNLPE     50
+                                                            .|:.:.     
+s2                 1 ---------------------------------------MHYCVL-----      6
+
+s1                51 HTQGWLGSKWLWLLFVVVPFVILQCQR-DSEKNKEQSPPGLRGGQLHSPL     99
+                            |.:|.|..|.|...:..|.. |.::...:....:| ||:.|.|
+s2                 7 -------SAFLILHLVTVALSLSTCSTLDMDQFMRKRIEAIR-GQILSKL     48
+
+s1               100 KKKRNASPNKDCAFNTLMELEVELMKFVSKVRNLKRAMATGSGSNLRLRK    149
+                     |.   .||.:|  :....|:..|::...:..|:|.:..|:...:.....:
+s2                49 KL---TSPPED--YPEPEEVPPEVISIYNSTRDLLQEKASRRAAACERER     93
+
+s1               150 SE---MPADPYHVTICEIWGEESSS-------------------------    171
+                     |:   ...:.|.:.:...:..|::.                         
+s2                94 SDEEYYAKEVYKIDMPPFFPSENAIPPTFYRPYFRIVRFDVSAMEKNASN    143
+
+s1               171 --------------------------------------------------    171
+                                                                       
+s2               144 LVKAEFRVFRLQNPKARVPEQRIELYQILKSKDLTSPTQRYIDSKVVKTR    193
+
+s1               171 --------------------------------------------------    171
+                                                                       
+s2               194 AEGEWLSFDVTDAVHEWLHHKDRNLGFKISLHCPCCTFVPSNNYIIPNKS    243
+
+s1               171 --------------------------------------------------    171
+                                                                       
+s2               244 EELEARFAGIDGTSTYTSGDQKTIKSTRKKNSGKTPHLLLMLLPSYRLES    293
+
+s1               171 --------------------------------------------------    171
+                                                                       
+s2               294 QQTNRRKKRALDAAYCFRNVQDNCCLRPLYIDFKRDLGWKWIHEPKGYNA    343
+
+s1               171 --------------------------------------------------    171
+                                                                       
+s2               344 NFCAGACPYLWSSDTQHSRVLSLYNTINPEASASPCCVSQDLEPLTILYY    393
+
+s1               171 ---------------------    171
+                                          
+s2               394 IGKTPKIEQLSNMIVKSCKCS    414
+
+
+#---------------------------------------
+#---------------------------------------

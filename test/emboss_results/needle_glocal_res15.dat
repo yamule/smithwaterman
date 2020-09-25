@@ -1,0 +1,97 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:29
+# Commandline: needle
+#    -asequence inputs/seq15.1.fas
+#    -bsequence inputs/seq15.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_glocal_res15.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_glocal_res15.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 718
+# Identity:       8/718 ( 1.1%)
+# Similarity:    15/718 ( 2.1%)
+# Gaps:         693/718 (96.5%)
+# Score: 15.0
+# 
+#
+#=======================================
+
+s1                 1 MAARKGRRRTCETGEPMEAESGDTSSEGPAQVYLPGRGPPLREGEELVMD     50
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1                51 EEAYVLYHRAQTGAPCLSFDIVRDHLGDNRTELPLTLYLCAGTQAESAQS    100
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               101 NRLMMLRMHNLHGTKPPPSEGSDEEEEEEDEEDEEERKPQLELAMVPHYG    150
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               151 GINRVRVSWLGEEPVAGVWSEKGQVEVFALRRLLQVVEEPQALAAFLRDE    200
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               201 QAQMKPIFSFAGHMGEGFALDWSPRVTGRLLTGDCQKNIHLWTPTDGGSW    250
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               251 HVDQRPFVGHTRSVEDLQWSPTENTVFASCSADASIRIWDIRAAPSKACM    300
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               301 LTTATAHDGDVNVISWSRREPFLLSGGDDGALKIWDLRQFKSGSPVATFK    350
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               351 QHVAPVTSVEWHPQDSGVFAASGADHQITQWDLAVERDPEAGDVEADPGL    400
+                                                                       
+s2                 0 --------------------------------------------------      0
+
+s1               401 ADLPQQLLFVHQGETELKEL-----------HWHPQCPGLLVSTALSGFT    439
+                                     :|.:           ..:..||.:::..     .
+s2                 1 ----------------MKHIINSYENINNTARNNSDCPRVVLPE-----E     29
+
+s1               440 IFRTISV-------------------------------------------    446
+                     ||.|||:                                           
+s2                30 IFFTISIVGVLENLIVLLAVFKNKNLQAPMYFFICSLAISDMLGSLYKIL     79
+
+s1               446 --------------------------------------------------    446
+                                                                       
+s2                80 ENILIILRNMGYLKPRGSFETTADDIIDSLFVLSLLGSIFSLSVIAADRY    129
+
+s1               446 --------------------------------------------------    446
+                                                                       
+s2               130 ITIFHALRYHSIVTMRRTVVVLTVIWTFCTGTGITMVIFSHHVPTVITFT    179
+
+s1               446 --------------------------------------------------    446
+                                                                       
+s2               180 SLFPLMLVFILCLYVHMFLLARSHTRKISTLPRANMKGAITLTILLGVFI    229
+
+s1               446 --------------------------------------------------    446
+                                                                       
+s2               230 FCWAPFVLHVLLMTFCPSNPYCACYMSLFQVNGMLIMCNAVIDPFIYAFR    279
+
+s1               446 ------------------    446
+                                       
+s2               280 SPELRDAFKKMIFCSRYW    297
+
+
+#---------------------------------------
+#---------------------------------------

@@ -1,0 +1,66 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:35:23
+# Commandline: needle
+#    -endweight
+#    -asequence inputs/seq98.1.fas
+#    -bsequence inputs/seq98.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_res98.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_res98.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 318
+# Identity:      36/318 (11.3%)
+# Similarity:    52/318 (16.4%)
+# Gaps:         213/318 (67.0%)
+# Score: -79.0
+# 
+#
+#=======================================
+
+s1                 1 MSLLLYYALPALGSYAMLSIFFLRRPHLLHTPRAPTFRIRLGAHRGGSGE     50
+                     |:                       |..:.. :||..|.|   ||     
+s2                 1 MN-----------------------PSEMQR-KAPPRRRR---HR-----     18
+
+s1                51 LLENTMEAMENSMAQRSDLLELDCQLTRDRVVVVSHDENLCRQSGLNRDV    100
+                                   .|:.|               :|..|           
+s2                19 --------------NRAPL---------------THKMN-----------     28
+
+s1               101 GSLDFEDLPLYKEKLEVYFSPGHFAHGSDRRMVRLEDLFQRFPRTPMSVE    150
+                                                   :||..|:. .:.|.|     
+s2                29 ------------------------------KMVTSEEQ-MKLPST-----     42
+
+s1               151 IKGKNEELIREIAGLVRRYDRNEITIWASEKSSVMKKCKAANPEMPLSFT    200
+                                        .:.|...||..|....               
+s2                43 -------------------KKAEPPTWAQLKKLTQ---------------     58
+
+s1               201 ISRGFWVLLSYYLGLLPFIPIPEKFFFCFLPNIINRTYFPFSCSCLNQLL    250
+                            |.:.||........||                    |.|...|
+s2                59 -------LATKYLENTKVTQTPE--------------------SMLLAAL     81
+
+s1               251 AVVSKWLIMRKSLIRHLEERGVQVVFWCLNEESDFEAAFSVGATGVITDY    300
+                     .:||                   :|.:.:...|:..|..           
+s2                82 MIVS-------------------MVSYGVPNSSEETATI-----------    101
+
+s1               301 PTALRHYLDNHGPAARTS    318
+                              .:||     
+s2               102 ---------ENGP-----    105
+
+
+#---------------------------------------
+#---------------------------------------

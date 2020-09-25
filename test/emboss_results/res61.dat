@@ -1,0 +1,57 @@
+########################################
+# Program: water
+# Rundate: Sat 26 Sep 2020 01:34:58
+# Commandline: water
+#    -asequence inputs/seq61.1.fas
+#    -bsequence inputs/seq61.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/res61.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/res61.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 233
+# Identity:      55/233 (23.6%)
+# Similarity:    81/233 (34.8%)
+# Gaps:          64/233 (27.5%)
+# Score: 52.5
+# 
+#
+#=======================================
+
+s1                 2 EPLRLLILLFVTELSGAHNTTVFQGVAGQSLQVSCPYDSMKHWGRRKAWC     51
+                     ||.:||..|...|......:.:|:|...||:.||          ..:...
+s2               234 EPDQLLATLEKQETIEQLLSNMFEGEQSQSVIVS----------GIQVLL    273
+
+s1                52 RQLGEKGPCQRVVSTHN--------LWLLSFLRRWNGSTAITDDTLGGTL     93
+                     ..|..:.|....|:.::        |.||:     .|:...|..::|   
+s2               274 TLLEPRRPRSESVTVNSFFSSVDGQLELLA-----QGALESTVSSVG---    315
+
+s1                94 TITLRNLQPHDAGLYQ----------CQSLHGSEADTL---RKVLVEVLA    130
+                       .|..|:|..:..:|          .|...|..|..|   |..:|::||
+s2               316 --ALHALRPRLSCFHQLLLEPPKLEPLQMTWGMLAPPLGNTRLHVVKLLA    363
+
+s1               131 DPLDHRDAG---------------DLWFPGESESFEDAHVEHSISRSLLE    165
+                     ..|...||.               ||:|.....:|..|.||..:|..|..
+s2               364 SALSANDAALTHELLALDVPNTMLDLFFHYVFNNFLHAQVEGCVSTMLSL    413
+
+s1               166 GEIP--FPPTSIL------LLLACIFLIKILAA    190
+                     |..|  .|.|.|.      ||..|..:.:||.:
+s2               414 GPPPDSSPETPIQNPVVKHLLQQCRLVERILTS    446
+
+
+#---------------------------------------
+#---------------------------------------

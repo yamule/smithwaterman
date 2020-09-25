@@ -1,0 +1,65 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:43
+# Commandline: needle
+#    -asequence inputs/seq38.1.fas
+#    -bsequence inputs/seq38.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_glocal_res38.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_glocal_res38.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 309
+# Identity:      29/309 ( 9.4%)
+# Similarity:    53/309 (17.2%)
+# Gaps:         203/309 (65.7%)
+# Score: 21.0
+# 
+#
+#=======================================
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2                 1 MQRPGEPGAARFGPPEGCADHRPHRYRSFMIEEILTEPPGPKGAAPAAAA     50
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2                51 AAAGELLKFGVQALLAARPFHSHLAVLKAEQAAVFKFPLAPLGCSGLSSA    100
+
+s1                 1 -------------------------------------------MVPKLFT      7
+                                                                ....:||
+s2               101 LLAAGPGLPGAAGAPHLPLELQLRGKLEAAGPGEPGTKAKKGRRSRTVFT    150
+
+s1                 8 SQICLLLLLGLLAVEGSLHVKPPQFTWAQWFET-QHINMTSQQCTNAMQV     56
+                     .    |.|:||          ..:|...::..| ..|::......:.:||
+s2               151 E----LQLMGL----------EKRFEKQKYLSTPDRIDLAESLGLSQLQV    186
+
+s1                57 INNYQ-RRCKNQNTFLLTTFANVVNVCGNPNMTCPSNKTRKNCHHSGSQV    105
+                     ...|| ||.|.:..        |:...|..:.|.|..:.:||        
+s2               187 KTWYQNRRMKWKKI--------VLQGGGLESPTKPKGRPKKN--------    220
+
+s1               106 PLIHCNLTTPSPQNIS---NCRYAQTPANMFYIVACDNRDQRRDPPQYPV    152
+                            :.|:.:.::   ..:.|:.||.    |..:..|:.|:.     
+s2               221 -------SIPTSEQLTEQERAKDAEKPAE----VPGEPSDRSRED-----    254
+
+s1               153 VPVHLDRII    161
+                              
+s2               254 ---------    254
+
+
+#---------------------------------------
+#---------------------------------------

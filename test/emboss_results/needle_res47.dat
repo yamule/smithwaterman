@@ -1,0 +1,62 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:48
+# Commandline: needle
+#    -endweight
+#    -asequence inputs/seq47.1.fas
+#    -bsequence inputs/seq47.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_res47.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_res47.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 275
+# Identity:      35/275 (12.7%)
+# Similarity:    56/275 (20.4%)
+# Gaps:         169/275 (61.5%)
+# Score: -54.0
+# 
+#
+#=======================================
+
+s1                 1 MN----ATFLN---HSGLEEV---DGVGGGAGAALGNRTHGLGTWLGCCP     40
+                     ||    ..|::   ..||..|   .|:.......:|...:          
+s2                 1 MNPEWGQAFVHVAVAGGLCAVAVFTGIFDSVSVQVGYEHY----------     40
+
+s1                41 GGAPLAASDGVPAGLAPDERSL-----------WVSR-------------     66
+                     ..||:|   |:||.||....||           |:.|             
+s2                41 AEAPVA---GLPAFLAMPFNSLVNMAYTLLGLSWLHRGGAMGLGPRYLKD     87
+
+s1                67 -VAQIAVL----------------------------------CV------     75
+                      .|.:|:|                                  |:      
+s2                88 VFAAMALLYGPVQWLRLWTQWRRAAVLDQWLTLPIFAWPVAWCLYLDRGW    137
+
+s1                76 -----LSLTVV----FGVFFL---GCNLLIKSESMINFLVQERRPSKDVG    113
+                          |||..|    :|:..|   |..:.:.:. ::..:.|..|..:..|
+s2               138 RPWLFLSLECVSLASYGLALLHPQGFEVALGAH-VVAAVGQALRTHRHYG    186
+
+s1               114 AAILGLY-------------------------------------------    120
+                     :.....|                                           
+s2               187 STTSATYLALGVLSCLGFVVLKLCDHQLARWRLFQCLTGHFWSKVCDVLQ    236
+
+s1               120 -------------------------    120
+                                              
+s2               237 FHFAFLFLTHFNTHPRFHPSGGKTR    261
+
+
+#---------------------------------------
+#---------------------------------------

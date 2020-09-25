@@ -1,0 +1,97 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:37
+# Commandline: needle
+#    -asequence inputs/seq28.1.fas
+#    -bsequence inputs/seq28.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_glocal_res28.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_glocal_res28.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 736
+# Identity:      58/736 ( 7.9%)
+# Similarity:    97/736 (13.2%)
+# Gaps:         564/736 (76.6%)
+# Score: 40.0
+# 
+#
+#=======================================
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2                 1 MAATAAAVVAEEDTELRDLLVQTLENSGVLNRIKAELRAAVFLALEEQEK     50
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2                51 VENKTPLVNESLKKFLNTKDGRLVASLVAEFLQFFNLDFTLAVFQPETST    100
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2               101 LQGLEGRENLARDLGIIEAEGTVGGPLLLEVIRRCQQKEKGPTTGEGALD    150
+
+s1                 1 ---------------------------MSENLDKSNVNEAGKSKSNDSEE     23
+                                                ..:...|::..:||..|:||   
+s2               151 LSDVHSPPKSPEGKTSAQTTPSKIPRYKGQGKKKTSGQKAGDKKAND---    197
+
+s1                24 GLEDAVEGADEALQKAIKSDSSSPQRVQRPHSSPPRFVTVEELL--ETAR     71
+                                   :|.:||:|       ...|.|:..:...||  ||..
+s2               198 --------------EANQSDTS-------VSLSEPKSKSSLHLLSHETKI    226
+
+s1                72 G--VTNMAL---------AHEIVVNGD-FQIKPVELPENS--LKKRVKEI    107
+                     |  ::|..|         ..|..:.|| |...|:..||.:  |:|..::.
+s2               227 GSFLSNRTLDGKDKAGLCPDEDDMEGDSFFDDPIPKPEKTYGLRKEPRKQ    276
+
+s1               108 VHKAFWDCLSVQLSEDPPAYDHAIKLVG--EIKETLLSFLLPGHTRLRNQ    155
+                     ....      ..||:.||.......|.|  .:|:   |....|:|.|:  
+s2               277 AGSL------ASLSDAPPLKSGLSSLAGAPSLKD---SESKRGNTVLK--    315
+
+s1               156 ITEVLDLDLIKQEAENGALDI------------------SKLAEFIIGMM    187
+                          ||.||..:.  |:|.:                  |:.:|..||  
+s2               316 -----DLKLISDKI--GSLGLGTGEDDDYVDDFNSTSHRSEKSEISIG--    356
+
+s1               188 GTLCAPARDEEVK--------------KLKDIKEIVPLFREIFSVLDLMK    223
+                              ||::              ||.|:.:.:.: .::..|.|.::
+s2               357 ---------EEIEEDLSVEIDDINTSDKLDDLTQDLTV-SQLSDVADYLE    396
+
+s1               224 VDMANFAISSIRPHLMQQSVEYERKKFQEILERQPNSLDFVTQWLEEASE    273
+                      |:|                                              
+s2               397 -DVA----------------------------------------------    399
+
+s1               274 DLMTQKYKHALPVGGMAAGSGDMPRLSPVAVQNYAYLKLLKWDHLQRPFP    323
+                                                                       
+s2               399 --------------------------------------------------    399
+
+s1               324 ETVLMDQSRFHELQLQLEQLTILGAVLLVTFSMAAPGISSQADFAEKLKM    373
+                                                                       
+s2               399 --------------------------------------------------    399
+
+s1               374 IVKILLTDMHLPSFHLKDVLTTIGEKVCLEVSSCLSLCGSSPFTTDKETV    423
+                                                                       
+s2               399 --------------------------------------------------    399
+
+s1               424 LKGQIQAVASPDDPIRRIMESRILTFLETYLASGHQKPLPTVPGGLSPVQ    473
+                                                                       
+s2               399 --------------------------------------------------    399
+
+s1               474 RELEEVAIKFARLVNYNKMVFCPYYDAILSKILVRS    509
+                                                         
+s2               399 ------------------------------------    399
+
+
+#---------------------------------------
+#---------------------------------------

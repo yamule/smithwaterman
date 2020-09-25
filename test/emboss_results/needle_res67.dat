@@ -1,0 +1,98 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:35:02
+# Commandline: needle
+#    -endweight
+#    -asequence inputs/seq67.1.fas
+#    -bsequence inputs/seq67.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_res67.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_res67.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 702
+# Identity:     101/702 (14.4%)
+# Similarity:   164/702 (23.4%)
+# Gaps:         372/702 (53.0%)
+# Score: -74.5
+# 
+#
+#=======================================
+
+s1                 1 MAEKALEAVGCGLGP-------GAVAMAVTLEDGAEPPVLTTHLKKVENH     43
+                     ||  |:.|:.....|       |:..::.::..|....::...:|..:.:
+s2                 1 MA--AIPALDPEAEPSMDVILVGSSELSSSVSPGTGRDLIAYEVKANQRN     48
+
+s1                44 ITEAQRFSHLPKRSAVDIEF------VELSYSVREG----PCWRK-----     78
+                     |.              ||..      |...:.:.||    ||..|     
+s2                49 IE--------------DICICCGSLQVHTQHPLFEGGICAPCKDKFLDAL     84
+
+s1                79 -----RGYKTLLK-CLSGK-------------FCRRELIGIMGPSGAGKS    109
+                          .||::... |.||:             :|...:..::||..:||.
+s2                85 FLYDDDGYQSYCSICCSGETLLICGNPDCTRCYCFECVDSLVGPGTSGKV    134
+
+s1               110 TFMNILAGY-----RESGMKGQILVNGRPRELRTFRKMSCYIMQDDMLLP    154
+                     ..|:....|     ..||:.      .|.|:.|:..| :.|..:.:..|.
+s2               135 HAMSNWVCYLCLPSSRSGLL------QRRRKWRSQLK-AFYDRESENPLE    177
+
+s1               155 HLTVLEAMMVSANLKLSEKQEVKKELVTEILTALGLMSCSHTRTALLSGG    204
+                     ....:..........||..:::|||     ||:||.:.            
+s2               178 MFETVPVWRRQPVRVLSLFEDIKKE-----LTSLGFLE------------    210
+
+s1               205 QRKRLAIALELVNNPPVMFFDEPTSGLDSASCFQVV----SLMKSLAQGG    250
+                                             ||.|......||    ::.|.:.:.|
+s2               211 ------------------------SGSDPGQLKHVVDVTDTVRKDVEEWG    236
+
+s1               251 RTIICTIHQPSAKLFEMFDKLYILSQGQCIFKGVVTNLIPYLKGLGLHCP    300
+                                     .||.:|                       |...|
+s2               237 ----------------PFDLVY-----------------------GATPP    247
+
+s1               301 TYHN----PADFIIEVASGEYGDLNPMLFRAVQNGLCAMAEKKSSPEKNE    346
+                     ..|.    |:.::.:            ..|.:|...              
+s2               248 LGHTCDRPPSWYLFQ------------FHRLLQYAR--------------    271
+
+s1               347 VPAPCPPCPPEVDPIESHTFATSTLTQFCILFKRTFLSILRDTVLTHLRF    396
+                      |.|..|                          |.|..:..|.::.:...
+s2               272 -PKPGSP--------------------------RPFFWMFVDNLVLNKED    294
+
+s1               397 MSHVVIGVLIGLLYLHIGDDASKVFNNTGCLFFSMLFL-MFAALMPTVLT    445
+                     :                 |.||:             || |....:|.|..
+s2               295 L-----------------DVASR-------------FLEMEPVTIPDVHG    314
+
+s1               446 FPLEMAVFMREHLNYWYSLKAYYLAKTMADVPFQVVCPVVYCSIVYWMTG    495
+                     ..|:.||      ..|.::                               
+s2               315 GSLQNAV------RVWSNI-------------------------------    327
+
+s1               496 QPAETSRFLLFSALATATALVA-QSLGLLIGAASNSLQVATFVGPVTAIP    544
+                      ||..||.         .|||: :.|.||.....:|...|.:        
+s2               328 -PAIRSRH---------WALVSEEELSLLAQNKQSSKLAAKW--------    359
+
+s1               545 VLLFSGFFVSFKTIPTYLQWSSYLSYVRYGFEGVILTIYGMERGDLTCLE    594
+                                   ||.|..:.:|                          
+s2               360 --------------PTKLVKNCFL--------------------------    369
+
+s1               595 ERCPFREPQSILRALDVEDAKLYMDFLVLGIFFLALRLLAYLVLRYRVKS    644
+                        |.||               |..:                 ....:.|
+s2               370 ---PLRE---------------YFKY-----------------FSTELTS    384
+
+s1               645 ER    646
+                     ..
+s2               385 SL    386
+
+
+#---------------------------------------
+#---------------------------------------

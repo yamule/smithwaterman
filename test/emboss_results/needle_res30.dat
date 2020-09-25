@@ -1,0 +1,70 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:38
+# Commandline: needle
+#    -endweight
+#    -asequence inputs/seq30.1.fas
+#    -bsequence inputs/seq30.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_res30.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_res30.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 360
+# Identity:      47/360 (13.1%)
+# Similarity:    86/360 (23.9%)
+# Gaps:         161/360 (44.7%)
+# Score: -66.5
+# 
+#
+#=======================================
+
+s1                 1 M----DNKKRLAYAIIQFLHDQLRHGGLSSDAQESLEVAIQCLETAFGVT     46
+                     |    ..|..|...::..|....|.|.....:            ..:.:|
+s2                 1 MAAAAATKILLCLPLLLLLSGWSRAGRADPHS------------LCYDIT     38
+
+s1                47 VEDSDLALPQTLP------------------------EIFEAAATGKEMP     72
+                     |      :|:..|                        .:...:..||::.
+s2                39 V------IPKFRPGPRWCAVQGQVDEKTFLHYDCGNKTVTPVSPLGKKLN     82
+
+s1                73 QDLRSPARTPPSEEDSAEAERLKTEGNEQMKVENFEAAVHFYGKAIELNP    122
+                     ......|:.|...    |...:.||....:::||:             .|
+s2                83 VTTAWKAQNPVLR----EVVDILTEQLRDIQLENY-------------TP    115
+
+s1               123 ANAVYFCNRAAAYSKL-GNYAGAVQ-----------DCERAI--CIDPAY    158
+                     ...:....|.:...|. |:.:|:.|           |.|:.:  .:.|..
+s2               116 KEPLTLQARMSCEQKAEGHSSGSWQFSFDGQIFLLFDSEKRMWTTVHPGA    165
+
+s1               159 SKAYGRMGLALSSLNKHVEAVAYYKKALELDPDNETYKSNLKIAELKLRE    208
+                     .|...:..      |..|.|::::                          
+s2               166 RKMKEKWE------NDKVVAMSFH--------------------------    183
+
+s1               209 APSPTGGVGSFDIAGLLNNPGFMSMASNLMNNPQIQQLMSGMISGGNNPL    258
+                                          :.||...:   ..::..:.||.|......
+s2               184 ---------------------YFSMGDCI---GWLEDFLMGMDSTLEPSA    209
+
+s1               259 GTP-----GTSPSQNDLASLIQAGQQFAQQMQQQNPELIEQLRSQIRSRT    303
+                     |.|     ||:..:....:||...             |:..|...|   .
+s2               210 GAPLAMSSGTTQLRATATTLILCC-------------LLIILPCFI---L    243
+
+s1               304 PSASNDDQQE    313
+                     |..       
+s2               244 PGI-------    246
+
+
+#---------------------------------------
+#---------------------------------------

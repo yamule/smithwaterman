@@ -1,0 +1,73 @@
+########################################
+# Program: water
+# Rundate: Sat 26 Sep 2020 01:34:46
+# Commandline: water
+#    -asequence inputs/seq43.1.fas
+#    -bsequence inputs/seq43.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/res43.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/res43.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 446
+# Identity:      92/446 (20.6%)
+# Similarity:   131/446 (29.4%)
+# Gaps:         162/446 (36.3%)
+# Score: 91.0
+# 
+#
+#=======================================
+
+s1              1675 GTGRHSS-SSLSSHASSEAGNMVMLGDGSMGDAPEDLYHHMQL-------   1716
+                     |||.:.: ...|.:...|.|.::|        :|..|..|.:|       
+s2                63 GTGLYQTLVQESQYQCLECGQLLM--------SPSQLLEHQELHLKMMAP    104
+
+s1              1717 -----AYPNPRYQGSVTNVSVLSSS---------QASPSSSSLSSTH---   1749
+                          |.|:|:       ...||||         :|..:|..|...|   
+s2               105 QEAVPAEPSPK-------APPLSSSTIHYECVDCKALFASQELWLNHRQT    147
+
+s1              1750 -------SAPSQMITSAPSSARGSP------SLPDKYRHAREMMLLLPTY   1786
+                            .||:.::..:| ...|.|      ::...||.|.|        
+s2               148 HLRATPTKAPAPVVLGSP-VVLGPPVGQARVAVEHSYRKAEE--------    188
+
+s1              1787 RDRPSSAMYPAAILENGQPPNFQRALFQQVVGACKPCSDP-NLSVAEKGH   1835
+                       ....|..|:|.....:.......|..:    |..||.. .|......|
+s2               189 --GGEGATVPSAAATTTEVVTEVELLLYK----CSECSQLFQLPADFLEH    232
+
+s1              1836 YSLHFDAFHHPLGDT-PPALPARTLRKSPLHPIPASPTSPQSGLDGSNST   1884
+                     .:.||.|   |:.:: .|||.......||.. :|.|...|....|.|...
+s2               233 QATHFPA---PVPESQEPALQQEVQASSPAE-VPVSQPDPLPASDHSYEL    278
+
+s1              1885 LSGSASSGVSSLSESNFGHSSEAP---------PRTDTMDSMPSQAWN--   1923
+                     .:|.|.........:...:|.||.         ...|.:...|.|...  
+s2               279 RNGEAIGRDRRGRRARRNNSGEAGGAATQELFCSACDQLFLSPHQLQQHL    328
+
+s1              1924 ---------------------------ADEDLEPPYLPVHYSL---SESA   1943
+                                                .|...|..:|.|...|   :|:.
+s2               329 RSHREGVFKCPLCSRVFPSPSSLDQHLGDHSSESHFLCVDCGLAFGTEAL    378
+
+s1              1944 VLDSIKAQ--------PC--------------RSHSAPGCVIPQDPMDPP   1971
+                     :|...:|.        ||              |:|...|..:|..|: ||
+s2               379 LLAHRRAHTPNPLHSCPCGKTFVNLTKFLYHRRTHGVGGVPLPTTPV-PP    427
+
+s1              1972 ALP----PKPYHPRLPALEHDEGVLLREETERPRGLHRKAPLPPGS   2013
+                     ..|    |:|    .||           ||..|     :||.||.|
+s2               428 EEPVIGFPEP----APA-----------ETGEP-----EAPEPPVS    453
+
+
+#---------------------------------------
+#---------------------------------------

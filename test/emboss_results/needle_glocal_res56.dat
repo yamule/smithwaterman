@@ -1,0 +1,53 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:55
+# Commandline: needle
+#    -asequence inputs/seq56.1.fas
+#    -bsequence inputs/seq56.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_glocal_res56.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_glocal_res56.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 179
+# Identity:      21/179 (11.7%)
+# Similarity:    43/179 (24.0%)
+# Gaps:          82/179 (45.8%)
+# Score: 13.5
+# 
+#
+#=======================================
+
+s1                 1 ---------------------MKAFSPVRSVRKNSLSDHSLGISRSKTPV     29
+                                          :..:......|:.:|:...|         
+s2                 1 MATSLDFKTYVDQACRAAEEFVNIYYETMDKRRRALTRLYL---------     41
+
+s1                30 DDPMSLLYNMNDCYSKLKELVPSIPQNKKVSKMEILQHVIDYILDLQIAL     79
+                      |..:|::|.|                 .||.::.|.:..|       .|
+s2                42 -DKATLIWNGN-----------------AVSGLDALNNFFD-------TL     66
+
+s1                80 DSHPTIVSLHHQRPGQNQASRTPLTTLNTDISILSLQASEFPSELMSNDS    129
+                     .|....|::...:|...||:::..|.|......:....::   :...|.:
+s2                67 PSSEFQVNMLDCQPVHEQATQSQTTVLVVTSGTVKFDGNK---QHFFNQN    113
+
+s1               130 KALCG------------------------    134
+                     ..|..                        
+s2               114 FLLTAQSTPNNTVWKIASDCFRFQDWSSS    142
+
+
+#---------------------------------------
+#---------------------------------------

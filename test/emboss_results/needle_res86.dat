@@ -1,0 +1,62 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:35:14
+# Commandline: needle
+#    -endweight
+#    -asequence inputs/seq86.1.fas
+#    -bsequence inputs/seq86.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_res86.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_res86.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 270
+# Identity:      37/270 (13.7%)
+# Similarity:    62/270 (23.0%)
+# Gaps:         142/270 (52.6%)
+# Score: -44.0
+# 
+#
+#=======================================
+
+s1                 1 ML------------SGRL--VLGLVSMAGRVCLCQGSAGSGAIGPVEAAI     36
+                     |.            .|||  |...:...|....|.|...:.  |.:.||.
+s2                 1 MSRRYDSRTTIFSPEGRLYQVEYAMEAIGHAGTCLGILAND--GVLLAAE     48
+
+s1                37 RTKLEEAL-----SPEVLELRNESGGHAVPPGSETHF---RVAVVSSRF-     77
+                     |..:.:.|     |.::.:|..:.........|:.:.   .:.:::.|: 
+s2                49 RRNIHKLLDEVFFSEKIYKLNEDMACSVAGITSDANVLTNELRLIAQRYL     98
+
+s1                78 -EGLSPLQRHRLVHAALAE------ELGGP----VHALAIQARTPAQWRE    116
+                      :...|:...:|| .||.:      :.||.    |..|.|      .|.:
+s2                99 LQYQEPIPCEQLV-TALCDIKQAYTQFGGKRPFGVSLLYI------GWDK    141
+
+s1               117 N--SQLDTSPP----------CLGGN------------------------    130
+                     :  .||..|.|          |:|.|                        
+s2               142 HYGFQLYQSDPSGNYGGWKATCIGNNSAAAVSMLKQDYKEGEMTLKSALA    191
+
+s1               131 ------KKTLGT--------------------------------------    136
+                           .||:..                                      
+s2               192 LAIKVLNKTMDVSKLSAEKVEIATLTRENGKTVIRVLKQKEVEQLIKKHE    241
+
+s1               137 -------------------P    137
+                                        .
+s2               242 EEEAKAEREKKEKEQKEKDK    261
+
+
+#---------------------------------------
+#---------------------------------------

@@ -1,0 +1,62 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:43
+# Commandline: needle
+#    -endweight
+#    -asequence inputs/seq38.1.fas
+#    -bsequence inputs/seq38.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_res38.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_res38.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 295
+# Identity:      37/295 (12.5%)
+# Similarity:    60/295 (20.3%)
+# Gaps:         175/295 (59.3%)
+# Score: -41.0
+# 
+#
+#=======================================
+
+s1                 1 M-------------------------------------------------      1
+                     |                                                 
+s2                 1 MQRPGEPGAARFGPPEGCADHRPHRYRSFMIEEILTEPPGPKGAAPAAAA     50
+
+s1                 2 ---------------VPKLFTSQICLL-------------------LLLG     17
+                                    ..:.|.|.:.:|                   |...
+s2                51 AAAGELLKFGVQALLAARPFHSHLAVLKAEQAAVFKFPLAPLGCSGLSSA    100
+
+s1                18 LLA-------------------VEGSLHVKPP---------------QFT     33
+                     |||                   :.|.|....|               .||
+s2               101 LLAAGPGLPGAAGAPHLPLELQLRGKLEAAGPGEPGTKAKKGRRSRTVFT    150
+
+s1                34 WAQW------FETQ-------HINMTSQQCTNAMQVINNYQ-RRCKNQNT     69
+                     ..|.      ||.|       .|::......:.:||...|| ||.|.:..
+s2               151 ELQLMGLEKRFEKQKYLSTPDRIDLAESLGLSQLQVKTWYQNRRMKWKKI    200
+
+s1                70 FLLTTFANVVNVCGNPNMTCPSNKTRKNCHHSGSQVPLIHCNLTTPSPQN    119
+                             |:...|..:.|.|..:.:||               :.|:.:.
+s2               201 --------VLQGGGLESPTKPKGRPKKN---------------SIPTSEQ    227
+
+s1               120 ISNCRYAQTPANMFYIVACDNRDQRRD---PPQYPVVPVHLDRII    161
+                     ::                  .:::.:|   |.:.|..|....|..
+s2               228 LT------------------EQERAKDAEKPAEVPGEPSDRSRED    254
+
+
+#---------------------------------------
+#---------------------------------------

@@ -1,0 +1,61 @@
+########################################
+# Program: water
+# Rundate: Sat 26 Sep 2020 01:35:05
+# Commandline: water
+#    -asequence inputs/seq72.1.fas
+#    -bsequence inputs/seq72.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/res72.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/res72.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 257
+# Identity:      47/257 (18.3%)
+# Similarity:    83/257 (32.3%)
+# Gaps:          81/257 (31.5%)
+# Score: 49.5
+# 
+#
+#=======================================
+
+s1               236 ISGLTDFG-------EKVVAEMNRLGMMVDLSHVSDAVARRALEVSQAPV    278
+                     |:.|.|||       |::..|...|...:..:|.::.          .|.
+s2               132 IATLRDFGVGKRGIEERIQEESGFLIEAIRSTHGANI----------DPT    171
+
+s1               279 IFSHSAARGVCNSARNV---------PDDILQLLKKNGGVVMVSLSMGVI    319
+                     .|   .:|.|.|...::         ..:.|.||         |:.:|:.
+s2               172 FF---LSRTVSNVISSIVFGDRFDYEDKEFLSLL---------SMMLGIF    209
+
+s1               320 QCNPSAN------VSTVADHFDHIKAVIGSKFIGIGGDYDGAGKFPQGLE    363
+                     |...::.      .|:|..|              :.|....|.|..||||
+s2               210 QFTSTSTGQLYEMFSSVMKH--------------LPGPQQQAFKLLQGLE    245
+
+s1               364 DVSTYPV--------------LIEELLSRGWSEEE-------LQGVLRGN    392
+                     |.....|              .|:..|.....||:       |:.::...
+s2               246 DFIAKKVEHNQRTLDPNSPQDFIDSFLIHMQEEEKNPNTEFYLKNLMMST    295
+
+s1               393 LLRVFRQVEKVQEENKWQSPLEDKFPDEQLSSSCHSDLSRLRQRQSLTSG    442
+                     |.......|.|....::...|..|.|  ::.:..|.::.|:..:......
+s2               296 LNLFIAGTETVSTTLRYGFLLLMKHP--EVEAKVHEEIDRVIGKNRQPKF    343
+
+s1               443 QELTEIP    449
+                     ::.|::|
+s2               344 EDRTKMP    350
+
+
+#---------------------------------------
+#---------------------------------------

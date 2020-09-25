@@ -1,0 +1,61 @@
+########################################
+# Program: water
+# Rundate: Sat 26 Sep 2020 01:35:03
+# Commandline: water
+#    -asequence inputs/seq69.1.fas
+#    -bsequence inputs/seq69.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/res69.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/res69.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 270
+# Identity:      55/270 (20.4%)
+# Similarity:   100/270 (37.0%)
+# Gaps:          63/270 (23.3%)
+# Score: 53.5
+# 
+#
+#=======================================
+
+s1               278 DDIQGTAAVALAGLLAAQKVISKPISEH-----------KILFLGAGEA-    315
+                     |.||.:.|: :.||..|:..::..:.|.           |.:.|...:| 
+s2               440 DQIQKSEAL-IQGLSMAKSQVAAKLQETEQALQEQEVVLKAVTLERDQAV    488
+
+s1               316 -ALGIANL------IVMSMVENGLSEQEAQKKIWMFDKYGLLVKGRKAKI    358
+                      ||.:..|      :::...|..:|:.....:|....:....::...|::
+s2               489 QALRMHGLPRPGAQMLLRQHEEEISKDFPSSEIQRLREQNTSLRNAIAQM    538
+
+s1               359 DSYQEPFTHSAPESIPDTFEDAVNILKPSTIIGVAGAGRLFTPDVIRAM-    407
+                     ....|..:|..|..| .|..::.:..:|....|    |...|||.:.|: 
+s2               539 RKEMEALSHQIPPPI-QTAAESTDANQPDPEAG----GDAATPDYVLALE    583
+
+s1               408 ASINERPVIF--------------ALSNPTAQAECTAEEAYTLTEGRCLF    443
+                     |.|......|              .:|:|.|:::.:...:...|.|..  
+s2               584 AEIRTLKHKFKTLEKHLEDVLDPLKMSSPHAESQPSVRTSTETTGGSA--    631
+
+s1               444 ASGSPFGPVKLTDGRVFTPGQ-GNNVYIFP---GVALAVILCNTRHISDS    489
+                     .:|...|.|:        .|| |.:|...|   |:||       |.:.|.
+s2               632 QAGQAGGSVQ--------AGQAGGSVQAGPVSSGLAL-------RKLGDR    666
+
+s1               490 VFLEAAKALTSQLTDEELAQ    509
+                     |  :....|.::|..:.|.:
+s2               667 V--QLLNLLVTRLRQKVLRE    684
+
+
+#---------------------------------------
+#---------------------------------------

@@ -102,13 +102,13 @@ public class SmithWaterman {
 				fc = Math.max(0,fc);
 				fr = Math.max(0,fr);
 				
-				if(fm >= fr){
-					if(fm >= fc){
+				if(fm >= fc){
+					if(fm >= fr){
 						currentcell.setScoreAt(TYPE_MATCH,fm);
 						currentcell.setPrevTypeAt(TYPE_MATCH, TYPE_MATCH);
 					}else{
-						currentcell.setScoreAt(TYPE_MATCH,fc);
-						currentcell.setPrevTypeAt(TYPE_MATCH, TYPE_GAPINCOL);
+						currentcell.setScoreAt(TYPE_MATCH,fr);
+						currentcell.setPrevTypeAt(TYPE_MATCH, TYPE_GAPINROW);
 					}
 				}else{
 					if(fr > fc){
@@ -149,7 +149,7 @@ public class SmithWaterman {
 				fc = Math.max(0,fc);
 				fr = Math.max(0,fr);
 				
-				if(fm > fr){
+				if(fm >= fr){
 					currentcell.setScoreAt(TYPE_GAPINROW, fm);
 					currentcell.setPrevTypeAt(TYPE_GAPINROW, TYPE_MATCH);
 				}else{

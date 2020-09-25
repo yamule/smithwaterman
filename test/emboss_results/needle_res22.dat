@@ -1,0 +1,62 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:33
+# Commandline: needle
+#    -endweight
+#    -asequence inputs/seq22.1.fas
+#    -bsequence inputs/seq22.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_res22.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_res22.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 292
+# Identity:      33/292 (11.3%)
+# Similarity:    66/292 (22.6%)
+# Gaps:         181/292 (62.0%)
+# Score: -29.0
+# 
+#
+#=======================================
+
+s1                 1 MSQ------QRPARKLPSLLLDPTEETVRRRCRDPINVEGLLPSKIRINL     44
+                     |:.      ::...:|.:.::| |::.|:..   .|.:|.|..:|...:|
+s2                 1 MAAPVDLELKKAFTELQAKVID-TQQKVKLA---DIQIEQLNRTKKHAHL     46
+
+s1                45 EDNVQYVSMRKALKVKRPRFDVSLVYLTRKFMDLVRSAPGGILDLNKVAT     94
+                     .|.                          :.|.||               
+s2                47 TDT--------------------------EIMTLV---------------     55
+
+s1                95 KLGVRKRRVYDITNVLDGID---LVEKKSKNHIRWIGSDLSNFGAVPQQK    141
+                               |.||:.:|:.   :::.|...|     |.|     :.:||
+s2                56 ----------DETNMYEGVGRMFILQSKEAIH-----SQL-----LEKQK     85
+
+s1               142 KLQEELSDLSAMEDALDELIKDCAQQLFELTDDKENERLAYVTYQDIHSI    191
+                     ..:|::.:|...:..|:..:|:.                           
+s2                86 IAEEKIKELEQKKSYLERSVKEA---------------------------    108
+
+s1               192 QAFHEQIVIAVKAPAETRLDVPAPREDSITVHIRSTNGPIDVYLCEVEQG    241
+                                              ||:|                     
+s2               109 -------------------------EDNI---------------------    112
+
+s1               242 QTSNKRSEGVGTSSSESTHPEGPEEEENPQQSEELLEV--SN    281
+                                                     .|:|..  :.
+s2               113 --------------------------------REMLMARRAQ    122
+
+
+#---------------------------------------
+#---------------------------------------

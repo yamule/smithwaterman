@@ -1,0 +1,81 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:59
+# Commandline: needle
+#    -asequence inputs/seq63.1.fas
+#    -bsequence inputs/seq63.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_glocal_res63.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_glocal_res63.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 511
+# Identity:      33/511 ( 6.5%)
+# Similarity:    67/511 (13.1%)
+# Gaps:         388/511 (75.9%)
+# Score: 31.0
+# 
+#
+#=======================================
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2                 1 MNFTPTHTPVCRKRTVVSKRGVAVSGPTKRRGMADSLESTPLPSPEDRLA     50
+
+s1                 1 ------------------------------------------MAGELTPE      8
+                                                               :..:|...
+s2                51 KLHPSKELLEYYQKKMAECEAENEDLLKKLELYKEACEGQHKLECDLQQR    100
+
+s1                 9 EE--AQYKKAFSAVDT-------------DGNGTINAQELGAALKATGKN     43
+                     ||  |:.:||.|.:..             ..|..:..:||.         
+s2               101 EEEIAELQKALSDMQVCLFQEREHVLRLYSENDRLRIRELE---------    141
+
+s1                44 LSEAQLRKLISEVDSDGDGEISF------------QEFLTAAKKARAGLE     81
+                      .:.:::.|::.|.:|. ||:::            |:.:.|..:..   :
+s2               142 -DKKKIQNLLALVGTDA-GEVTYFCKEPPHKVTILQKTIQAVGECE---Q    186
+
+s1                82 DLQVAFRA-------------------FDQDGDGHITVDELRRAMAGLGQ    112
+                     ....||:|                   :.:|....|...|..:|..|...
+s2               187 SESSAFKADPKISKRRPSRERKESSEHYQRDIQTLILQVEALQAQLGEQT    236
+
+s1               113 PLPQEELDAMIREADVDQDGRVNYEEFARMLAQE----------------    146
+                     .|.:|:::.:|      :|.|::.||   :..|.                
+s2               237 KLSREQIEGLI------EDRRIHLEE---IQVQHQRNQNKIKELTKNLHH    277
+
+s1               146 --------------------------------------------------    146
+                                                                       
+s2               278 TQELLYESTKDFLQLRSENQNKEKSWMLEKDNLMSKIKQYRVQCKKKEDK    327
+
+s1               146 --------------------------------------------------    146
+                                                                       
+s2               328 IGKVLPVMHESHHAQSEYIKSLKDKLVQEKKLSNMYQEQCISLEEELARI    377
+
+s1               146 --------------------------------------------------    146
+                                                                       
+s2               378 REEEGMRREIFKDRTNKMGKRLQIMTKRYEALERRRILEVEGFKTDIKVL    427
+
+s1               146 --------------------------------------------------    146
+                                                                       
+s2               428 RQKLKDLEQMLYKATVNARANQDLALLCEVRDSNRRAHKIQGELKNLKSK    477
+
+s1               146 -----------    146
+                                
+s2               478 VFGLENELRLC    488
+
+
+#---------------------------------------
+#---------------------------------------

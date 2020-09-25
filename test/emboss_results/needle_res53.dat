@@ -1,0 +1,70 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:52
+# Commandline: needle
+#    -endweight
+#    -asequence inputs/seq53.1.fas
+#    -bsequence inputs/seq53.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_res53.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_res53.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 352
+# Identity:      65/352 (18.5%)
+# Similarity:   103/352 (29.3%)
+# Gaps:         115/352 (32.7%)
+# Score: -8.5
+# 
+#
+#=======================================
+
+s1                 1 MTEPGASPEDPWVKASPVGAHAGE------GRAGRARARRGAGRRGASLL     44
+                     |.|..|.|           ...||      |......|..|......::.
+s2                 1 MAETSALP-----------TGFGELEVLAVGMVLLVEALSGLSLNTLTIF     39
+
+s1                45 S-PKSPTLSVPRGCREDSSHPACAKVEYAYSDNSLDPGLFVESTR-----     88
+                     | .|:|.|..|  |.       ...:..|.:|:.:.....|.:|.     
+s2                40 SFCKTPELRTP--CH-------LLVLSLALADSGISLNALVAATSSLLRR     80
+
+s1                89 -------------KGSVVSRANSIGSTSASSVPNTDDEDSDYHQEAYKES    125
+                                  :|.|.:.| ||.|::|.:.       ..||.      
+s2                81 WPYGSDGCQAHGFQGFVTALA-SICSSAAIAW-------GRYHH------    116
+
+s1               126 YKDRRRRAHTQAEQ------------KRRDAIKRGYDDLQTIVPTCQQQD    163
+                     |..|.:.|...|..            .....:..|:.|.:.: .||...|
+s2               117 YCTRSQLAWNSAVSLVLFVWLSSAFWAALPLLGWGHYDYEPL-GTCCTLD    165
+
+s1               164 FSIGSQKLSKAIVLQKTIDYIQF------------LHKEK--KKQEEEVS    199
+                     :|.|.:..:..:.   |:.:..|            |.::|  |....:|:
+s2               166 YSKGDRNFTSFLF---TMSFFNFAMPLFITITSYSLMEQKLGKSGHLQVN    212
+
+s1               200 TLRKDVTAL---KIMKVNYEQIVKAHQDNPHEGEDQVSDQVKFNVFQGIM    246
+                     |.....|.|   ....:.|...|.|         |..|...|..:...::
+s2               213 TTLPARTLLLGWGPYAILYLYAVIA---------DVTSISPKLQMVPALI    253
+
+s1               247 DSLFQSFNASISVASFQELSACVFSWIEEHCKPQTLREIVIGVLHQLKNQ    296
+                     ..:..:.|| |:.|...|: .|...|   .|.....||         |::
+s2               254 AKMVPTINA-INYALGNEM-VCRGIW---QCLSPQKRE---------KDR    289
+
+s1               297 LY    298
+                     ..
+s2               290 TK    291
+
+
+#---------------------------------------
+#---------------------------------------

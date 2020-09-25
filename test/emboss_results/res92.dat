@@ -1,0 +1,73 @@
+########################################
+# Program: water
+# Rundate: Sat 26 Sep 2020 01:35:19
+# Commandline: water
+#    -asequence inputs/seq92.1.fas
+#    -bsequence inputs/seq92.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/res92.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/res92.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 418
+# Identity:      75/418 (17.9%)
+# Similarity:   130/418 (31.1%)
+# Gaps:         163/418 (39.0%)
+# Score: 72.0
+# 
+#
+#=======================================
+
+s1                 4 GDLKRSLRNLEQ-------------------VLRLLNYPEEVDCVGLIKG     34
+                     |.:.|::..|||                   :::|....:......||..
+s2               148 GLITRAISGLEQDQPARRANKDATAERIDEFIVKLKELKQVASPFTLIID    197
+
+s1                35 DPAA--------------SLPIISYSFTSYSPYVTELIMESNVELIAKND     70
+                     ||:.              :|.|..|:.|.....:..|..|:..|...:.|
+s2               198 DPSGNSFVENPHAPQKDDALVITHYNRTRQQEEMLGLQEEAPAEKPEEED    247
+
+s1                71 LRFIDAVYKLLRDQFN----YKPILTKKQFIQCGFAEWKIQIVCDILNCV    116
+                     ||     .::|:...|    ..|..|..:.:|....:..|.:..:..|| 
+s2               248 LR-----NEVLQFSTNCPECNAPAQTNMKLVQIPHFKEVIIMATNCENC-    291
+
+s1               117 MKKHKELSSLQKIPSQQRKKISSGKSEPPLGNEKISAEAVGVDISGRFMT    166
+                                   ..:..::.||.:..|||. :|:              
+s2               292 --------------GHRTNEVKSGGAVEPLGT-RIT--------------    312
+
+s1               167 SGKKKAVVIRHLYNEDNVDISEDTLSPITDVNEAVDVSDLNATEIKMPEV    216
+                                |:..|..|::.|.|...|                  ..|
+s2               313 -----------LHITDASDMTRDLLKSET------------------CSV    333
+
+s1               217 KVPEIKAEQQDVNVNPEITALQTMLAECQENLKKLTSIEKRLDCLEQKMK    266
+                     ::||::.|.....:..:.|.|:.:|.:.:|                    
+s2               334 EIPELEFELGMAVLGGKFTTLEGLLKDIRE--------------------    363
+
+s1               267 GKVMVDENTWTNLLSRVTLLETEML--LSKKNDEFIEFNEVSEDYASCSD    314
+                        :|.:|.:| |.......:||.|  .|:|.|:.||.|           
+s2               364 ---LVTKNPFT-LGDSSNPGQTERLQEFSQKMDQIIEGN-----------    398
+
+s1               315 MDLLNPHRKSEVERPASIPLSSGYSTASSDSTPRASTVNYCGLNEISEET    364
+                        :..|  ..::.||      |.|...:...|              |:.
+s2               399 ---MKAH--FIMDDPA------GNSYLQNVYAP--------------EDD    423
+
+s1               365 TIQKMERMKKMFEETAEL    382
+                     ...|:||.|:.|::..||
+s2               424 PEMKVERYKRTFDQNEEL    441
+
+
+#---------------------------------------
+#---------------------------------------

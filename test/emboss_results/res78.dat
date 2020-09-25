@@ -1,0 +1,53 @@
+########################################
+# Program: water
+# Rundate: Sat 26 Sep 2020 01:35:09
+# Commandline: water
+#    -asequence inputs/seq78.1.fas
+#    -bsequence inputs/seq78.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/res78.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/res78.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 172
+# Identity:      35/172 (20.3%)
+# Similarity:    55/172 (32.0%)
+# Gaps:          46/172 (26.7%)
+# Score: 46.0
+# 
+#
+#=======================================
+
+s1                72 KGSAGKRNGRVSIRDSPANL-------SFT---VTLENLTEEDA-GTYWC    110
+                     :|.||...|....|....||       .||   :.:..:.:.|| ..:|.
+s2               107 EGKAGHGPGPGPGRPKSKNLQPKIQEYEFTDDPIDVPRIPKNDAPNRFWA    156
+
+s1               111 GVDTPWLRD------------FHDPIVEVEVSVFPA--------------    134
+                     .|: |:..|            ...|..|.|....|.              
+s2               157 SVE-PYCADITSEEVRTLEELLKPPEDEAEHYKIPPLGKHYSQRWAQEDL    205
+
+s1               135 ------GTTTASSPQSSMGTSGPPTKLPVHTWPSVTRK-DSPEPSPHPGS    177
+                           |...|:......|..||.|:|......::.:| ::....|..|.
+s2               206 LEEQKDGARAAAVADKKKGLMGPLTELDTKDVDALLKKSEAQHEQPEDGC    255
+
+s1               178 LFSNV-RFLLLVLLELPLLLSM    198
+                     .|..: :.||..|:|..::..|
+s2               256 PFGALTQRLLQALVEENIISPM    277
+
+
+#---------------------------------------
+#---------------------------------------

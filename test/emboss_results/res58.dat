@@ -1,0 +1,61 @@
+########################################
+# Program: water
+# Rundate: Sat 26 Sep 2020 01:34:56
+# Commandline: water
+#    -asequence inputs/seq58.1.fas
+#    -bsequence inputs/seq58.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/res58.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/res58.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 258
+# Identity:      55/258 (21.3%)
+# Similarity:    92/258 (35.7%)
+# Gaps:          51/258 (19.8%)
+# Score: 64.0
+# 
+#
+#=======================================
+
+s1               366 RDSTFQLHVRCVFNASDFLPIQASIFP------PPSPAPMTQPGPLRLEL    409
+                     |.:..:||.|......:.||.|:...|      |..|.|:: ||.|:|..
+s2               794 RPAASELHSRAEHTKENGLPYQSPSVPGSMKLSPQDPRPLS-PGALQLAG    842
+
+s1               410 RIAKDETF-SSYYGEDDYPIVRLLREPVHVEVRLLQRTDPN---------    449
+                     ..:.::.. ...||.....|..|   |:.:.:..:|   ||         
+s2               843 EKSSEKGLRERAYGSSGELITSL---PISIPLSTVQ---PNKLPVSIPLA    886
+
+s1               450 LVLLLHQCWGAPSA-NPFQQPQWPILSDGCPFKGDSYRTQMVALDGATPF    498
+                     .|:|..:...|.|. :|..||:.|         ..:...|:    ||...
+s2               887 SVVLPSRAERARSTPSPVLQPRDP---------SSTLEKQI----GANAH    923
+
+s1               499 QSHYQRFTVATFALLDSGSQRALRGLVYLFCSTSACHTSGLETCSTACST    548
+                     .:..:...:|......:||. |:.|.:   ..:.|..|.|.|..:...|:
+s2               924 GAGSRSLALAPAGFSYAGSV-AISGAL---AGSPASLTPGAEPATLDESS    969
+
+s1               549 GTTRQRRSSGHRNDTARPQDIVSSPG---PVGFEDSYGQEPTLG------    589
+                     .:.....:.|.|:.|.:...:::.|.   |..........|.||      
+s2               970 SSGSLFATVGSRSSTPQHPLLLAQPRNSLPASPAHQLSSSPRLGGAAQGP   1019
+
+s1               590 -PTDSNGN    596
+                      |..|.|:
+s2              1020 LPEASKGD   1027
+
+
+#---------------------------------------
+#---------------------------------------

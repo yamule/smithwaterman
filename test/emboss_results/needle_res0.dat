@@ -1,0 +1,46 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:50:05
+# Commandline: needle
+#    -endweight
+#    -asequence inputs/seq0.1.fas
+#    -bsequence inputs/seq0.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_res0.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_res0.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 97
+# Identity:      97/97 (100.0%)
+# Similarity:    97/97 (100.0%)
+# Gaps:           0/97 ( 0.0%)
+# Score: 485.0
+# 
+#
+#=======================================
+
+s1                 1 KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK     50
+                     ||||||||||||||||||||||||||||||||||||||||||||||||||
+s2                 1 KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK     50
+
+s1                51 KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK     97
+                     |||||||||||||||||||||||||||||||||||||||||||||||
+s2                51 KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK     97
+
+
+#---------------------------------------
+#---------------------------------------

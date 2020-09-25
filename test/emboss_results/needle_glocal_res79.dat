@@ -1,0 +1,293 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:35:10
+# Commandline: needle
+#    -asequence inputs/seq79.1.fas
+#    -bsequence inputs/seq79.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_glocal_res79.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_glocal_res79.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 3152
+# Identity:      62/3152 ( 2.0%)
+# Similarity:   104/3152 ( 3.3%)
+# Gaps:        2927/3152 (92.9%)
+# Score: 27.0
+# 
+#
+#=======================================
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2                 1 MGAGGPRRGEGPPDGGWGWVVLGACFVVTGFAYGFPKAVSVFFRALMRDF     50
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2                51 DAGYSDTAWVSSIMLAMLYGTGPVSSILVTRFGCRPVMLAGGLLASAGMI    100
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2               101 LASFATRLLELYLTAGVLTGLGLALNFQPSLIMLGLYFERRRPLANGLAA    150
+
+s1                 0 --------------------------------------------------      0
+                                                                       
+s2               151 AGSPVFLSALSPLGQQLLERFGWRGGFLLLGGLLLHCCACGAVMRPPPGP    200
+
+s1                 1 ------------------------------MSSPRLIPLWKDLKLLLNDT     20
+                                                   .:|||:.|    .:.||:  
+s2               201 GPRPRRDSAGDRAGDAPGEAEADGAGLQLREASPRVRP----RRRLLD--    244
+
+s1                21 INKSKQPSEDPKNCLIVLSDRSQAVAWMKSKTEDMVEKRTFSMTERLPPI     70
+                                   |.|.:||:.||.        .|.|...::...:|.|
+s2               245 --------------LAVCTDRAFAVY--------AVTKFLMALGLFVPAI    272
+
+s1                71 QSMVHA---------GSFHILVVYCGDLILR-----LFGDHFRAFKPLGK    106
+                     ..:.:|         .:|.:.:|...|::.|     |.|  ....:|  .
+s2               273 LLVNYAKDAGVPDTDAAFLLSIVGFVDIVARPACGALAG--LARLRP--H    318
+
+s1               107 VPCRFNISCLCYD-PEMKMLLSGILGAVVTWVIELGGT-----GLQIAHM    150
+                     ||..|:::.|... .::....:...||:|.:.:..|.:     .||...:
+s2               319 VPYLFSLALLANGLTDLSSARARSYGALVAFCVAFGLSYGMVGALQFEVL    368
+
+s1               151 VSMPGDELVQDIVLNGPSG-SLLALCETVVRVLMHQGKGQLGEVKR---F    196
+                     ::..|       ....||. .|:.|.|....::.....|:|.:|.:   .
+s2               369 MAAVG-------APRFPSALGLVLLVEAAAVLIGPPSAGRLVDVLKNYEI    411
+
+s1               197 TSTSSGSSI-----------TCCFTCFDQGFLYAGNQAGEIQVWSLQ---    232
+                     ....:||.:           .||..|........|.:.|.......:   
+s2               412 IFYLAGSEVALAGVFMAVATNCCLRCAKAAPSGPGTEGGASDTEDAEAEG    461
+
+s1               233 QGHPLHSFQAHQSG------VICIRSRP-----EAHTLLTAGSDSLIKEW    271
+                     ...|| ...|.:.|      |:..|..|     ||...|.|.|.      
+s2               462 DSEPL-PVVAEEPGNLEALEVLSARGEPTEPEIEARPRLAAESV------    504
+
+s1               272 NLTSGSLLRRLELGEELYRLQFIDSITFFCQTAHSFSLHRLPCFYSLFNV    321
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1               322 CGSAPQQLRRVCCGNNWFRILCTTEDGLLRFVSPVTGDLLVITWPFSILD    371
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1               372 QAVDWAYDPGKEELFVATGSSEVLVFDTTRCPCPAKYLLGTSPNSQDFVQ    421
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1               422 CLAYGHFNLGRGLEGLIFSGHQSGVIRVLSQHSCARLEKFMHFGAVLALS    471
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1               472 TLSGGIFGGQGNSLLCSYGMDDYVHLSEAVLDGVKVQLRPLASILSSCHL    521
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1               522 THLILLPKSVGAITETNCLRLWKFHDFLSSGSQNGLKFIETLPLHLCAIT    571
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1               572 SFDVCLSLSLFVTGSADGSVRIWDFHGRLIGILDSSLHFGPVCFANDRGD    621
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1               622 LLVTFNQSLYLVSCLKLLPPALLTRLSFMSISDEVLEVPKPFIPSFFFSF    671
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1               672 ETMFVPKYIYPGQAQQKLVGLEKLVNNRAIAFDHSVPHVIEEDEEGSPVL    721
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1               722 LRSSMHYSLQDMEDWMQVSKRYQCHYVLPPQLQLTSWDGLNPYQILRYYF    771
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1               772 GHGREWLFAPDCYIPNSVIRARLWPEGTPIYLQCNLHAPQRELEWDRSQE    821
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1               822 FFFWHSRVRAISNTEYPKNKEEDEHFLEMRLSKDVTYSVLTDGANRSWLG    871
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1               872 RKMSEITINSMIETMLNIMVHASLLKYQCCVGALGQIFASYQVSPALRSE    921
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1               922 TARRLLNDTTNSNPLIRELAWEGLKRLGMITHLFAMPLAQGLMDKDERVR    971
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1               972 IKTLSLMAEIGIHSRTSLLQLTQKQETFREMQQQMIGEEPLDHLLGMRAT   1021
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              1022 DLQILSTQVEQRLNENLTLSHRDEKPAFSLDVSMPSELKSSLKPPTVSEE   1071
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              1072 SEVAIKPSKGQRRGQAGVKKHSQKWLRGLKKTKERDSKQMSTEPGLLEDE   1121
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              1122 SGTEAAPIEMEEASVYSQWSSSTSVIKLSKDVDSQEKDISKDHIALTLKR   1171
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              1172 LQKIRDKRDKKATAQKLKKKHKKKGKEAKVINEETTPPVMEQPVTKKVKI   1221
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              1222 QGRGASGISGRRSTAGDGSSWRDDLCRLMALRISGSQTKMSENLNAELVT   1271
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              1272 FAQEMLVDRHPSWELFQEICPLLKKESKVLLEDLDWDVVPPEKKPIFIQE   1321
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              1322 GAIREDMIQGVTQEVIRHKEVMPREEEQAQKKARDMLGLEETQVILKKGK   1371
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              1372 KVIFLEPGNVTMGKEISKKEEKKTFQKSPKQGRKAVQKERKVGKIKREMT   1421
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              1422 KEERDMSEEVEEMATLEEKVVKQEGKLVMIERTPSWQDWKKAWDEWKQVH   1471
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              1472 GETRKSWKAWKEEWEKRLLQEEEKLHQAGEKLSPEEEMLQEDKKLKWEEW   1521
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              1522 KQVWENMLSSKSKEQQYKDEEEVTLEEEVSREGEEKEQQVTEEQRHIQEE   1571
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              1572 HKWARIHRKRARAEKKRAQEERKLAQEEEKLAQEERQLAQEERKLAQAYV   1621
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              1622 KITQDDREMAQAEGKFAQKEETLAQRGEKLSQEAEKLAQKRKKLAKKWEK   1671
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              1672 VAREEEKLAKKGGKLAEVKNILAQKVEELPQREQNLDWQEKELAQELEEL   1721
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              1722 EWDMEELSWKEEELNQEEGKLVEEKKKLAEEEEALAWQREKLSEEETKLA   1771
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              1772 QEEELLIQEKEKLAQHKEKMPEEEERLGRKREQLIEKKMKLAQKRERWIN   1821
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              1822 SMEELTKNKMILYQKKNLAQEKKNLAQEKEKLAQRKENLLYNKERLTHSK   1871
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              1872 KQLVQVKNKLGMFNKILAQVEEKLTQEKETVIKKKEKLAETEKKLVQVED   1921
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              1922 SLAKKQEKLAQEKMKLALEKAMVQGKKRLRGELDIAKEEKALNLEMKRLA   1971
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              1972 EEKMRLVEGKETLSKGETPETSRQRKMTQVEQELFERKLSLEEKILLHED   2021
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              2022 RILAMEESEIAKGKLEFTRGQRIFVQGQRKLAKASRKLIKKRESLSKEPA   2071
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              2072 KLNKILKALQKLTRDERKLTQEEIKMTKMKRALFVKERRLSIEQSKLDIK   2121
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              2122 EWDFSEKRSELTKDEKKLARKQRKLANKMRRMINKEEKMTEEESKLARKH   2171
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              2172 SEVILDDEEEGGIEEEEVIPFLKRRWRKRKEAKRGDKPKEKFSSQVDEVE   2221
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              2222 SEEHFSEEMESLLDELEKQESLSSEEEEEREEEEEREEEEVREEEEERKE   2271
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              2272 EEEGEEKQVEKEEEEKKKKKKEKKKEEVQEKEEVFEEKEEIMSEEETESL   2321
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              2322 SDEEEEEESCSLEEEVDREKEILKKEKQFKLQEQRRKSLRGRERVLSILR   2371
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              2372 GVPHGKGRAIRLGVLKSPLKKLMSTALEMKEKTPVPVPEKQISWEDKKAT   2421
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              2422 VVEIPRKFLGTMDKEREVMGKYEPIPPHVLGTVLESQAQDLKTPFMSHIL   2471
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              2472 RRTVEAEELQHKPLGAWWKWFLQHPPLMGQTEVQLPLSQIPAKEQHADVS   2521
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              2522 LSDVEWIRHVLERMEAGEQLSRDGFHRLCQLLKDLASKGNLEWLHLAKHE   2571
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              2572 AIVYRHRQALESQDTRISSRQSMSPKYLKVIPPIKAKEKESWPKPLAVPT   2621
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              2622 QKSPLATKRIPDPRAKNWHLLGEPYRSERAQQISIAHKEMEMQYFYPATR   2671
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              2672 DIFPSAHASVEKQTLALMFQKDFWDFKDKRRFPKLPKLEKKTQPISKKKE   2721
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              2722 ELPLWETFVALYHVLRMLQQRYPKDSTAWMEQFYQLMDLYQLKSPRIQKL   2771
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              2772 LQELLMREEPQPQEIIYEEALKATELVPGERLFCCLFCGSSHTPRSPQEF   2821
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              2822 QGAVPLPWQNCVRTILPVGIARYGILELAWKSLPEADLHLTKALTHTVAP   2871
+                                                                       
+s2               504 --------------------------------------------------    504
+
+s1              2872 TL   2873
+                       
+s2               504 --    504
+
+
+#---------------------------------------
+#---------------------------------------

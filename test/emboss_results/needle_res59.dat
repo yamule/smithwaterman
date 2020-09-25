@@ -1,0 +1,82 @@
+########################################
+# Program: needle
+# Rundate: Sat 26 Sep 2020 01:34:57
+# Commandline: needle
+#    -endweight
+#    -asequence inputs/seq59.1.fas
+#    -bsequence inputs/seq59.2.fas
+#    -gapopen 10.0
+#    -gapextend 0.5
+#    -outfile emboss_results/needle_res59.dat
+#    -datafile EBLOSUM62
+#    -sprotein1
+#    -sprotein2
+# Align_format: srspair
+# Report_file: emboss_results/needle_res59.dat
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: s1
+# 2: s2
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 501
+# Identity:      70/501 (14.0%)
+# Similarity:   113/501 (22.6%)
+# Gaps:         271/501 (54.1%)
+# Score: -80.0
+# 
+#
+#=======================================
+
+s1                 1 ME-----------------------HLERCEWLLRGTLV-----------     16
+                     |.                       :|:.||.....||.           
+s2                 1 MAEEREPELYLKWKHCETPGVKTLCNLKHCETPGVKTLCNLKKLLNRLQK     50
+
+s1                17 --RAAVRRYLPWALVASML-----------------------------AG     35
+                       |..|..|:...|..:.|                             ||
+s2                51 DHREDVYLYISGHLNPNKLYQPPETILQHWPNAHRPKGERASEVGEPPAG    100
+
+s1                36 SL--LKEL-----------------SPL-----PESYLS--NKRNVLNVY     59
+                     .:  :||.                 :||     |::.||  ::.:.|.|.
+s2               101 KVARMKEALAHFTIHTALVPSEAQDTPLFRYLNPQASLSHTSEEDFLPVE    150
+
+s1                60 FVK---------------VAWAWTFCLLLPFIALTNYHLTGKAGLVLRR-     93
+                     .|:               ..|.....|.||.:.:..|...|..|...|. 
+s2               151 AVREGKEEKKGGPPGRGPPGWRRREELRLPDLKVLCYQEAGSRGTRDRHH    200
+
+s1                94 -LSTLLVGTA----------------------------------------    102
+                      :|:.|.|..                                        
+s2               201 YVSSYLAGATSADRYRMFLRFQKEVLAKQDLLKNDFTGSKAAAGHERKLQ    250
+
+s1               103 --IWYICT-------------SIFSNI------------------EHYTG    119
+                       :..|||             .:|.:|                  |.|..
+s2               251 QELQKICTCSPQQFNRLHVFGKVFEDICNSSLIFGDLLKKVKDEYELYMA    300
+
+s1               120 SCYQS-PA----------------------LEGVRKEHQ-----SKQQCH    141
+                     :..:| ||                      ::..|:|.:     :|....
+s2               301 TLLESQPAAQYEALLAQLKALGQRPVKTADMDLAREELRMLVTATKAALE    350
+
+s1               142 QEGGFWHGFDISGHSFLLTFCALM-------------IVEEMSVLHEVKT    178
+                     |....        .|.|....||:             |::|..:....|.
+s2               351 QNDRL--------RSELEMEVALLQSAKERSESSEKHIIDENRLTLTEKV    392
+
+s1               179 DRSHC-----------LHTAITTLVVALGI--LTFIWVLMFLCTAVYFHN    215
+                     ::..|           |...|.|.:|..||  :|...:......|:....
+s2               393 EKKRCEILSKWDEIQALEKEIKTTLVHTGISDITENRIKSIEHEAIQLET    442
+
+s1               216 ----LSQKVFGTLFGLLSWYGTYGFWYPKAFSPGLPPQSCSLNLKQDSYK    261
+                         |.:|:.|                |.....|:    |.:.    ..:
+s2               443 ENMILKKKIKG----------------PLEIYQGI----CKIR----GNR    468
+
+s1               262 K    262
+                     :
+s2               469 R    469
+
+
+#---------------------------------------
+#---------------------------------------
