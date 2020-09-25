@@ -43,12 +43,16 @@ if($check_pl == 1){
 		if($p1 ne ${$sourcefas{$tag}}[0]){
 			print $p1."\n";
 			print ${$sourcefas{$tag}}[0]."\n";
-			die;
+			if($p1 !~ /[JUZBOX]/){
+				die;
+			}
 		}
 		if($p2 ne ${$sourcefas{$tag}}[1]){
 			print $p2."\n";
 			print ${$sourcefas{$tag}}[1]."\n";
-			die;
+			if($p2 !~ /[JUZBOX]/){
+				die;
+			}
 		}
 		
 		
@@ -60,13 +64,17 @@ if($check_pl == 1){
 				print $infile."\n";
 				print $res[0]."\n";
 				print ${$answers{$fname}}[0]."\n";
-				die;
+				if($res[0] !~ /[JUZBOX]/ && $res[1] !~ /[JUZBOX]/){
+					die;
+				}
 			}
 			if($res[1] ne ${$answers{$fname}}[1]){
 				print $infile."\n";
 				print $res[1]."\n";
 				print ${$answers{$fname}}[1]."\n";
-				die;
+				if($res[0] !~ /[JUZBOX]/ && $res[1] !~ /[JUZBOX]/){
+					die;
+				}
 			}
 			$okcount ++;
 		}else{
@@ -101,13 +109,17 @@ if($check_py == 1){
 			print $infile."\n";
 			print $p1."\n";
 			print ${$sourcefas{$tag}}[0]."\n";
-			die;
+			if($p1 !~ /[JUZBOX]/){
+				die;
+			}
 		}
 		if($p2 ne ${$sourcefas{$tag}}[1]){
 			print $infile."\n";
 			print $p2."\n";
 			print ${$sourcefas{$tag}}[1]."\n";
-			die;
+			if($p2 !~ /[JUZBOX]/){
+				die;
+			}
 		}
 		
 		
@@ -123,13 +135,17 @@ if($check_py == 1){
 				print $infile."\n";
 				print $res[0]."\n";
 				print ${$answers{$fname}}[0]."\n";
-				die;
+				if($res[0] !~ /[JUZBOX]/ && $res[1] !~ /[JUZBOX]/){
+					die;
+				}
 			}
 			if($res[1] ne ${$answers{$fname}}[1]){
 				print $infile."\n";
 				print $res[1]."\n";
 				print ${$answers{$fname}}[1]."\n";
-				die;
+				if($res[0] !~ /[JUZBOX]/ && $res[1] !~ /[JUZBOX]/){
+					die;
+				}
 			}
 			$okcount ++;
 		}else{
@@ -162,13 +178,17 @@ if($check_java == 1){
 			print $infile."\n";
 			print $p1."\n";
 			print ${$sourcefas{$tag}}[0]."\n";
-			die;
+			if($p1 !~ /[JUZBOX]/){
+				die;
+			}
 		}
 		if($p2 ne ${$sourcefas{$tag}}[1]){
 			print $infile."\n";
 			print $p2."\n";
 			print ${$sourcefas{$tag}}[1]."\n";
-			die;
+			if($p2 !~ /[JUZBOX]/){
+				die;
+			}
 		}
 		
 		
@@ -180,13 +200,17 @@ if($check_java == 1){
 				print $infile."\n";
 				print $res[0]."\n";
 				print ${$answers{$fname}}[0]."\n";
-				die;
+				if($res[0] !~ /[JUZBOX]/ && $res[1] !~ /[JUZBOX]/){
+					die;
+				}
 			}
 			if($res[1] ne ${$answers{$fname}}[1]){
 				print $infile."\n";
 				print $res[1]."\n";
 				print ${$answers{$fname}}[1]."\n";
-				die;
+				if($res[0] !~ /[JUZBOX]/ && $res[1] !~ /[JUZBOX]/){
+					die;
+				}
 			}
 			$okcount ++;
 		}else{
@@ -222,13 +246,17 @@ if($check_rs == 1){
 			print $infile."\n";
 			print $p1."\n";
 			print ${$sourcefas{$tag}}[0]."\n";
-			die;
+			if($p1 !~ /[JUZBOX]/){
+				die;
+			}
 		}
 		if($p2 ne ${$sourcefas{$tag}}[1]){
 			print $infile."\n";
 			print $p2."\n";
 			print ${$sourcefas{$tag}}[1]."\n";
-			die;
+			if($p2 !~ /[JUZBOX]/){
+				die;
+			}
 		}
 		
 		if($aa =~ /glocal/){

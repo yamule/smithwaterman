@@ -8,4 +8,11 @@
 ====
 5. Type `perl run_java.pl`, `perl run_py.pl`, `perl run_pl.pl`, `perl run_rust.pl`.
 6. Type `perl check_results.pl`.
+7. If default dataset was used, 
+
+OK
+Checked 600 results.
+
+will be shown as message.
+
 * Only rust version produces global and glocal (global + endweight==0) alignments.
