@@ -6,7 +6,7 @@
 3. Change $sourcefas variable in embpss_test.pl to the file path you made in step 2. & $embosswater, $embosswater, $num_trials, can manipulate other settings.
 4. Type `perl emboss_run.pl`.
 
-** As it seems that EMBOSS needle has a bug, test may fail with files produced with this process. I have already reported.
+ ** As it seems that EMBOSS needle has a bug, test may fail with files produced with this process. I have already reported.
 
 ====
 
@@ -19,4 +19,4 @@ Checked 600 results.
 
 will be shown as message.
 
-* Only rust version produces global and glocal (global + endweight==0) alignments.
+\* Only rust version produces global and glocal (global + endweight==0) alignments.
