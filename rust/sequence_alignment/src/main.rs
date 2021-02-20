@@ -8,7 +8,7 @@ fn main(){
     let mut alignment_type:usize = sequence_alignment::ALIGN_LOCAL;
     let mut mess:&str = "Local alignment";
     if argss.len() < 2{
-        panic!("usage: sequence_alignment <infile1 (single plain fasta file)>  <infile2 (single plain fasta file)> ");
+        panic!("usage: sequence_alignment <infile1 (fasta file)>  <infile2 (fasta file)> ");
     }
     let mut file1:&str = &argss[1];
     let mut file2:&str = &argss[2];

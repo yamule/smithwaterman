@@ -22,12 +22,12 @@ fn main(){
     let mut alignment_type:usize = opencl_sequence_alignment::ALIGN_LOCAL;
     let mut mess:&str = "Local alignment";
     if argss.len() < 2{
-        eprintln!("usage: sa_opencl [(-global|-glocal|-local(default))] <infile1 (single plain fasta file)>  <infile2 (single plain fasta file)> ");
+        eprintln!("usage: sa_opencl [(-global|-glocal|-local(default))] <infile1 (fasta file)>  <infile2 (fasta file)> ");
         eprintln!("usage: sa_opencl [(-global|-glocal|-local(default))] [-list] <list file>");
         eprintln!("The \"list file\" has a list of tab separated pairs as follows.");
-        eprintln!("<infile1 (single plain fasta file)>  <infile2 (single plain fasta file)>");
-        eprintln!("<infile3 (single plain fasta file)>  <infile4 (single plain fasta file)>");
-        eprintln!("<infile5 (single plain fasta file)>  <infile6 (single plain fasta file)>");
+        eprintln!("<infile1 (fasta file)>  <infile2 (fasta file)>");
+        eprintln!("<infile3 (fasta file)>  <infile4 (fasta file)>");
+        eprintln!("<infile5 (fasta file)>  <infile6 (fasta file)>");
         eprintln!("...");
         eprintln!("Then,");
         eprintln!("sequences in infile1 and infile2,");
@@ -113,7 +113,7 @@ fn main(){
             for ss2 in seq2.iter(){
                 let res = sw.align(ss1,ss2,true);
                 let r1 = res.0.iter().fold("".to_string(),|s,m|s+m);
-                let r2 = res.1.iter().fold("".to_string(),|s,m|s+m);
+                let r2 = res.1.iter().fold("".to_string(),|s,m|s+m);cd 
                 println!("#score:{}",res.2);
                 println!("#type:{}",mess);
                 println!(">{}\n{}\n",ss1.name,r1);
