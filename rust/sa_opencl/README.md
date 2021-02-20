@@ -1,2 +1,2 @@
-# sw_opencl
+# sa_opencl
 opencl sequence alignment
