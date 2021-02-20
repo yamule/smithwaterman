@@ -17,6 +17,7 @@ my $okcount = 0;
 
 my $check_pl = 1;
 my $check_rs = 1;
+my $check_rs_ocl = 0;
 my $check_py = 1;
 my $check_java = 1;
 
@@ -306,6 +307,173 @@ if($check_rs == 1){
 		
 	}
 
+}
+
+
+if($check_rs_ocl == 1){
+
+	my $rustres  ="res_rust_ocl/";
+	opendir(DIR,$rustres);
+	my @allfiles = grep(/.res..+$/,readdir(DIR));
+	closedir(DIR);
+
+	foreach my $aa(@allfiles){
+
+		my $infile = $rustres."/".$aa;
+		my @r = getSeqFastaLike($infile);
+		my $seq1 = $r[0];
+		my $seq2 = $r[1];
+		
+		my $tag = $aa;
+		$tag =~ s/\.res.*//;
+		my $p1 = $seq1;
+		$p1 =~ s/[^A-Z]//g;
+		my $p2 = $seq2;
+		$p2 =~ s/[^A-Z]//g;
+		if($p1 ne ${$sourcefas{$tag}}[0]){
+			print $infile."\n";
+			print $p1."\n";
+			print ${$sourcefas{$tag}}[0]."\n";
+			if($p1 !~ /[JUZBOX]/){
+				die;
+			}
+		}
+		if($p2 ne ${$sourcefas{$tag}}[1]){
+			print $infile."\n";
+			print $p2."\n";
+			print ${$sourcefas{$tag}}[1]."\n";
+			if($p2 !~ /[JUZBOX]/){
+				die;
+			}
+		}
+		
+		if($aa =~ /glocal/){
+			#next;
+		}
+		my @res;
+		if($aa =~ /global/ || $aa =~ /glocal/){
+			@res = ($seq1,$seq2);
+		}else{
+			@res = trimTerminal($seq1,$seq2);
+		}
+		if($aa =~ /seq([0-9]+)/){
+			my $sid = $1;
+			my $fname = "res".$sid.".dat";
+			if($aa =~ /\.glocal/){
+				 $fname = "needle_glocal_res".$sid.".dat";
+			}
+			if($aa =~ /\.global/){
+				 $fname = "needle_res".$sid.".dat";
+			}
+			
+			
+			if($res[0] ne ${$answers{$fname}}[0]){
+				print $infile."\n";
+				print $res[0]."\n";
+				print ${$answers{$fname}}[0]."\n";
+				print ${$answers{$fname}}[1]."\n";
+				if($res[0] !~ /[JUZBOX]/ && $res[1] !~ /[JUZBOX]/){
+				#	die;
+				}
+			}
+			if($res[1] ne ${$answers{$fname}}[1]){
+				print $infile."\n";
+				print $res[1]."\n";
+				print ${$answers{$fname}}[0]."\n";
+				print ${$answers{$fname}}[1]."\n";
+				if($res[0] !~ /[JUZBOX]/ && $res[1] !~ /[JUZBOX]/){
+				#	die;
+				}
+			}
+			$okcount ++;
+		}else{
+			die;
+		}
+		
+	}
+}
+
+if($check_rs_ocl == 1){
+
+	my $rustres  ="res_rust_ocl_list/";
+	opendir(DIR,$rustres);
+	my @allfiles = grep(/.res..+$/,readdir(DIR));
+	closedir(DIR);
+
+	foreach my $aa(@allfiles){
+
+		my $infile = $rustres."/".$aa;
+		my @r = getSeqFastaLike($infile);
+		my $seq1 = $r[0];
+		my $seq2 = $r[1];
+		
+		my $tag = $aa;
+		$tag =~ s/\.res.*//;
+		my $p1 = $seq1;
+		$p1 =~ s/[^A-Z]//g;
+		my $p2 = $seq2;
+		$p2 =~ s/[^A-Z]//g;
+		if($p1 ne ${$sourcefas{$tag}}[0]){
+			print $infile."\n";
+			print $p1."\n";
+			print ${$sourcefas{$tag}}[0]."\n";
+			if($p1 !~ /[JUZBOX]/){
+				die;
+			}
+		}
+		if($p2 ne ${$sourcefas{$tag}}[1]){
+			print $infile."\n";
+			print $p2."\n";
+			print ${$sourcefas{$tag}}[1]."\n";
+			if($p2 !~ /[JUZBOX]/){
+				die;
+			}
+		}
+		
+		if($aa =~ /glocal/){
+			#next;
+		}
+		my @res;
+		if($aa =~ /global/ || $aa =~ /glocal/){
+			@res = ($seq1,$seq2);
+		}else{
+			@res = trimTerminal($seq1,$seq2);
+		}
+		if($aa =~ /seq([0-9]+)/){
+			my $sid = $1;
+			my $fname = "res".$sid.".dat";
+			if($aa =~ /\.glocal/){
+				 $fname = "needle_glocal_res".$sid.".dat";
+			}
+			if($aa =~ /\.global/){
+				 $fname = "needle_res".$sid.".dat";
+			}
+			
+			
+			if($res[0] ne ${$answers{$fname}}[0]){
+				print $infile."\n";
+				print $res[0]."\n";
+				print ${$answers{$fname}}[0]."\n";
+				print ${$answers{$fname}}[1]."\n";
+				if($res[0] !~ /[JUZBOX]/ && $res[1] !~ /[JUZBOX]/){
+				#	die;
+				}
+			}
+			if($res[1] ne ${$answers{$fname}}[1]){
+				print $infile."\n";
+				print $res[1]."\n";
+				print ${$answers{$fname}}[0]."\n";
+				print ${$answers{$fname}}[1]."\n";
+				if($res[0] !~ /[JUZBOX]/ && $res[1] !~ /[JUZBOX]/){
+				#	die;
+				}
+			}
+			$okcount ++;
+		}else{
+			die;
+		}
+		
+	}
 }
 
 print "OK\nChecked $okcount results.\n";
