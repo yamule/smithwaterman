@@ -95,7 +95,7 @@ pub struct OpenCLSequenceAlignment{
 impl OpenCLSequenceAlignment{
     pub fn new(max_length:usize,ss:Box<dyn ScoringMatrix>,go:f32,ge:f32,alignment_type:usize)->OpenCLSequenceAlignment{
         let src_test:String = format!(r#"
-        int pos_1d_to_2d_rc(int r,int c,int num_rows,int num_cols){{
+        int pos_2d_to_1d_rc(int r,int c,int num_rows,int num_cols){{
             
             int k = max((c+r-num_rows+1),0);
             int l = max((c+r-num_cols+1),0);
@@ -109,6 +109,10 @@ impl OpenCLSequenceAlignment{
 
             return ps+zt;
         }}
+        int pos_2d_to_1d_rc_(int r,int c,int num_rows,int num_cols){{
+            return num_cols*r+c;
+        }}
+        
         __kernel void fill_matrix(
             __global int* seq_a 
             ,__global int* seq_b
@@ -131,10 +135,10 @@ impl OpenCLSequenceAlignment{
                     int prevrow = 0;
                     int currentrow = 1;
                     while(currentrow < num_rows){{
-                        int prevpos_t = pos_1d_to_2d_rc(currentrow-1,col_id,num_rows,num_cols);
-                        int prevpos_l = pos_1d_to_2d_rc(currentrow,col_id-1,num_rows,num_cols);
-                        int prevpos_lt = pos_1d_to_2d_rc(currentrow-1,col_id-1,num_rows,num_cols);
-                        int currentpos = pos_1d_to_2d_rc(currentrow,col_id,num_rows,num_cols);
+                        int prevpos_t = pos_2d_to_1d_rc(currentrow-1,col_id,num_rows,num_cols);
+                        int prevpos_l = pos_2d_to_1d_rc(currentrow,col_id-1,num_rows,num_cols);
+                        int prevpos_lt = pos_2d_to_1d_rc(currentrow-1,col_id-1,num_rows,num_cols);
+                        int currentpos = pos_2d_to_1d_rc(currentrow,col_id,num_rows,num_cols);
                         if(
                             (flag_matrix[prevpos_t] & 1) == 1
                             &&
@@ -508,11 +512,11 @@ impl OpenCLSequenceAlignment{
             .build().unwrap_or_else(|e|panic!("{:?}",e));
         }
     }
-    /*
-    pub fn pos_2d_to_1d_rc(&self,r:usize,c:usize)->usize{
+    
+    pub fn pos_2d_to_1d_rc_(&self,r:usize,c:usize)->usize{
         return r*self.num_cols+c;
     }
-    */
+    
 
     pub fn pos_2d_to_1d_rc(&self,r_:usize,c_:usize)->usize{
         let r = r_ as i64;

@@ -111,13 +111,33 @@ fn main(){
         let seq2 = opencl_sequence_alignment::SeqData::load_fasta(&file2,false);
         for ss1 in seq1.iter(){
             for ss2 in seq2.iter(){
+                
                 let res = sw.align(ss1,ss2,true);
                 let r1 = res.0.iter().fold("".to_string(),|s,m|s+m);
-                let r2 = res.1.iter().fold("".to_string(),|s,m|s+m);cd 
+                let r2 = res.1.iter().fold("".to_string(),|s,m|s+m);
                 println!("#score:{}",res.2);
                 println!("#type:{}",mess);
                 println!(">{}\n{}\n",ss1.name,r1);
                 println!(">{}\n{}\n",ss2.name, r2);            
+
+                /*//少し早くなるが結果が安定しない
+                if ss1.seq.len() > ss2.seq.len(){
+                    let res = sw.align(ss1,ss2,true);
+                    let r1 = res.0.iter().fold("".to_string(),|s,m|s+m);
+                    let r2 = res.1.iter().fold("".to_string(),|s,m|s+m);
+                    println!("#score:{}",res.2);
+                    println!("#type:{}",mess);
+                    println!(">{}\n{}\n",ss1.name,r1);
+                    println!(">{}\n{}\n",ss2.name, r2);            
+                }else{
+                    let res = sw.align(ss2,ss1,true);
+                    let r1 = res.0.iter().fold("".to_string(),|s,m|s+m);
+                    let r2 = res.1.iter().fold("".to_string(),|s,m|s+m);
+                    println!("#score:{}",res.2);
+                    println!("#type:{}",mess);
+                    println!(">{}\n{}\n",ss1.name,r2);
+                    println!(">{}\n{}\n",ss2.name,r1);   
+                }*/
             }
         }
     }
