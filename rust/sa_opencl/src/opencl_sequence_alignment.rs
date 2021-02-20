@@ -730,24 +730,6 @@ impl OpenCLSequenceAlignment{
 
 
 
-#[derive(Clone)]
-pub struct SWCell{
-    pub scores:Vec<f32>,
-    pub prev:Vec<usize>
-}
-
-
-
-impl SWCell{
-    pub fn new()->SWCell{
-        return SWCell{scores:vec![0.0;3],prev:vec![0_usize,0_usize,0_usize]};
-    }
-    pub fn set(&mut self,index:usize,prevpath:usize,score:f32){
-        self.prev[index] = prevpath;
-        self.scores[index] = score;
-    }
-}
-
 pub trait ScoringMatrix{
     fn get_score(&self,a:usize,b:usize)->f32;
     fn get_score_str(&self,a:&str,b:&str)->f32;
@@ -757,7 +739,7 @@ pub trait ScoringMatrix{
     fn get_vec_score(&self)->Vec<f32>;
     fn get_num_columns(&self)->usize;
 }
-
+/* not tested
 #[allow(dead_code)]
 pub struct PositionSpecificMatrix{
     pub scores:Vec<f32>,
@@ -806,7 +788,7 @@ impl PositionSpecificMatrix{
         };
     }
 }
-
+*/
 #[allow(dead_code)]
 pub struct SubstitutionMatrix{
     pub string_to_index:HashMap<String,usize> ,
