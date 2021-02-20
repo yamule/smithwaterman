@@ -134,11 +134,13 @@ impl OpenCLSequenceAlignment{
                     int prevcol = col_id-1;
                     int prevrow = 0;
                     int currentrow = 1;
+                    
+                    int prevpos_t = pos_2d_to_1d_rc(currentrow-1,col_id,num_rows,num_cols);
+                    int prevpos_l = pos_2d_to_1d_rc(currentrow,col_id-1,num_rows,num_cols);
+                    int prevpos_lt = pos_2d_to_1d_rc(currentrow-1,col_id-1,num_rows,num_cols);
+                    int currentpos = pos_2d_to_1d_rc(currentrow,col_id,num_rows,num_cols);
+
                     while(currentrow < num_rows){{
-                        int prevpos_t = pos_2d_to_1d_rc(currentrow-1,col_id,num_rows,num_cols);
-                        int prevpos_l = pos_2d_to_1d_rc(currentrow,col_id-1,num_rows,num_cols);
-                        int prevpos_lt = pos_2d_to_1d_rc(currentrow-1,col_id-1,num_rows,num_cols);
-                        int currentpos = pos_2d_to_1d_rc(currentrow,col_id,num_rows,num_cols);
                         if(
                             (flag_matrix[prevpos_t] & 1) == 1
                             &&
@@ -287,6 +289,11 @@ impl OpenCLSequenceAlignment{
 
                             flag_matrix[currentpos] = (matchindex << 1) + (gapxindex << 3) + (gapyindex << 5) +1;
                             currentrow += 1;
+                            
+                            prevpos_t = pos_2d_to_1d_rc(currentrow-1,col_id,num_rows,num_cols);
+                            prevpos_l = pos_2d_to_1d_rc(currentrow,col_id-1,num_rows,num_cols);
+                            prevpos_lt = pos_2d_to_1d_rc(currentrow-1,col_id-1,num_rows,num_cols);
+                            currentpos = pos_2d_to_1d_rc(currentrow,col_id,num_rows,num_cols);
                         }}
                     }}
                 }}
@@ -344,9 +351,6 @@ impl OpenCLSequenceAlignment{
         let seq_a:VecAndBuffer<i32> = VecAndBuffer::new(vec![0_i32;max_length],&queue);
         let seq_b:VecAndBuffer<i32> = VecAndBuffer::new(vec![0_i32;max_length],&queue);
 
-
-
-        
         let kernel = Kernel::builder()
         .program(&program)
         .name("fill_matrix")
@@ -399,6 +403,8 @@ impl OpenCLSequenceAlignment{
     }
     pub fn prepare(&mut self,s1:&SeqData,s2:&SeqData){
         
+        let buffremake_diff:i64 = 1000;
+
         let seq_a = self.scoring_matrix.seq_to_index(&s1,None);
         let seq_b = self.scoring_matrix.seq_to_index(&s2,None);
         self.num_cols = seq_a.len()+1;
@@ -412,13 +418,13 @@ impl OpenCLSequenceAlignment{
         }
 
         let mut buffer_updated:bool = false;
-        if seq_a.len() > self.seq_a.vector.len(){
-            self.seq_a = VecAndBuffer::new(vec![0_i32;seq_a.len()],&self.ocl_queue);
+        if (seq_a.len() > self.seq_a.vector.len()) || (seq_a.len() as i64) < (self.seq_a.vector.len() as i64) - buffremake_diff {
+            self.seq_a = VecAndBuffer::new(vec![0_i32;seq_a.len()+((buffremake_diff/4) as usize)],&self.ocl_queue);
             buffer_updated = true;
         }
         
-        if seq_b.len() > self.seq_b.vector.len(){
-            self.seq_b = VecAndBuffer::new(vec![0_i32;seq_b.len()],&self.ocl_queue);
+        if seq_b.len() > self.seq_b.vector.len() || (seq_b.len() as i64) < (self.seq_b.vector.len() as i64) - buffremake_diff{
+                self.seq_b = VecAndBuffer::new(vec![0_i32;seq_b.len()+((buffremake_diff/4) as usize)],&self.ocl_queue);
             buffer_updated = true;
         }
         for ii in 0..seq_a.len(){
@@ -433,9 +439,9 @@ impl OpenCLSequenceAlignment{
 
 
         let matrix_size:usize = self.num_cols*self.num_rows;
-        if matrix_size > self.flag_matrix.vector.len(){
-            self.dp_matrix = VecAndBuffer::new(vec![0.0_f32;matrix_size*3],&self.ocl_queue);
-            self.flag_matrix = VecAndBuffer::new(vec![0_u8;matrix_size],&self.ocl_queue);
+        if matrix_size > self.flag_matrix.vector.len() || (matrix_size as i64) < (self.flag_matrix.vector.len() as i64) - buffremake_diff*buffremake_diff{
+            self.dp_matrix = VecAndBuffer::new(vec![0.0_f32;(matrix_size+((buffremake_diff*buffremake_diff/16) as usize))*3],&self.ocl_queue);
+            self.flag_matrix = VecAndBuffer::new(vec![0_u8;matrix_size+((buffremake_diff*buffremake_diff/16) as usize)],&self.ocl_queue);
             buffer_updated = true;
         }
         for rr in 0..self.num_rows{
