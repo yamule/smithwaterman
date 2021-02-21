@@ -95,6 +95,7 @@ pub struct OpenCLSequenceAlignment{
     pub score_buff:VecAndBuffer<f32>,
     pub dp_matrix:VecAndBuffer<f32>,
     pub flag_matrix:VecAndBuffer<u8>,
+    pub kernel_control:VecAndBuffer<u8>,
 
 }
 
@@ -312,212 +313,212 @@ impl OpenCLSequenceAlignment{
             ,__global int* max_position
             ,__global float* score_buff
             ,int alignment_type
+            ,__global char* kernel_control//0 prepare, 1 fill, 2 backtrack
+            
         ) {{
-            
-            //printf("%d started %d\n",get_global_id(0),get_local_size(1));
-            prepare_matrix(
-            dp_matrix
-            ,flag_matrix
-            ,seqsize
-            ,start_openal
-            ,start_epenal);
-            //printf("%d blocked\n",get_global_id(0));
-            barrier(CLK_GLOBAL_MEM_FENCE);
-            //printf("%d running\n",get_global_id(0));
-            
-            int num_rows = seqsize[1]+1;
-            int num_cols = seqsize[0]+1;
+            if(kernel_control[0] == 0){{
+                //printf("%d started %d\n",get_global_id(0),get_local_size(1));
+                prepare_matrix(
+                dp_matrix
+                ,flag_matrix
+                ,seqsize
+                ,start_openal
+                ,start_epenal);
+                //printf("%d blocked\n",get_global_id(0));
+                //barrier(CLK_GLOBAL_MEM_FENCE);
+                //printf("%d running\n",get_global_id(0));
+            }}else if(kernel_control[0] == 1){{
+                int num_rows = seqsize[1]+1;
+                int num_cols = seqsize[0]+1;
 
-            int col_id = get_global_id(0)+1;
-            int maxpos = -1;
-            float maxscore = -10000;
-            if(col_id < num_cols){{
-                int prevcol = col_id-1;
-                int prevrow = 0;
-                int currentrow = 1;
-                
-                int prevpos_t = pos_2d_to_1d_rc(currentrow-1,col_id,num_rows,num_cols);
-                int prevpos_l = pos_2d_to_1d_rc(currentrow,col_id-1,num_rows,num_cols);
-                int prevpos_lt = pos_2d_to_1d_rc(currentrow-1,col_id-1,num_rows,num_cols);
-                int currentpos = pos_2d_to_1d_rc(currentrow,col_id,num_rows,num_cols);
-                maxscore = dp_matrix[currentpos];
-                maxpos = currentrow;
+                int col_id = get_global_id(0)+1;
+                int maxpos = -1;
+                float maxscore = -10000;
+                if(col_id < num_cols){{
+                    int prevcol = col_id-1;
+                    int prevrow = 0;
+                    int currentrow = 1;
+                    
+                    int prevpos_t = pos_2d_to_1d_rc(currentrow-1,col_id,num_rows,num_cols);
+                    int prevpos_l = pos_2d_to_1d_rc(currentrow,col_id-1,num_rows,num_cols);
+                    int prevpos_lt = pos_2d_to_1d_rc(currentrow-1,col_id-1,num_rows,num_cols);
+                    int currentpos = pos_2d_to_1d_rc(currentrow,col_id,num_rows,num_cols);
+                    maxscore = dp_matrix[currentpos];
+                    maxpos = currentrow;
 
-                while(currentrow < num_rows){{
-                    if(
-                        (flag_matrix[prevpos_t] & 1) == 1
-                        &&
-                        (flag_matrix[prevpos_l] & 1) == 1
-                        &&
-                        (flag_matrix[prevpos_lt] & 1) == 1
-                    ){{
+                    while(currentrow < num_rows){{
+                        if(
+                            (flag_matrix[prevpos_t] & 1) == 1
+                            &&
+                            (flag_matrix[prevpos_l] & 1) == 1
+                            &&
+                            (flag_matrix[prevpos_lt] & 1) == 1
+                        ){{
 
-                        int p3t = prevpos_t*3;
-                        int p3l = prevpos_l*3;
-                        int p3lt = prevpos_lt*3;
-                        int cp3 = currentpos*3;
+                            int p3t = prevpos_t*3;
+                            int p3l = prevpos_l*3;
+                            int p3lt = prevpos_lt*3;
+                            int cp3 = currentpos*3;
 
-                        float mmscore = scoring_matrix[seq_a[col_id-1]*num_letter_types+seq_b[currentrow-1]];
-                        
-                        float matchscore = 0.0;
-                        int matchindex = 1;
-                        
-                        float gapxscore = 0.0;
-                        int gapxindex = 0;
-                        
-                        float gapyscore = 0.0;
-                        int gapyindex = 0;
-                        
-                        //Cell にマッチした場合
-                        if(dp_matrix[p3lt+{CELL_MATCH}]+mmscore
-                        >= dp_matrix[p3lt+{CELL_GAPINX}]+mmscore){{
+                            float mmscore = scoring_matrix[seq_a[col_id-1]*num_letter_types+seq_b[currentrow-1]];
+                            
+                            float matchscore = 0.0;
+                            int matchindex = 1;
+                            
+                            float gapxscore = 0.0;
+                            int gapxindex = 0;
+                            
+                            float gapyscore = 0.0;
+                            int gapyindex = 0;
+                            
+                            //Cell にマッチした場合
                             if(dp_matrix[p3lt+{CELL_MATCH}]+mmscore
-                            >= dp_matrix[p3lt+{CELL_GAPINY}]+mmscore){{    
-                                matchscore = dp_matrix[p3lt+{CELL_MATCH}]+mmscore;
-                                matchindex = {CELL_MATCH};
+                            >= dp_matrix[p3lt+{CELL_GAPINX}]+mmscore){{
+                                if(dp_matrix[p3lt+{CELL_MATCH}]+mmscore
+                                >= dp_matrix[p3lt+{CELL_GAPINY}]+mmscore){{    
+                                    matchscore = dp_matrix[p3lt+{CELL_MATCH}]+mmscore;
+                                    matchindex = {CELL_MATCH};
+                                }}else{{
+                                    matchscore = dp_matrix[p3lt+{CELL_GAPINY}]+mmscore;
+                                    matchindex = {CELL_GAPINY};
+                                }}
                             }}else{{
-                                matchscore = dp_matrix[p3lt+{CELL_GAPINY}]+mmscore;
-                                matchindex = {CELL_GAPINY};
+                                if(dp_matrix[p3lt+{CELL_GAPINX}]+mmscore
+                                >= dp_matrix[p3lt+{CELL_GAPINY}]+mmscore){{    
+                                    matchscore = dp_matrix[p3lt+{CELL_GAPINX}]+mmscore;
+                                    matchindex = {CELL_GAPINX};
+                                }}else{{
+                                    matchscore = dp_matrix[p3lt+{CELL_GAPINY}]+mmscore;
+                                    matchindex = {CELL_GAPINY};
+                                }}
                             }}
-                        }}else{{
-                            if(dp_matrix[p3lt+{CELL_GAPINX}]+mmscore
-                            >= dp_matrix[p3lt+{CELL_GAPINY}]+mmscore){{    
-                                matchscore = dp_matrix[p3lt+{CELL_GAPINX}]+mmscore;
-                                matchindex = {CELL_GAPINX};
-                            }}else{{
-                                matchscore = dp_matrix[p3lt+{CELL_GAPINY}]+mmscore;
-                                matchindex = {CELL_GAPINY};
-                            }}
-                        }}
 
-                        if(alignment_type != {ALIGN_LOCAL}){{
-                            //emboss の water と needle で優先順位が違うようだ・・・
-                            float popenal = (num_cols-col_id-1 == 0)?(start_openal):(openal);
-                            float pepenal = (num_cols-col_id-1 == 0)?(start_epenal):(epenal);
+                            if(alignment_type != {ALIGN_LOCAL}){{
+                                //emboss の water と needle で優先順位が違うようだ・・・
+                                float popenal = (num_cols-col_id-1 == 0)?(start_openal):(openal);
+                                float pepenal = (num_cols-col_id-1 == 0)?(start_epenal):(epenal);
+                                
+                                float qopenal = (num_rows-currentrow-1 == 0)?(start_openal):(openal);
+                                float qepenal = (num_rows-currentrow-1 == 0)?(start_epenal):(epenal);
+                                
+                                if(dp_matrix[p3t+{CELL_MATCH}]+popenal
+                                > dp_matrix[p3t+{CELL_GAPINX}]+pepenal){{
+                                    if(dp_matrix[p3t+{CELL_MATCH}]+popenal >= dp_matrix[p3t+{CELL_GAPINY}]+popenal){{
+                                        gapxscore = dp_matrix[p3t+{CELL_MATCH}]+popenal;
+                                        gapxindex = {CELL_MATCH};
+                                    }}else{{
+                                        gapxscore = dp_matrix[p3t+{CELL_GAPINY}]+popenal;
+                                        gapxindex = {CELL_GAPINY};
+                                    }}
+                                }}else{{
+                                    if(dp_matrix[p3t+{CELL_GAPINX}]+pepenal >= dp_matrix[p3t+{CELL_GAPINY}]+popenal){{
+                                        gapxscore = dp_matrix[p3t+{CELL_GAPINX}]+pepenal;
+                                        gapxindex = {CELL_GAPINX};
+                                    }}else{{
+                                        gapxscore = dp_matrix[p3t+{CELL_GAPINY}]+popenal;
+                                        gapxindex = {CELL_GAPINY};
+                                    }}
+                                }}
+                                if(dp_matrix[p3l+{CELL_MATCH}]+qopenal
+                                > dp_matrix[p3l+{CELL_GAPINY}]+qepenal){{
+                                    if(dp_matrix[p3l+{CELL_MATCH}]+qopenal >= dp_matrix[p3l+{CELL_GAPINX}]+qopenal){{
+                                        gapyscore = dp_matrix[p3l+{CELL_MATCH}]+qopenal;
+                                        gapyindex = {CELL_MATCH};
+                                    }}else{{
+                                        gapyscore = dp_matrix[p3l+{CELL_GAPINX}]+qopenal;
+                                        gapyindex = {CELL_GAPINX};
+                                    }}
+                                }}else{{
+                                    if(dp_matrix[p3l+{CELL_GAPINY}]+qepenal >= dp_matrix[p3l+{CELL_GAPINX}]+qopenal){{
+                                        gapyscore = dp_matrix[p3l+{CELL_GAPINY}]+qepenal;
+                                        gapyindex = {CELL_GAPINY};
+                                    }}else{{
+                                        gapyscore = dp_matrix[p3l+{CELL_GAPINX}]+qopenal;
+                                        gapyindex = {CELL_GAPINX};
+                                    }}
+                                }}
+                            }}else{{
+                                if(dp_matrix[p3t+{CELL_MATCH}]+openal
+                                >= dp_matrix[p3t+{CELL_GAPINX}]+epenal){{
+                                    if(dp_matrix[p3t+{CELL_MATCH}]+openal > dp_matrix[p3t+{CELL_GAPINY}]+openal){{
+                                        gapxscore = dp_matrix[p3t+{CELL_MATCH}]+openal;
+                                        gapxindex = {CELL_MATCH};
+                                    }}else{{
+                                        gapxscore = dp_matrix[p3t+{CELL_GAPINY}]+openal;
+                                        gapxindex = {CELL_GAPINY};
+                                    }}
+                                }}else{{
+                                    if( dp_matrix[p3t+{CELL_GAPINX}]+epenal > dp_matrix[p3t+{CELL_GAPINY}]+openal){{
+                                        gapxscore = dp_matrix[p3t+{CELL_GAPINX}]+epenal;
+                                        gapxindex = {CELL_GAPINX};
+                                    }}else{{
+                                        gapxscore = dp_matrix[p3t+{CELL_GAPINY}]+openal;
+                                        gapxindex = {CELL_GAPINY};
+                                    }}
+                                }}
+            
+                                if(dp_matrix[p3l+{CELL_MATCH}]+openal
+                                >= dp_matrix[p3l+{CELL_GAPINY}]+epenal){{
+                                    if(dp_matrix[p3l+{CELL_MATCH}]+openal > dp_matrix[p3l+{CELL_GAPINX}]+openal){{
+                                        gapyscore = dp_matrix[p3l+{CELL_MATCH}]+openal;
+                                        gapyindex = {CELL_MATCH};
+                                    }}else{{
+                                        gapyscore = dp_matrix[p3l+{CELL_GAPINX}]+openal;
+                                        gapyindex = {CELL_GAPINX};
+                                        
+                                    }}
+            
+                                }}else{{
+                                    if(dp_matrix[p3l+{CELL_GAPINY}]+epenal > dp_matrix[p3l+{CELL_GAPINX}]+openal){{
+                                        gapyscore = dp_matrix[p3l+{CELL_GAPINY}]+epenal;
+                                        gapyindex = {CELL_GAPINY};
+                                    }}else{{
+                                        gapyscore = dp_matrix[p3l+{CELL_GAPINX}]+openal;
+                                        gapyindex = {CELL_GAPINX};
+                                    }}
+                                }}
+                                if(matchscore < 0.0){{
+                                    matchscore = 0.0;
+                                }}
+                                if(gapxscore < 0.0){{
+                                    gapxscore = 0.0;
+                                }}
+                                if(gapyscore < 0.0){{
+                                    gapyscore = 0.0;
+                                }}
+                            }}
+
+
+                            dp_matrix[cp3] = matchscore;
+                            dp_matrix[cp3+{CELL_GAPINX}] = gapxscore;
+                            dp_matrix[cp3+{CELL_GAPINY}] = gapyscore;
+
+                            if(matchscore > maxscore){{
+                                maxpos = currentrow;
+                                maxscore = matchscore;
+                            }}
+
+                            flag_matrix[currentpos] = (matchindex << 1) + (gapxindex << 3) + (gapyindex << 5) +1;
+                            currentrow += 1;
                             
-                            float qopenal = (num_rows-currentrow-1 == 0)?(start_openal):(openal);
-                            float qepenal = (num_rows-currentrow-1 == 0)?(start_epenal):(epenal);
+                            prevpos_t = pos_2d_to_1d_rc(currentrow-1,col_id,num_rows,num_cols);
+                            prevpos_l = pos_2d_to_1d_rc(currentrow,col_id-1,num_rows,num_cols);
+                            prevpos_lt = pos_2d_to_1d_rc(currentrow-1,col_id-1,num_rows,num_cols);
+                            currentpos = pos_2d_to_1d_rc(currentrow,col_id,num_rows,num_cols);
                             
-                            if(dp_matrix[p3t+{CELL_MATCH}]+popenal
-                            > dp_matrix[p3t+{CELL_GAPINX}]+pepenal){{
-                                if(dp_matrix[p3t+{CELL_MATCH}]+popenal >= dp_matrix[p3t+{CELL_GAPINY}]+popenal){{
-                                    gapxscore = dp_matrix[p3t+{CELL_MATCH}]+popenal;
-                                    gapxindex = {CELL_MATCH};
-                                }}else{{
-                                    gapxscore = dp_matrix[p3t+{CELL_GAPINY}]+popenal;
-                                    gapxindex = {CELL_GAPINY};
-                                }}
-                            }}else{{
-                                if(dp_matrix[p3t+{CELL_GAPINX}]+pepenal >= dp_matrix[p3t+{CELL_GAPINY}]+popenal){{
-                                    gapxscore = dp_matrix[p3t+{CELL_GAPINX}]+pepenal;
-                                    gapxindex = {CELL_GAPINX};
-                                }}else{{
-                                    gapxscore = dp_matrix[p3t+{CELL_GAPINY}]+popenal;
-                                    gapxindex = {CELL_GAPINY};
-                                }}
-                            }}
-                            if(dp_matrix[p3l+{CELL_MATCH}]+qopenal
-                            > dp_matrix[p3l+{CELL_GAPINY}]+qepenal){{
-                                if(dp_matrix[p3l+{CELL_MATCH}]+qopenal >= dp_matrix[p3l+{CELL_GAPINX}]+qopenal){{
-                                    gapyscore = dp_matrix[p3l+{CELL_MATCH}]+qopenal;
-                                    gapyindex = {CELL_MATCH};
-                                }}else{{
-                                    gapyscore = dp_matrix[p3l+{CELL_GAPINX}]+qopenal;
-                                    gapyindex = {CELL_GAPINX};
-                                }}
-                            }}else{{
-                                if(dp_matrix[p3l+{CELL_GAPINY}]+qepenal >= dp_matrix[p3l+{CELL_GAPINX}]+qopenal){{
-                                    gapyscore = dp_matrix[p3l+{CELL_GAPINY}]+qepenal;
-                                    gapyindex = {CELL_GAPINY};
-                                }}else{{
-                                    gapyscore = dp_matrix[p3l+{CELL_GAPINX}]+qopenal;
-                                    gapyindex = {CELL_GAPINX};
-                                }}
-                            }}
-                        }}else{{
-                            if(dp_matrix[p3t+{CELL_MATCH}]+openal
-                            >= dp_matrix[p3t+{CELL_GAPINX}]+epenal){{
-                                if(dp_matrix[p3t+{CELL_MATCH}]+openal > dp_matrix[p3t+{CELL_GAPINY}]+openal){{
-                                    gapxscore = dp_matrix[p3t+{CELL_MATCH}]+openal;
-                                    gapxindex = {CELL_MATCH};
-                                }}else{{
-                                    gapxscore = dp_matrix[p3t+{CELL_GAPINY}]+openal;
-                                    gapxindex = {CELL_GAPINY};
-                                }}
-                            }}else{{
-                                if( dp_matrix[p3t+{CELL_GAPINX}]+epenal > dp_matrix[p3t+{CELL_GAPINY}]+openal){{
-                                    gapxscore = dp_matrix[p3t+{CELL_GAPINX}]+epenal;
-                                    gapxindex = {CELL_GAPINX};
-                                }}else{{
-                                    gapxscore = dp_matrix[p3t+{CELL_GAPINY}]+openal;
-                                    gapxindex = {CELL_GAPINY};
-                                }}
-                            }}
-        
-                            if(dp_matrix[p3l+{CELL_MATCH}]+openal
-                            >= dp_matrix[p3l+{CELL_GAPINY}]+epenal){{
-                                if(dp_matrix[p3l+{CELL_MATCH}]+openal > dp_matrix[p3l+{CELL_GAPINX}]+openal){{
-                                    gapyscore = dp_matrix[p3l+{CELL_MATCH}]+openal;
-                                    gapyindex = {CELL_MATCH};
-                                }}else{{
-                                    gapyscore = dp_matrix[p3l+{CELL_GAPINX}]+openal;
-                                    gapyindex = {CELL_GAPINX};
-                                    
-                                }}
-        
-                            }}else{{
-                                if(dp_matrix[p3l+{CELL_GAPINY}]+epenal > dp_matrix[p3l+{CELL_GAPINX}]+openal){{
-                                    gapyscore = dp_matrix[p3l+{CELL_GAPINY}]+epenal;
-                                    gapyindex = {CELL_GAPINY};
-                                }}else{{
-                                    gapyscore = dp_matrix[p3l+{CELL_GAPINX}]+openal;
-                                    gapyindex = {CELL_GAPINX};
-                                }}
-                            }}
-                            if(matchscore < 0.0){{
-                                matchscore = 0.0;
-                            }}
-                            if(gapxscore < 0.0){{
-                                gapxscore = 0.0;
-                            }}
-                            if(gapyscore < 0.0){{
-                                gapyscore = 0.0;
-                            }}
                         }}
-
-
-                        dp_matrix[cp3] = matchscore;
-                        dp_matrix[cp3+{CELL_GAPINX}] = gapxscore;
-                        dp_matrix[cp3+{CELL_GAPINY}] = gapyscore;
-
-                        if(matchscore > maxscore){{
-                            maxpos = currentrow;
-                            maxscore = matchscore;
-                        }}
-
-                        flag_matrix[currentpos] = (matchindex << 1) + (gapxindex << 3) + (gapyindex << 5) +1;
-                        currentrow += 1;
-                        
-                        prevpos_t = pos_2d_to_1d_rc(currentrow-1,col_id,num_rows,num_cols);
-                        prevpos_l = pos_2d_to_1d_rc(currentrow,col_id-1,num_rows,num_cols);
-                        prevpos_lt = pos_2d_to_1d_rc(currentrow-1,col_id-1,num_rows,num_cols);
-                        currentpos = pos_2d_to_1d_rc(currentrow,col_id,num_rows,num_cols);
-                        
                     }}
                 }}
+                max_position[col_id] = maxpos;
+                score_buff[col_id] = maxscore;
+            }}else{{
+                //なんか止まらない？？？
+                //barrier(CLK_GLOBAL_MEM_FENCE);
+                //if(get_global_id(0) == num_cols-1){{
+                if(get_global_id(0) == 0){{
+                        backtrack(aligned_seq_a,aligned_seq_b,max_position,score_buff,seqsize,dp_matrix,flag_matrix,alignment_type);
+                }}
             }}
-            max_position[col_id] = maxpos;
-            score_buff[col_id] = maxscore;
-            
-            //止まらない？？？
-            barrier(CLK_GLOBAL_MEM_FENCE);
-            barrier(CLK_LOCAL_MEM_FENCE);
-            if(get_global_id(0) == num_cols-1){{
-                backtrack(aligned_seq_a,aligned_seq_b,max_position,score_buff,seqsize,dp_matrix,flag_matrix,alignment_type);
-            }}
-            
-            barrier(CLK_GLOBAL_MEM_FENCE);
-            //printf("%d finished\n",get_global_id(0));
         }}
     
         "#,CELL_MATCH=CELL_MATCH
@@ -544,6 +545,7 @@ impl OpenCLSequenceAlignment{
         let dp_matrix:VecAndBuffer<f32> = VecAndBuffer::new(vec![0.0_f32;matrix_size*3],&queue);
         let flag_matrix:VecAndBuffer<u8> = VecAndBuffer::new(vec![0_u8;matrix_size],&queue);
         let seq_length:VecAndBuffer<i32> = VecAndBuffer::new(vec![0_i32;2],&queue);
+        let kernel_control:VecAndBuffer<u8> = VecAndBuffer::new(vec![0_u8;1],&queue);
 
         let mut pgo = go;
         let mut pge = ge;
@@ -605,6 +607,7 @@ impl OpenCLSequenceAlignment{
         .arg(&max_position.buffer)
         .arg(&score_buff.buffer)
         .arg(alignment_type as i32)
+        .arg(&kernel_control.buffer)
         .build().unwrap_or_else(|e|panic!("{:?}",e));
 
         return OpenCLSequenceAlignment{
@@ -632,6 +635,7 @@ impl OpenCLSequenceAlignment{
             ,ocl_queue:queue
             ,dp_matrix:dp_matrix
             ,flag_matrix:flag_matrix
+            ,kernel_control:kernel_control
         };
     }
 
@@ -721,6 +725,7 @@ impl OpenCLSequenceAlignment{
             .arg(&self.max_position.buffer)
             .arg(&self.score_buff.buffer)
             .arg(self.alignment_type as i32)
+            .arg(&self.kernel_control.buffer)
             .build().unwrap_or_else(|e|panic!("{:?}",e));
         }
     }
@@ -781,10 +786,30 @@ impl OpenCLSequenceAlignment{
         self.prepare(&s1, &s2);
         
         unsafe {
+            self.kernel_control.vector[0] = 0;
+            self.kernel_control.write();
             self.kernel_fill.cmd()
             .queue(&self.ocl_queue)
             .global_work_offset(ocl::SpatialDims::new(Some(0),None, None).unwrap())
             .global_work_size(self.num_cols)
+            .local_work_size(self.kernel_fill.default_local_work_size())
+            .enq().unwrap_or_else(|e|panic!("{:?}",e));
+            
+            self.kernel_control.vector[0] = 1;
+            self.kernel_control.write();
+            self.kernel_fill.cmd()
+            .queue(&self.ocl_queue)
+            .global_work_offset(ocl::SpatialDims::new(Some(0),None, None).unwrap())
+            .global_work_size(self.num_cols)
+            .local_work_size(self.kernel_fill.default_local_work_size())
+            .enq().unwrap_or_else(|e|panic!("{:?}",e));
+            
+            self.kernel_control.vector[0] = 2;
+            self.kernel_control.write();
+            self.kernel_fill.cmd()
+            .queue(&self.ocl_queue)
+            .global_work_offset(ocl::SpatialDims::new(Some(0),None, None).unwrap())
+            .global_work_size(1)
             .local_work_size(self.kernel_fill.default_local_work_size())
             .enq().unwrap_or_else(|e|panic!("{:?}",e));
             
