@@ -78,7 +78,8 @@ pub struct OpenCLSequenceAlignment{
     pub num_cols:usize,//== seqlen_a+1
     pub num_rows:usize,//== seqlen_b+1
     pub alignment_type:usize,
-    pub kernel:Kernel,
+    pub kernel_fill:Kernel,
+    //pub kernel_backtrack:Kernel,
 
     pub ocl_platform:Platform,
     pub ocl_device:Device,
@@ -113,6 +114,61 @@ impl OpenCLSequenceAlignment{
             return num_cols*r+c;
         }}
         
+        __kernel void prepare_matrix(
+            __global float* dp_matrix
+            ,__global char* flag_matrix // 00 match 01 gapincol 10 gapincol x3 0 uncalculated 1 calculated
+            ,__global int* seqsize
+            ,float start_openal
+            ,float start_epenal) {{
+            
+            int cc = get_global_id(0);
+            int num_rows = seqsize[1]+1;
+            int num_cols = seqsize[0]+1;
+            if(get_global_id(0) >= num_cols){{return;}}
+            for(int rr = 0;rr < num_rows;rr++){{
+                int ppos = pos_2d_to_1d_rc(rr,cc,num_rows,num_cols);
+                int ppos_d = ppos*3;
+                flag_matrix[ppos] = 0b0000000;
+                dp_matrix[ppos_d] = -10000.0;
+                dp_matrix[ppos_d+1] = -10000.0;
+                dp_matrix[ppos_d+2] = -10000.0;
+            }}
+    
+            for(int pp_ = 0;pp_ < 2;pp_++){{
+                int tc = (pp_ == 0)?(num_cols):(1);
+                int tr = (pp_ == 1)?(num_rows):(1);
+                for(int rr = 0;rr < tr;rr++){{
+                    float openal = start_openal;
+                    float epenal = start_epenal;
+                    int ppos = pos_2d_to_1d_rc(rr,cc,num_rows,num_cols);
+                    int ppos_d = ppos*3;
+
+                    if(cc == 0 && rr == 0){{
+                        dp_matrix[ppos_d] = 0.0;
+                        dp_matrix[ppos_d+1] = 0.0;
+                        dp_matrix[ppos_d+2] = 0.0;
+                        flag_matrix[ppos] = 0b0000001;
+                        continue;
+                    }}
+                    if(cc == 0){{
+                        float lscore = rr*epenal+(openal-epenal);
+                        dp_matrix[ppos_d] = lscore+10.0*openal +10.0*openal -10000.0;
+                        dp_matrix[ppos_d+1] = lscore;
+                        dp_matrix[ppos_d+2] = lscore+10.0*openal +10.0*openal -10000.0;
+                        flag_matrix[ppos] = 0b0101011;
+                        continue;
+                    }}else if(rr == 0){{
+                        float lscore = cc*epenal+(openal-epenal);
+                        dp_matrix[ppos_d] = lscore+10.0*openal +10.0*openal -10000.0 ;
+                        dp_matrix[ppos_d+1] = lscore+10.0*openal +10.0*openal -10000.0;
+                        dp_matrix[ppos_d+2] = lscore;
+                        flag_matrix[ppos] = 0b1010101;
+                        continue;
+                    }}
+                }}
+            }}
+        }}
+
         __kernel void fill_matrix(
             __global int* seq_a 
             ,__global int* seq_b
@@ -126,6 +182,16 @@ impl OpenCLSequenceAlignment{
             ,float openal
             ,float epenal
             ,int alignment_type) {{
+                
+                prepare_matrix(
+                dp_matrix
+                ,flag_matrix
+                ,seqsize
+                ,start_openal
+                ,start_epenal);
+                
+                barrier(CLK_GLOBAL_MEM_FENCE);
+
                 int num_rows = seqsize[1]+1;
                 int num_cols = seqsize[0]+1;
 
@@ -144,9 +210,9 @@ impl OpenCLSequenceAlignment{
                         if(
                             (flag_matrix[prevpos_t] & 1) == 1
                             &&
-                            (flag_matrix[prevpos_l]) & 1  == 1
+                            (flag_matrix[prevpos_l] & 1) == 1
                             &&
-                            (flag_matrix[prevpos_lt]) & 1  == 1
+                            (flag_matrix[prevpos_lt] & 1) == 1
                         ){{
 
                             int p3t = prevpos_t*3;
@@ -351,7 +417,7 @@ impl OpenCLSequenceAlignment{
         let seq_a:VecAndBuffer<i32> = VecAndBuffer::new(vec![0_i32;max_length],&queue);
         let seq_b:VecAndBuffer<i32> = VecAndBuffer::new(vec![0_i32;max_length],&queue);
 
-        let kernel = Kernel::builder()
+        let kernel_fill = Kernel::builder()
         .program(&program)
         .name("fill_matrix")
         .queue(queue.clone())
@@ -375,7 +441,7 @@ impl OpenCLSequenceAlignment{
             ,scoring_matrix_vec:scoring_matrix_vec
             ,o_penalty:pgo
             ,e_penalty:pge
-            ,kernel:kernel
+            ,kernel_fill:kernel_fill
             ,start_openal:spgo
             ,start_epenal:spge
             ,seq_a:seq_a
@@ -444,61 +510,10 @@ impl OpenCLSequenceAlignment{
             self.flag_matrix = VecAndBuffer::new(vec![0_u8;matrix_size+((buffremake_diff*buffremake_diff/16) as usize)],&self.ocl_queue);
             buffer_updated = true;
         }
-        for rr in 0..self.num_rows{
-            for cc in 0..self.num_cols{
-                let ppos:usize = self.pos_2d_to_1d_rc(rr,cc);
-                let ppos_d:usize = ppos*3;
-                self.flag_matrix.vector[ppos] = 0;
-                self.dp_matrix.vector[ppos_d] = -10000.0;
-                self.dp_matrix.vector[ppos_d+1] = -10000.0;
-                self.dp_matrix.vector[ppos_d+2] = -10000.0;
-            }
-        }
 
-        for pp_ in 0..2{
-            let tc:usize = if pp_ == 0{self.num_cols}else{1};
-            let tr:usize = if pp_ == 1{self.num_rows}else{1};
-            for rr in 0..tr{
-                for cc  in 0..tc{
-                    let mut openal = self.o_penalty;
-                    let mut epenal = self.e_penalty;
-                    if cc*rr == 0{
-                        openal = self.start_openal;
-                        epenal = self.start_epenal;
-                    }
-                    let ppos:usize = self.pos_2d_to_1d_rc(rr,cc);
-                    let ppos_d:usize = ppos*3;
 
-                    if cc == 0 && rr == 0{
-                        self.dp_matrix.vector[ppos_d] = 0.0;
-                        self.dp_matrix.vector[ppos_d+1] = 0.0;
-                        self.dp_matrix.vector[ppos_d+2] = 0.0;
-                        self.flag_matrix.vector[ppos] = 0b0000001;
-                        continue;
-                    }
-                    if cc == 0{
-                        let lscore = rr as f32*epenal+(openal-epenal);
-                        self.dp_matrix.vector[ppos_d] = lscore+10.0*self.o_penalty +10.0*self.e_penalty ;
-                        self.dp_matrix.vector[ppos_d+1] = lscore;
-                        self.dp_matrix.vector[ppos_d+2] = lscore+10.0*self.o_penalty +10.0*self.e_penalty ;
-                        self.flag_matrix.vector[ppos] = 0b0101011;
-                        continue;
-                    }else if rr == 0{
-                        let lscore = cc as f32*epenal+(openal-epenal);
-                        self.dp_matrix.vector[ppos_d] = lscore+10.0*self.o_penalty +10.0*self.e_penalty ;
-                        self.dp_matrix.vector[ppos_d+1] = lscore+10.0*self.o_penalty +10.0*self.e_penalty ;
-                        self.dp_matrix.vector[ppos_d+2] = lscore;
-                        self.flag_matrix.vector[ppos] = 0b1010101;
-                        continue;
-                    }
-                }
-            }
-        }
-        self.dp_matrix.write();
-        self.flag_matrix.write();
-        
         if buffer_updated{
-            self.kernel = Kernel::builder()
+            self.kernel_fill = Kernel::builder()
             .program(&self.ocl_program)
             .name("fill_matrix")
             .queue(self.ocl_queue.clone())
@@ -601,7 +616,7 @@ impl OpenCLSequenceAlignment{
             let prev_direc:usize = prev_direc as usize;
 
             if self.alignment_type == ALIGN_LOCAL 
-            && self.dp_matrix.vector[currentpos*3+current_direc] == 0.0_f32{
+            && self.dp_matrix.vector[currentpos*3+current_direc] <= 0.0_f32{
                 break;
             }
             //println!("direc:{} x:{} y:{}",current_direc,currentx,currenty);
@@ -615,9 +630,6 @@ impl OpenCLSequenceAlignment{
                 ret2.push((currenty-1) as i64);
                 currenty -= 1;
             }else if  current_direc == CELL_GAPINY{
-                if currentx == 0{
-                    panic!("{}",currenty);
-                }
                 ret1.push((currentx-1) as i64);
                 ret2.push(-1);
                 currentx -= 1;
@@ -639,12 +651,14 @@ impl OpenCLSequenceAlignment{
         self.prepare(&s1, &s2);
         
         unsafe {
-                self.kernel.cmd()
-                .queue(&self.ocl_queue)
-                .global_work_offset(self.kernel.default_global_work_offset())
-                .global_work_size(self.num_cols)
-                .local_work_size(self.kernel.default_local_work_size())
-                .enq().unwrap_or_else(|e|panic!("{:?}",e));
+
+            self.kernel_fill.cmd()
+            .queue(&self.ocl_queue)
+            .global_work_offset(self.kernel_fill.default_global_work_offset())
+            .global_work_size(self.num_cols)
+            .local_work_size(self.kernel_fill.default_local_work_size())
+            .enq().unwrap_or_else(|e|panic!("{:?}",e));
+            
         }
         
         self.flag_matrix.read();
