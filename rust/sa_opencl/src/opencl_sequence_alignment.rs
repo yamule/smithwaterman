@@ -143,34 +143,37 @@ impl OpenCLSequenceAlignment{
             for(int pp_ = 0;pp_ < 2;pp_++){{
                 int tc = (pp_ == 0)?(num_cols):(1);
                 int tr = (pp_ == 1)?(num_rows):(1);
-                for(int rr = 0;rr < tr;rr++){{
+                if(cc == 0){{
+                    int rr = 0;
                     float openal = start_openal;
                     float epenal = start_epenal;
                     int ppos = pos_2d_to_1d_rc(rr,cc,num_rows,num_cols);
                     int ppos_d = ppos*3;
-
-                    if(cc == 0 && rr == 0){{
-                        dp_matrix[ppos_d] = 0.0;
-                        dp_matrix[ppos_d+1] = 0.0;
-                        dp_matrix[ppos_d+2] = 0.0;
-                        flag_matrix[ppos] = 0b0000001;
-                        continue;
-                    }}
-                    if(cc == 0){{
+                    dp_matrix[ppos_d] = 0.0;
+                    dp_matrix[ppos_d+1] = 0.0;
+                    dp_matrix[ppos_d+2] = 0.0;
+                    flag_matrix[ppos] = 0b0000001;
+                    for(rr = 1;rr < tr;rr++){{
+                        ppos = pos_2d_to_1d_rc(rr,cc,num_rows,num_cols);
+                        ppos_d = ppos*3;
                         float lscore = rr*epenal+(openal-epenal);
                         dp_matrix[ppos_d] = lscore+10.0*openal +10.0*openal -10000.0;
                         dp_matrix[ppos_d+1] = lscore;
                         dp_matrix[ppos_d+2] = lscore+10.0*openal +10.0*openal -10000.0;
                         flag_matrix[ppos] = 0b0101011;
-                        continue;
-                    }}else if(rr == 0){{
-                        float lscore = cc*epenal+(openal-epenal);
-                        dp_matrix[ppos_d] = lscore+10.0*openal +10.0*openal -10000.0 ;
-                        dp_matrix[ppos_d+1] = lscore+10.0*openal +10.0*openal -10000.0;
-                        dp_matrix[ppos_d+2] = lscore;
-                        flag_matrix[ppos] = 0b1010101;
-                        continue;
                     }}
+                    
+                }}else{{
+                    int rr = 0;
+                    float openal = start_openal;
+                    float epenal = start_epenal;
+                    int ppos = pos_2d_to_1d_rc(rr,cc,num_rows,num_cols);
+                    int ppos_d = ppos*3;
+                    float lscore = cc*epenal+(openal-epenal);
+                    dp_matrix[ppos_d] = lscore+10.0*openal +10.0*openal -10000.0 ;
+                    dp_matrix[ppos_d+1] = lscore+10.0*openal +10.0*openal -10000.0;
+                    dp_matrix[ppos_d+2] = lscore;
+                    flag_matrix[ppos] = 0b1010101;
                 }}
             }}
         }}
@@ -200,7 +203,6 @@ impl OpenCLSequenceAlignment{
                         startx_ = cc;
                         starty_ = rr;
                     }}
-                
                 }}
                 max_place = {CELL_MATCH};
             }}else if(alignment_type == {ALIGN_GLOBAL} || alignment_type == {ALIGN_GLOCAL}){{
@@ -233,65 +235,88 @@ impl OpenCLSequenceAlignment{
             
             int buffposx = 0;
             int buffposy = 0;
-            while(1){{
-                int currentpos = pos_2d_to_1d_rc(currenty,currentx,num_rows,num_cols);
-                //printf("%d,",currentpos);
-                char prev_direc_ = flag_matrix[currentpos];
-                char prev_direc = 0;
-                /*デバッグ中
-                if((prev_direc_ & 0b1) == 0 ){{
-                    printf("????pos :%d direc: %d????? %d %d %d %d \n",currentpos,current_direc,currentx,currenty,buffposx,buffposy);
-                    //return;
-                }}else{{
-                    printf("!!!pos :%d direc: %d????? %d %d %d %d \n",currentpos,current_direc,currentx,currenty,buffposx,buffposy);
+
+            if (alignment_type == {ALIGN_LOCAL}){{
+                while(currentx+currenty > 0){{
+                    int currentpos = pos_2d_to_1d_rc(currenty,currentx,num_rows,num_cols);
+                    char prev_direc_ = flag_matrix[currentpos];
+                    char prev_direc = 0;
+
+                    if(current_direc == {CELL_MATCH}){{
+                        prev_direc = (prev_direc_ >> 1) & 0b11;
+                    }}else if(current_direc == {CELL_GAPINX}){{
+                        prev_direc = (prev_direc_ >> 3) & 0b11;
+                    }}else if(current_direc == {CELL_GAPINY}){{
+                        prev_direc = (prev_direc_ >> 5) & 0b11;
+                    }}else{{
+                        printf("????This direction is not expected pos :%d direc: %d????? %d %d",currentpos,current_direc,currentx,currenty);
+                        return;
+                    }};
+                    
+                    if (dp_matrix[currentpos*3+current_direc] <= 0.0){{
+                        break;
+                    }}
+                    
+                    if(current_direc == {CELL_MATCH}){{
+                        aligned_seq_a[buffposx] = currentx-1;
+                        aligned_seq_b[buffposy] = currenty-1;
+                        currentx -= 1;
+                        currenty -= 1;
+                    }}else if(current_direc == {CELL_GAPINX}){{
+                        aligned_seq_a[buffposx] = -1;
+                        aligned_seq_b[buffposy] = currenty-1;
+                        currenty -= 1;
+                    }}else if(current_direc == {CELL_GAPINY}){{
+                        aligned_seq_a[buffposx] = currentx-1;
+                        aligned_seq_b[buffposy] = -1;
+                        currentx -= 1;
+                    }}else{{
+                        printf("???");
+                        return;
+                    }}
+                    buffposx++;
+                    buffposy++;
+                    current_direc = prev_direc;
                 }}
-                */
-                if(current_direc == {CELL_MATCH}){{
-                    prev_direc = (prev_direc_ >> 1) & 0b11;
-                }}else if(current_direc == {CELL_GAPINX}){{
-                    prev_direc = (prev_direc_ >> 3) & 0b11;
-                }}else if(current_direc == {CELL_GAPINY}){{
-                    prev_direc = (prev_direc_ >> 5) & 0b11;
-                }}else{{
-                    printf("????This direction is not expected pos :%d direc: %d????? %d %d",currentpos,current_direc,currentx,currenty);
-                    return;
-                }};
-                
-                if (alignment_type == {ALIGN_LOCAL} 
-                && dp_matrix[currentpos*3+current_direc] <= 0.0){{
-                    break;
+            }}else{{
+                while(currentx+currenty > 0){{
+                    int currentpos = pos_2d_to_1d_rc(currenty,currentx,num_rows,num_cols);
+                    char prev_direc_ = flag_matrix[currentpos];
+                    char prev_direc = 0;
+
+                    if(current_direc == {CELL_MATCH}){{
+                        prev_direc = (prev_direc_ >> 1) & 0b11;
+                    }}else if(current_direc == {CELL_GAPINX}){{
+                        prev_direc = (prev_direc_ >> 3) & 0b11;
+                    }}else if(current_direc == {CELL_GAPINY}){{
+                        prev_direc = (prev_direc_ >> 5) & 0b11;
+                    }}else{{
+                        printf("????This direction is not expected pos :%d direc: %d????? %d %d",currentpos,current_direc,currentx,currenty);
+                        return;
+                    }};
+                    
+                    if(current_direc == {CELL_MATCH}){{
+                        aligned_seq_a[buffposx] = currentx-1;
+                        aligned_seq_b[buffposy] = currenty-1;
+                        currentx -= 1;
+                        currenty -= 1;
+                    }}else if(current_direc == {CELL_GAPINX}){{
+                        aligned_seq_a[buffposx] = -1;
+                        aligned_seq_b[buffposy] = currenty-1;
+                        currenty -= 1;
+                    }}else if(current_direc == {CELL_GAPINY}){{
+                        aligned_seq_a[buffposx] = currentx-1;
+                        aligned_seq_b[buffposy] = -1;
+                        currentx -= 1;
+                    }}else{{
+                        printf("???");
+                        return;
+                    }}
+                    buffposx++;
+                    buffposy++;
+                    current_direc = prev_direc;
                 }}
-                
-                if(current_direc == {CELL_MATCH}){{
-                    aligned_seq_a[buffposx] = currentx-1;
-                    aligned_seq_b[buffposy] = currenty-1;
-                    currentx -= 1;
-                    currenty -= 1;
-                }}else if(current_direc == {CELL_GAPINX}){{
-                    aligned_seq_a[buffposx] = -1;
-                    aligned_seq_b[buffposy] = currenty-1;
-                    currenty -= 1;
-                }}else if(current_direc == {CELL_GAPINY}){{
-                    aligned_seq_a[buffposx] = currentx-1;
-                    aligned_seq_b[buffposy] = -1;
-                    currentx -= 1;
-                }}else{{
-                    printf("???");
-                    return;
-                }}
-                buffposx++;
-                buffposy++;
-                
-                if(currentx == 0 && currenty == 0){{
-                    break;
-                }}
-                if(currentx < 0 || currenty < 0){{
-                    printf("!!! pos :%d direc: %d????? %d %d",currentpos,current_direc,currentx,currenty);
-                    break;
-                }}
-                current_direc = prev_direc;
             }}
-            
             aligned_seq_a[buffposx] = {POS_TERMINAL};
             aligned_seq_b[buffposy] = {POS_TERMINAL};
             score_buff[0] = maxscore;
@@ -314,7 +339,6 @@ impl OpenCLSequenceAlignment{
             ,__global float* score_buff
             ,int alignment_type
             ,__global char* kernel_control//0 prepare, 1 fill, 2 backtrack
-            
         ) {{
             if(kernel_control[0] == 0){{
                 //printf("%d started %d\n",get_global_id(0),get_local_size(1));
@@ -348,11 +372,7 @@ impl OpenCLSequenceAlignment{
 
                     while(currentrow < num_rows){{
                         if(
-                            (flag_matrix[prevpos_t] & 1) == 1
-                            &&
-                            (flag_matrix[prevpos_l] & 1) == 1
-                            &&
-                            (flag_matrix[prevpos_lt] & 1) == 1
+                            ((flag_matrix[prevpos_t] & flag_matrix[prevpos_l]) & flag_matrix[prevpos_lt]) & 0b1
                         ){{
 
                             int p3t = prevpos_t*3;
@@ -448,7 +468,7 @@ impl OpenCLSequenceAlignment{
                                         gapxindex = {CELL_GAPINY};
                                     }}
                                 }}else{{
-                                    if( dp_matrix[p3t+{CELL_GAPINX}]+epenal > dp_matrix[p3t+{CELL_GAPINY}]+openal){{
+                                    if(dp_matrix[p3t+{CELL_GAPINX}]+epenal > dp_matrix[p3t+{CELL_GAPINY}]+openal){{
                                         gapxscore = dp_matrix[p3t+{CELL_GAPINX}]+epenal;
                                         gapxindex = {CELL_GAPINX};
                                     }}else{{
@@ -464,10 +484,8 @@ impl OpenCLSequenceAlignment{
                                         gapyindex = {CELL_MATCH};
                                     }}else{{
                                         gapyscore = dp_matrix[p3l+{CELL_GAPINX}]+openal;
-                                        gapyindex = {CELL_GAPINX};
-                                        
+                                        gapyindex = {CELL_GAPINX};  
                                     }}
-            
                                 }}else{{
                                     if(dp_matrix[p3l+{CELL_GAPINY}]+epenal > dp_matrix[p3l+{CELL_GAPINX}]+openal){{
                                         gapyscore = dp_matrix[p3l+{CELL_GAPINY}]+epenal;
@@ -477,17 +495,10 @@ impl OpenCLSequenceAlignment{
                                         gapyindex = {CELL_GAPINX};
                                     }}
                                 }}
-                                if(matchscore < 0.0){{
-                                    matchscore = 0.0;
-                                }}
-                                if(gapxscore < 0.0){{
-                                    gapxscore = 0.0;
-                                }}
-                                if(gapyscore < 0.0){{
-                                    gapyscore = 0.0;
-                                }}
+                                matchscore = fmax((float)0.0,matchscore);
+                                gapxscore = fmax((float)0.0,gapxscore);
+                                gapyscore = fmax((float)0.0,gapyscore);
                             }}
-
 
                             dp_matrix[cp3] = matchscore;
                             dp_matrix[cp3+{CELL_GAPINX}] = gapxscore;
@@ -648,7 +659,7 @@ impl OpenCLSequenceAlignment{
     }
     pub fn prepare(&mut self,s1:&SeqData,s2:&SeqData){
         
-        let buffremake_diff:i64 = 1000;
+        let buffremake_diff:i64 = 4000;//バッファ再計算のための Factor
 
         let seq_a = self.scoring_matrix.seq_to_index(&s1,None);
         let seq_b = self.scoring_matrix.seq_to_index(&s2,None);

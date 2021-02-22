@@ -17,7 +17,7 @@ my $okcount = 0;
 
 my $check_pl = 1;
 my $check_rs = 1;
-my $check_rs_ocl = 0;
+my $check_rs_ocl = 1;
 my $check_py = 1;
 my $check_java = 1;
 
