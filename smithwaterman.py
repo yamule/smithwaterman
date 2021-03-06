@@ -205,7 +205,7 @@ class SmithWaterman:
 					cdict["name"] = nmat.group(1);
 				dmat = re.search("[\s]*>[\s]*([^\s]+)[\s]+([^\s][^\r\n]*)",ll);
 				if(not dmat == None):
-					cdict["desc"] = dmat.group(1);
+					cdict["desc"] = dmat.group(2);
 				cdict["seq"] = "";
 			else:
 				cdict["seq"] += re.sub("[\s]","",ll);
