@@ -122,7 +122,7 @@ impl OpenCLSequenceAlignment{
         
         __kernel void prepare_matrix(
             __global float* dp_matrix
-            ,__global char* flag_matrix // 00 match 01 gapincol 10 gapincol x3 0 uncalculated 1 calculated
+            ,__global char* flag_matrix // 00 match 01 gapincol 10 gapinrow x3 0 uncalculated 1 calculated
             ,__global int* seqsize
             ,float start_openal
             ,float start_epenal) {{
