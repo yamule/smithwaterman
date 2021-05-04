@@ -114,12 +114,14 @@ impl AlignmentOptions{
 }
 
 fn main(){
-	let argss: Vec<String> = env::args().collect();
+	let mut argss: Vec<String> = env::args().collect();
+    argss.remove(0);
+
     let mut mess:&str = "Local alignment";
     if argss.len() < 2{
         eprintln!("usage: sa_opencl [(-global|-glocal|-local(default))] <infile1 (fasta file)>  <infile2 (fasta file)> ");
         eprintln!("usage: sa_opencl [(-global|-glocal|-local(default))] [-list] <list file>");
-        eprintln!("usage: sa_opencl -cluster [-identity 0.0-1.0] [-coverage_short 0.0-1.0] [-coverage_long 0.0-1.0] <fasta file>");
+        eprintln!("usage: sa_opencl -cluster[ing] [(-global|-glocal|-local(default))] [-identity 0.0-1.0] [-coverage_short 0.0-1.0] [-coverage_long 0.0-1.0] -out <output file> <fasta file>");
         eprintln!("The \"list file\" has a list of tab separated pairs as follows.");
         eprintln!("<infile1 (fasta file)>  <infile2 (fasta file)>");
         eprintln!("<infile3 (fasta file)>  <infile4 (fasta file)>");
@@ -206,6 +208,9 @@ fn main(){
         f.flush().unwrap();
         let mut ff = BufWriter::new(File::create(opp.outfilename.clone()+".clstr").unwrap());
         for cc in 0..cluster_of.len(){
+            if members[cc].len() == 0{
+                continue;
+            }
             for (mii,mm) in members[cc].iter().enumerate(){
                 if mii != 0{
                     ff.write(" ".as_bytes()).unwrap();
@@ -215,8 +220,6 @@ fn main(){
             ff.write("\n".as_bytes()).unwrap();
         }
         ff.flush().unwrap();
-        
-
     }else{
         if opp.list{
             let file = File::open(opp.file1).unwrap();
