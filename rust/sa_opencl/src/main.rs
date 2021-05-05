@@ -151,51 +151,94 @@ fn main(){
         seq1.sort_by(|a,b|b.seq.len().cmp(&a.seq.len()));
         let mut cluster_of:Vec<usize> = (0..seq1.len()).into_iter().collect();
         let mut members:Vec<Vec<usize>> = vec![vec![];cluster_of.len()];
+        let mut identical:Vec<usize> = cluster_of.clone();
+        let mut identical_members:Vec<Vec<usize>> = vec![vec![];cluster_of.len()];
         let coverage_short = opp.c_coverage_short.unwrap_or(0.8);
         let coverage_long = opp.c_coverage_long.unwrap_or(0.8);
         let identity_threshold:f64 = opp.c_identity.unwrap_or(0.8);
 
         for ii in 0..seq1.len(){
+            if identical[ii] != ii{
+                continue;
+            }
+            identical_members[ii].push(ii);
+            let si = seq1[ii].seq.iter().fold("".to_string(),|s,m|s+m);
+            for jj in (ii+1)..seq1.len(){
+                if identical[jj] != jj{
+                    continue;
+                }
+                let sj = seq1[jj].seq.iter().fold("".to_string(),|s,m|s+m);
+                if si.len() != sj.len(){
+                    break;
+                }
+                if si == sj {
+                    identical[jj] = ii;
+                    identical_members[ii].push(jj);
+                }
+            }
+        }
+        for ii in 0..seq1.len(){
             if cluster_of[ii] != ii{
                 continue;
             }
-            members[ii].push(ii);
+            if identical[ii] != ii{
+                continue;
+            }
+            members[ii].append(&mut identical_members[ii]);
+            let si = seq1[ii].seq.iter().fold("".to_string(),|s,m|s+m);
             for jj in (ii+1)..seq1.len(){
                 if cluster_of[jj] != jj{
                     continue;
                 }
-                let res = sw.align(&seq1[ii],&seq1[jj],false);
-                let mut alen:usize = 0;
-                let mut blen:usize = 0;
-                let mut matchnum:usize = 0;
-                for kk in 0..res.0.len(){
-                    if res.0[kk] != "-"{
-                        alen += 1;
-                    }
-                    if res.1[kk] != "-"{
-                        blen += 1;
-                    }
-                    if res.0[kk] == "-" || res.1[kk] == "-"{
-                        continue;
-                    }
-                    if res.0[kk] == res.1[kk]{
-                        matchnum += 1;
-                    }
+                if identical[jj] != jj{
+                    continue;
                 }
-                let lcov:f64;
-                let scov:f64;
-                if seq1[ii].seq.len() > seq1[jj].seq.len(){
-                    lcov = alen as f64/(seq1[ii].seq.len() as f64);
-                    scov = blen as f64/(seq1[jj].seq.len() as f64);
+                let sj = seq1[jj].seq.iter().fold("".to_string(),|s,m|s+m);
+                if si.contains(&sj) {
+                    let lcov:f64 = sj.len() as f64 /(si.len() as f64);
+                    if lcov >= coverage_long{
+                        cluster_of[jj] = ii;
+                        members[ii].append(&mut identical_members[jj]);
+                    }
                 }else{
-                    scov = alen as f64/(seq1[ii].seq.len() as f64);
-                    lcov = blen as f64/(seq1[jj].seq.len() as f64);
+                    let res = sw.align(&seq1[ii],&seq1[jj],false);
+                    let mut alen:usize = 0;
+                    let mut blen:usize = 0;
+                    let mut matchnum:usize = 0;
+                    for kk in 0..res.0.len(){
+                        if res.0[kk] != "-"{
+                            alen += 1;
+                        }
+                        if res.1[kk] != "-"{
+                            blen += 1;
+                        }
+                        if res.0[kk] == "-" || res.1[kk] == "-"{
+                            continue;
+                        }
+                        if res.0[kk] == res.1[kk]{
+                            matchnum += 1;
+                        }
+                    }
+                    let lcov:f64;
+                    let scov:f64;
+                    if seq1[ii].seq.len() >= seq1[jj].seq.len(){
+                        lcov = alen as f64/(seq1[ii].seq.len() as f64);
+                        scov = blen as f64/(seq1[jj].seq.len() as f64);
+                    }else{
+                        panic!("??");
+                    }
+                    let ident = matchnum as f64/(res.0.len() as f64);
+                    if lcov >= coverage_long && scov >= coverage_short && ident >= identity_threshold{
+                        cluster_of[jj] = ii;
+                        members[ii].append(&mut identical_members[jj]);
+                    }
                 }
-                let ident = matchnum as f64/(res.0.len() as f64);
-                if lcov >= coverage_long && scov >= coverage_short && ident >= identity_threshold{
-                    cluster_of[jj] = ii;
-                    members[ii].push(jj);
+                if (jj+1)%1000 == 0{
+                    println!("{} alignments were done.",jj+1);
                 }
+            }
+            if (ii+1)%10 == 0{
+                println!("{} sequences were processed.",ii+1);
             }
         }
         let mut f = BufWriter::new(File::create(opp.outfilename.clone()).unwrap());
