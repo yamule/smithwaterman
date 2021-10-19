@@ -91,12 +91,12 @@ class SmithWaterman:
 		self.aaB = list(re.sub("[^A-Z]","",seqB.upper()));
 		for ii in range(len(self.aaA)):
 			if not self.aaA[ii] in self.acceptable:
-				self.aaA[ii] = "X";
 				sys.stderr.write(self.aaA[ii]+" was changed to X.\n");
+				self.aaA[ii] = "X";
 		for ii in range(len(self.aaB)):
 			if not self.aaB[ii] in self.acceptable:
-				self.aaB[ii] = "X";
 				sys.stderr.write(self.aaB[ii]+" was changed to X.\n");
+				self.aaB[ii] = "X";
 
 		self.dpmat = [[0 for i in range(len(self.aaA)+1)] for j in range(len(self.aaB)+1)]
 		
