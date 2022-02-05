@@ -212,6 +212,7 @@ class SmithWaterman:
 				
 		if(len(ret[0]["seq"]) == 0):
 			ret.pop(0);
+		fin.close();
 		return ret;
 		
 		
