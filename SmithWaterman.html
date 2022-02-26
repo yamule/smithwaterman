@@ -1,0 +1,422 @@
+<html><head><title>SmithWaterman - Free, AS IS, OpenSource Tools by yamabuki </title>
+<style type="text/css">
+input {
+border-width:1px;
+border-color: #000000;
+border-style: solid;
+}
+textarea {
+border-width:1px;
+border-color: #000000;
+border-style: solid;
+}
+div#main{
+margin:0px;
+padding:10px;
+border-left:double 20px #000000;
+border-right:double 20px #000000;
+width:60%;
+background-color:#FFFFFF;
+}
+</style>
+<script type="text/javascript">
+<!--
+	const CELL_MATCH = 0;
+	const CELL_GAPINROW = 1;
+	const CELL_GAPINCOL = 2;
+	
+//https://www.ncbi.nlm.nih.gov/Class/FieldGuide/BLOSUM62.txt
+//  Matrix made by sw_matblas from blosum62.iij
+//  * column uses minimum score
+//  BLOSUM Clustered Scoring Matrix in 1/2 Bit Units
+//  Blocks Database = /data/blocks_5.0/blocks.dat
+//  Cluster Percentage: >= 62
+//  Entropy =   0.6979, Expected =  -0.5209
+	const blosumlines= ["A  R  N  D  C  Q  E  G  H  I  L  K  M  F  P  S  T  W  Y  V  B  Z  X  *",
+		"A  4 -1 -2 -2  0 -1 -1  0 -2 -1 -1 -1 -1 -2 -1  1  0 -3 -2  0 -2 -1  0 -4",
+		"R -1  5  0 -2 -3  1  0 -2  0 -3 -2  2 -1 -3 -2 -1 -1 -3 -2 -3 -1  0 -1 -4",
+		"N -2  0  6  1 -3  0  0  0  1 -3 -3  0 -2 -3 -2  1  0 -4 -2 -3  3  0 -1 -4",
+		"D -2 -2  1  6 -3  0  2 -1 -1 -3 -4 -1 -3 -3 -1  0 -1 -4 -3 -3  4  1 -1 -4",
+		"C  0 -3 -3 -3  9 -3 -4 -3 -3 -1 -1 -3 -1 -2 -3 -1 -1 -2 -2 -1 -3 -3 -2 -4",
+		"Q -1  1  0  0 -3  5  2 -2  0 -3 -2  1  0 -3 -1  0 -1 -2 -1 -2  0  3 -1 -4",
+		"E -1  0  0  2 -4  2  5 -2  0 -3 -3  1 -2 -3 -1  0 -1 -3 -2 -2  1  4 -1 -4",
+		"G  0 -2  0 -1 -3 -2 -2  6 -2 -4 -4 -2 -3 -3 -2  0 -2 -2 -3 -3 -1 -2 -1 -4",
+		"H -2  0  1 -1 -3  0  0 -2  8 -3 -3 -1 -2 -1 -2 -1 -2 -2  2 -3  0  0 -1 -4",
+		"I -1 -3 -3 -3 -1 -3 -3 -4 -3  4  2 -3  1  0 -3 -2 -1 -3 -1  3 -3 -3 -1 -4",
+		"L -1 -2 -3 -4 -1 -2 -3 -4 -3  2  4 -2  2  0 -3 -2 -1 -2 -1  1 -4 -3 -1 -4",
+		"K -1  2  0 -1 -3  1  1 -2 -1 -3 -2  5 -1 -3 -1  0 -1 -3 -2 -2  0  1 -1 -4",
+		"M -1 -1 -2 -3 -1  0 -2 -3 -2  1  2 -1  5  0 -2 -1 -1 -1 -1  1 -3 -1 -1 -4",
+		"F -2 -3 -3 -3 -2 -3 -3 -3 -1  0  0 -3  0  6 -4 -2 -2  1  3 -1 -3 -3 -1 -4",
+		"P -1 -2 -2 -1 -3 -1 -1 -2 -2 -3 -3 -1 -2 -4  7 -1 -1 -4 -3 -2 -2 -1 -2 -4",
+		"S  1 -1  1  0 -1  0  0  0 -1 -2 -2  0 -1 -2 -1  4  1 -3 -2 -2  0  0  0 -4",
+		"T  0 -1  0 -1 -1 -1 -1 -2 -2 -1 -1 -1 -1 -2 -1  1  5 -2 -2  0 -1 -1  0 -4",
+		"W -3 -3 -4 -4 -2 -2 -3 -2 -2 -3 -2 -3 -1  1 -4 -3 -2 11  2 -3 -4 -3 -2 -4",
+		"Y -2 -2 -2 -3 -2 -1 -2 -3  2 -1 -1 -2 -1  3 -3 -2 -2  2  7 -1 -3 -2 -1 -4",
+		"V  0 -3 -3 -3 -1 -2 -2 -3 -3  3  1 -2  1 -1 -2 -2  0 -3 -1  4 -3 -2 -1 -4",
+		"B -2 -1  3  4 -3  0  1 -1  0 -3 -4  0 -3 -3 -2  0 -1 -4 -3 -3  4  1 -1 -4",
+		"Z -1  0  0  1 -3  3  4 -2  0 -3 -3  1 -1 -3 -1  0 -1 -3 -2 -2  1  4 -1 -4",
+		"X  0 -1 -1 -1 -2 -1 -1 -1 -1 -1 -1 -1 -1 -1 -2  0  0 -2 -1 -1 -1 -1 -1 -4",
+		"* -4 -4 -4 -4 -4 -4 -4 -4 -4 -4 -4 -4 -4 -4 -4 -4 -4 -4 -4 -4 -4 -4 -4  1"
+	];
+	
+	const dnarnalines= ["A T G C U N",
+		"A  4 -1 -1 -1 -1 -1",
+		"T  -1 4 -1 -1 4 -1",
+		"G  -1 -1 4 -1 -1 -1",
+		"C  -1 -1 -1 4 -1 -1",
+		"U  -1 4 -1 -1 4 -1",
+		"N  -1 -1 -1 -1 -1 0",
+	];
+	
+	class SWCell {
+		constructor() {
+			this.score = [0,0,0];
+			this.prev = [-1,-1,-1];
+		}
+	}
+	function create_scoring_matrix(lines_){
+		let lines = [];
+		for(let ii = 0;ii < lines_.length;ii++){
+			lines.push(lines_[ii].toUpperCase().replace(/[\s]+$/g,"").toUpperCase().replace(/^[\s]+/g,""));
+		}
+		head = lines[0].split(/[\s]+/);
+		ret = {};
+		for(let ii = 1;ii < lines.length;ii++){
+			ptt  = lines[ii].split(/[\s]+/);
+			for(let jj = 1;jj < ptt.length;jj++){
+				ret[ptt[0]+"_"+head[jj-1]] = parseFloat(ptt[jj]);
+			}
+		}
+		return ret;
+	}
+	
+	
+	function parse_fasta(ss){
+		let p1 = ss.toUpperCase().split(/[\r\n]+/)
+		let seq1s = [];
+		let seq = "";
+		let head = "";
+		for(let ii = 0;ii < p1.length;ii++){
+			if(p1[ii].indexOf(">") > -1){
+				if(seq.length > 0){
+					seq1s.push([head,seq]);
+				}
+				seq = "";
+				head = "";
+				head = p1[ii];
+			}else{
+				seq += p1[ii].toUpperCase().replace(/[^A-Z]+/g,"");
+			}
+		}
+		
+		if(seq.length > 0){
+			seq1s.push([head,seq]);
+		}
+		return seq1s;
+	}
+	function calculate(){
+	
+		let s1 = parse_fasta(document.FORM1.SEQUENCE1.value);
+		let s2 = parse_fasta(document.FORM1.SEQUENCE2.value);
+		
+		res = [];
+		for(let ii = 0;ii < s1.length;ii++){
+			for(let jj = 0;jj < s2.length;jj++){
+				//if(ii != jj){//デバッグ用
+				//	continue;
+				//}
+				if(s1[ii][0].length + s2[jj][0] > 0){
+					res.push(s1[ii][0]+"\n");
+					res.push(s2[jj][0]+"\n");
+				}
+				res.push(calculate_(s1[ii][1],s2[jj][1]));
+				res.push("//\n");
+			}
+		}
+		document.FORM1.TEXTAREA2.value = res.join("");
+	}
+	
+	function calculate_debug(){
+		
+		
+	}
+	
+	
+	
+	function calculate_(seq1_,seq2_){
+		
+		let seq1 = Array.from(seq1_.toUpperCase().replace(/[^A-Z]+/g,""));
+		let seq2 = Array.from(seq2_.toUpperCase().replace(/[^A-Z]+/g,""));
+		
+		let message = "";
+		let gopenalty = 10;
+		let gepenalty =0.5;
+		
+		try {
+			gopenalty = parseFloat(document.FORM1.GAP_OPEN_PENALTY.value.replace(/[^0-9.]/g,""));
+		} catch (error) {
+			gopenalty = 10;
+			if(message.length > 0){
+				message += "<br>";
+			}
+			message += error;
+		}
+		if(gopenalty < 0){
+			gopenalty = gopenalty*-1;
+		}
+		
+		try {
+			gepenalty = parseFloat(document.FORM1.GAP_EXTEND_PENALTY.value.replace(/[^0-9.]/g,""));
+		} catch (error) {
+			gepenalty = 0.5;
+			if(message.length > 0){
+				message += "<br>";
+			}
+			message += error;
+		}
+		if(gepenalty < 0){
+			gepenalty = gepenalty*-1;
+		}
+		if(isNaN(gepenalty)){
+			if(message.length > 0){
+				message += "<br>";
+			}
+			message += "Error in parsing gap extend penalty.";
+			gepenalty = 0.5;
+		}
+		if(isNaN(gopenalty)){
+			if(message.length > 0){
+				message += "<br>";
+			}
+			message += "Error in parsing gap open penalty.";
+			gopenalty = 10.0;
+		}
+		
+		
+		document.FORM1.GAP_OPEN_PENALTY.value = gopenalty;
+		document.FORM1.GAP_EXTEND_PENALTY.value = gepenalty;
+		
+		
+		let smatrix = null;
+		let minvalue = 0;
+		if(document.getElementById("radio_protein").checked) {
+			smatrix = create_scoring_matrix(blosumlines);
+			
+			for(let kk in smatrix){
+				if(smatrix[kk] < minvalue){
+					minvalue = smatrix[kk];
+				}
+			}
+		}else{
+			//smatrix = create_scoring_matrix(dnarnalines);
+		}
+		
+		let dpmatrix = new Array();
+		for(let ii = 0;ii < seq1.length+1;ii++){
+			let r = new Array();
+			for(let jj = 0;jj < seq2.length+1;jj++){
+				r.push(new SWCell());
+			}
+			dpmatrix.push(r);
+		}
+		let nokeyflag = false;
+		let nokeyexample = "";
+		let maxi = 0;
+		let maxj = 0;
+		let maxk = 0;
+		let maxscore = -1;
+		for(let ii = 0;ii < seq1.length+1;ii++){
+			for(let jj = 0;jj < seq2.length+1;jj++){
+				
+				if(ii == 0){
+					dpmatrix[ii][jj].prev[0] = CELL_GAPINCOL;
+					dpmatrix[ii][jj].prev[1] = CELL_GAPINCOL;
+					dpmatrix[ii][jj].prev[2] = CELL_GAPINCOL;
+					continue;
+				}
+				
+				if(jj == 0){
+					dpmatrix[ii][jj].prev[0] = CELL_GAPINROW;
+					dpmatrix[ii][jj].prev[1] = CELL_GAPINROW;
+					dpmatrix[ii][jj].prev[2] = CELL_GAPINROW;
+					continue;
+				}
+				let mkey = "";
+				let mscore = 0;
+				if(smatrix == null){
+					if(seq1[ii-1] === seq2[jj-1]){
+						mscore = 4;
+					}else{
+						mscore = -1;
+					}
+				}else{
+					mkey = seq1[ii-1]+"_"+seq2[jj-1];
+					if (!( mkey in smatrix)){
+						mscore = minvalue;
+						nokeyflag = true;
+						nokeyexample = mkey;
+					}else{
+						mscore = smatrix[mkey];
+					}
+				}
+				
+				if(dpmatrix[ii-1][jj-1].score[CELL_MATCH] >= dpmatrix[ii-1][jj-1].score[CELL_GAPINCOL]){
+					if(dpmatrix[ii-1][jj-1].score[CELL_MATCH] >= dpmatrix[ii-1][jj-1].score[CELL_GAPINROW]){
+						dpmatrix[ii][jj].score[CELL_MATCH] = dpmatrix[ii-1][jj-1].score[CELL_MATCH]+mscore;
+						dpmatrix[ii][jj].prev[CELL_MATCH] = CELL_MATCH;
+					}else{
+						dpmatrix[ii][jj].score[CELL_MATCH] = dpmatrix[ii-1][jj-1].score[CELL_GAPINROW]+mscore;
+						dpmatrix[ii][jj].prev[CELL_MATCH] = CELL_GAPINROW;
+					}
+				}else{
+					if(dpmatrix[ii-1][jj-1].score[CELL_GAPINCOL] >= dpmatrix[ii-1][jj-1].score[CELL_GAPINROW]){
+						dpmatrix[ii][jj].score[CELL_MATCH] = dpmatrix[ii-1][jj-1].score[CELL_GAPINCOL]+mscore;
+						dpmatrix[ii][jj].prev[CELL_MATCH] = CELL_GAPINCOL;
+					}else{
+						dpmatrix[ii][jj].score[CELL_MATCH] = dpmatrix[ii-1][jj-1].score[CELL_GAPINROW]+mscore;
+						dpmatrix[ii][jj].prev[CELL_MATCH] = CELL_GAPINROW;
+					}
+				}
+				
+				if(dpmatrix[ii][jj-1].score[CELL_MATCH]-gopenalty >= dpmatrix[ii][jj-1].score[CELL_GAPINCOL]-gepenalty){
+					dpmatrix[ii][jj].score[CELL_GAPINCOL] = dpmatrix[ii][jj-1].score[CELL_MATCH]-gopenalty;
+					dpmatrix[ii][jj].prev[CELL_GAPINCOL] = CELL_MATCH;
+				}else{
+					dpmatrix[ii][jj].score[CELL_GAPINCOL] = dpmatrix[ii][jj-1].score[CELL_GAPINCOL]-gepenalty;
+					dpmatrix[ii][jj].prev[CELL_GAPINCOL] = CELL_GAPINCOL;
+				}
+				
+				if(dpmatrix[ii-1][jj].score[CELL_MATCH]-gopenalty >= dpmatrix[ii-1][jj].score[CELL_GAPINROW]-gepenalty){
+					dpmatrix[ii][jj].score[CELL_GAPINROW] = dpmatrix[ii-1][jj].score[CELL_MATCH]-gopenalty;
+					dpmatrix[ii][jj].prev[CELL_GAPINROW] = CELL_MATCH;
+				}else{
+					dpmatrix[ii][jj].score[CELL_GAPINROW] = dpmatrix[ii-1][jj].score[CELL_GAPINROW]-gepenalty;
+					dpmatrix[ii][jj].prev[CELL_GAPINROW] = CELL_GAPINROW;
+				}
+				
+				for(let kk = 0;kk < 3;kk++){
+					if(dpmatrix[ii][jj].score[kk] <= 0){
+						dpmatrix[ii][jj].score[kk] = 0;
+						dpmatrix[ii][jj].prev[kk] = -1;
+					}
+					if(dpmatrix[ii][jj].score[kk] > maxscore){
+						maxi = ii;
+						maxj = jj;
+						maxk = kk;
+						maxscore = dpmatrix[ii][jj].score[kk];
+					}
+				}
+			}
+		}
+		let align_i = [];
+		let align_j = [];
+		for(let ii = seq1.length;ii > maxi;ii--){
+			align_i.push(seq1[ii-1]);
+			align_j.push("-");
+		}
+		
+		for(let jj = seq2.length;jj > maxj;jj--){
+			align_j.push(seq2[jj-1]);
+			align_i.push("-");
+		}
+		
+		while(maxi > 0 || maxj > 0){
+			if(maxk == CELL_MATCH){
+				align_j.push(seq2[maxj-1]);
+				align_i.push(seq1[maxi-1]);
+			}else if(maxk == CELL_GAPINCOL){
+				align_j.push(seq2[maxj-1]);
+				align_i.push("-");
+			}else{
+				align_j.push("-");
+				align_i.push(seq1[maxi-1]);
+			}
+			let nexi = maxi;
+			let nexj = maxj;
+			if(maxk == CELL_MATCH){
+				nexi -= 1;
+				nexj -= 1;
+			}else if(maxk == CELL_GAPINCOL){
+				nexj -= 1;
+			}else if(maxk == CELL_GAPINROW){
+				nexi -= 1;
+			}else{
+				break;
+			}
+			let nexk = dpmatrix[maxi][maxj].prev[maxk];
+			
+			//console.log(nexi+";"+nexj+":"+dpmatrix[nexi][nexj].score[nexk]);
+			if(dpmatrix[nexi][nexj].score[nexk] <= 0){
+				break;
+			}
+			maxk = nexk;
+			maxi = nexi;
+			maxj = nexj;
+		}
+		
+		
+		for(let ii = maxi-1;ii > 0;ii--){
+			align_i.push(seq1[ii-1]);
+			align_j.push("-");
+		}
+		
+		for(let jj = maxj-1;jj > 0;jj--){
+			align_j.push(seq2[jj-1]);
+			align_i.push("-");
+		}
+		
+		align_i.reverse();
+		align_j.reverse();
+		matcher = [];
+		for(let ii = 0;ii < align_i.length;ii++){
+			if(align_i[ii] == align_j[ii]){
+				matcher.push(":");
+			}else{
+				matcher.push(" ");
+			}
+		}
+		if(nokeyflag){
+			if(message.length > 0){
+				message += "<br>";
+			}
+			message += nokeyexample+" was not found in the dict. "+minvalue+" was assigned.";;
+		}
+		document.getElementById("message").innerHTML = message;
+		return "Score: "+maxscore+"\n"+align_i.join("")+"\n"+matcher.join("")+"\n"+align_j.join("")+"\n";
+		
+	}
+// -->
+</script>
+</head><body style="background-color:#FFFFFF;margin:0px;padding:0px;">
+<center>
+<div id="main">
+<br>
+<div><strong><big>SmithWaterman</big>(JavaScript)</strong></div>
+<form name="FORM1" action="#">
+	<div>
+		<textarea name="SEQUENCE1" cols=60 rows=6 wrap="HARD">Query</textarea>
+		<br>
+		<textarea name="SEQUENCE2" cols=60 rows=6 wrap="HARD">Subject</textarea>
+	</div>
+	<div>
+		Gap Open Penalty: <input type="text" style="padding-left:4px" name="GAP_OPEN_PENALTY" value="10" size=5>,
+		Gap Extend Penalty: <input type="text" style="padding-left:4px" name="GAP_EXTEND_PENALTY" value="0.5" size=5><br>
+		<input type="radio" name="sequence_type" value="protein" id="radio_protein" checked>
+		<label for="radio_protein">BLOSUM62</label> 
+		<input type="radio" name="sequence_type" value="lettermatch" id="radio_lettermatch">
+		<label for="radio_lettermatch">Match:4,Mismatch:-1</label><br>
+		<input type="button" onclick="calculate()" value="Calculate">
+	</div>
+	<br>
+	<div>
+		<left><div>RESULT</div></left>
+		<textarea name="TEXTAREA2" cols=60 rows=12 wrap="HARD"></textarea>
+	</div>
+	<div id="message" style="color:red"></div>
+</form><br><small>This program is Public Domain. You can Download and run it in local.<br> At your own risk!</small><br>
+</div>
+
+</center>
+</body>
+</html>
+
