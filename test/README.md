@@ -1,3 +1,6 @@
+There is no test for the JavaScript version.
+
+
 1-4 can be skipped.
 
 === Please use 1-4 when you want to construct more than 100 example files. 100 is not enough to cover all cases. I'm so stupid that can not make a perfect testset....====
