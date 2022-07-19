@@ -673,7 +673,7 @@ impl SubstitutionMatrix{
             if self.string_to_index.contains_key("X"){
                 return *(self.string_to_index.get("X").unwrap());
             }else{
-                panic!("unknown letter {}. please set X to allow scoring for undefined letter pair.");
+                panic!("unknown letter {}. please set X to allow scoring for undefined letter pair.",vv);
             }
         }
     }
